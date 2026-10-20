@@ -1,0 +1,12 @@
+{
+  "url": "https://api.trigpointing.uk/v1/stats/site",
+  "fetched": "2026-10-20",
+  "stats": {
+    "total_trigs": 26979,
+    "total_members": 7479,
+    "total_logs": 504604,
+    "total_photos": 439530,
+    "recent_logs_7d": 742,
+    "recent_users_30d": 203
+  }
+}

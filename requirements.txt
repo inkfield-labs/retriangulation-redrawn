@@ -1,0 +1,10 @@
+numpy
+scipy
+matplotlib
+pandas
+requests
+pyproj
+rasterio
+pymupdf
+pillow
+shapely
