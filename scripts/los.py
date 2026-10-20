@@ -32,10 +32,13 @@ class DEM:
             b[b == meta["nodata"]] = np.nan
             b = np.nanmean(b.reshape(ny // factor, factor, nx // factor, factor), axis=(1, 3))
             self.z = np.nan_to_num(b / 10.0, nan=0.0).astype(np.float32)
+            self.scale = 1.0
         else:
-            z = np.asarray(a, dtype=np.float32) / 10.0
-            z[a == meta["nodata"]] = 0.0  # sea and off-grid
+            # keep int16 decimetres in memory (0.7 GB rather than 1.4 GB as float32)
+            z = np.array(a)
+            z[z == meta["nodata"]] = 0  # sea and off-grid
             self.z = z
+            self.scale = 0.1
         self.cell = meta["cell"] * factor
         self.x0, self.y1 = meta["x0"], meta["y1"]
 
@@ -47,8 +50,8 @@ class DEM:
         r0 = np.clip(np.floor(r).astype(np.int64), 0, self.z.shape[0] - 2)
         fc, fr = np.clip(c - c0, 0, 1), np.clip(r - r0, 0, 1)
         z = self.z
-        return ((z[r0, c0] * (1 - fc) + z[r0, c0 + 1] * fc) * (1 - fr) +
-                (z[r0 + 1, c0] * (1 - fc) + z[r0 + 1, c0 + 1] * fc) * fr)
+        return self.scale * ((z[r0, c0] * (1 - fc) + z[r0, c0 + 1] * fc) * (1 - fr) +
+                             (z[r0 + 1, c0] * (1 - fc) + z[r0 + 1, c0 + 1] * fc) * fr)
 
 
 def station_heights(height, comments, ground_dem, mode="fb"):

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sightline tiles test</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
+<style>html,body,#map{margin:0;height:100%;background:#f4f1ea}</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+// Render test only: does MapLibre draw the sightline PMTiles? Query string: ?file=<pmtiles>&z=&lon=&lat=
+const q = new URLSearchParams(location.search);
+const file = q.get("file") || "lines.pmtiles";
+const protocol = new pmtiles.Protocol();
+maplibregl.addProtocol("pmtiles", protocol.tile);
+window.renderLog = [];
+const map = new maplibregl.Map({
+  container: "map",
+  center: [parseFloat(q.get("lon") || "-4.6"), parseFloat(q.get("lat") || "57.6")],
+  zoom: parseFloat(q.get("z") || "7"),
+  style: {
+    version: 8,
+    sources: {lines: {type: "vector", url: `pmtiles://${location.origin}/${file}`}},
+    layers: [
+      {id: "bg", type: "background", paint: {"background-color": "#f4f1ea"}},
+      {id: "lines", type: "line", source: "lines", "source-layer": "sightlines",
+       paint: {"line-color": "#c2410c", "line-opacity": 0.35, "line-width": 0.6}}
+    ]
+  }
+});
+map.on("error", e => window.renderLog.push("error: " + (e.error && e.error.message)));
+map.on("idle", () => {
+  const n = map.queryRenderedFeatures({layers: ["lines"]}).length;
+  window.renderLog.push("idle features=" + n);
+  window.renderedFeatures = n;
+});
+</script>
+</body>
+</html>

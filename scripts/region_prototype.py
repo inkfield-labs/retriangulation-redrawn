@@ -88,7 +88,7 @@ def render(dem, p, lines, gtbox):
     x0, x1, y0, y1 = BOX
     c0, c1 = int((x0 - dem.x0) / dem.cell), int((x1 - dem.x0) / dem.cell)
     r0, r1 = int((dem.y1 - y1) / dem.cell), int((dem.y1 - y0) / dem.cell)
-    z = dem.z[r0:r1, c0:c1]
+    z = dem.z[r0:r1, c0:c1] * dem.scale
     gy, gx = np.gradient(z, dem.cell)
     shade = np.clip(0.7 + 1.5 * (gx - gy), 0, 1)  # light from the north-west
     sea = z <= 0

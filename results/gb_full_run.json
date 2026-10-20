@@ -1,0 +1,77 @@
+{
+  "pillars": 6079,
+  "pairs_le_150km": 3459140,
+  "los_seconds_sum_of_shards": 3799.7,
+  "finalize_seconds": 61.7,
+  "shards": 8,
+  "visible": {
+    "50": 146487,
+    "100": 214355,
+    "150": 229330
+  },
+  "pillars_with_no_visible_partner": 5,
+  "median_visible_partners": 61.0,
+  "longest": [
+    {
+      "a_name": "Kentmere Pike",
+      "b_name": "Moel Tywysog",
+      "dist_km": 149.99,
+      "clearance_m": 18.5
+    },
+    {
+      "a_name": "Beinn Dearg",
+      "b_name": "Pykestone Hill",
+      "dist_km": 149.98,
+      "clearance_m": 7.199999809265137
+    },
+    {
+      "a_name": "Beinn Spionnaidh",
+      "b_name": "Roneval Harris",
+      "dist_km": 149.94,
+      "clearance_m": 25.799999237060547
+    },
+    {
+      "a_name": "Corse Hill South",
+      "b_name": "Nine Standards Rigg",
+      "dist_km": 149.94,
+      "clearance_m": 7.0
+    },
+    {
+      "a_name": "Cefn Cyfarwydd",
+      "b_name": "Sca Fell",
+      "dist_km": 149.9,
+      "clearance_m": 16.0
+    },
+    {
+      "a_name": "Moel Wyn",
+      "b_name": "Pendle Hill",
+      "dist_km": 149.89,
+      "clearance_m": 6.800000190734863
+    },
+    {
+      "a_name": "Foel Gasyth",
+      "b_name": "Lank Rigg",
+      "dist_km": 149.88,
+      "clearance_m": 10.5
+    },
+    {
+      "a_name": "Barrowmouth Wood",
+      "b_name": "Foel Fras",
+      "dist_km": 149.86,
+      "clearance_m": 3.4000000953674316
+    },
+    {
+      "a_name": "Fair Snape Fell",
+      "b_name": "Stiperstones",
+      "dist_km": 149.85,
+      "clearance_m": 13.899999618530273
+    },
+    {
+      "a_name": "Ben Bragor",
+      "b_name": "Ladhar Bheinn",
+      "dist_km": 149.85,
+      "clearance_m": 10.0
+    }
+  ],
+  "geojson_bytes": 37295900
+}

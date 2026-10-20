@@ -1,0 +1,6 @@
+- generic [ref=f3e2]:
+  - region "Map" [ref=f3e3]
+  - group [ref=f3e4]:
+    - generic "Toggle attribution" [ref=f3e5] [cursor=pointer]
+    - link "MapLibre" [ref=f3e7] [cursor=pointer]:
+      - /url: https://maplibre.org/

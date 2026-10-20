@@ -1,0 +1,39 @@
+{
+  "pillars": 6079,
+  "dem_cell_m": 50,
+  "by_range": {
+    "50": {
+      "pairs": 522833,
+      "profile_samples": 337744017,
+      "mean_pair_km": 32.3,
+      "sampled_pairs": 200000,
+      "sample_seconds": 29.5,
+      "samples_per_second": 4381123,
+      "estimated_full_run_hours": 0.02,
+      "visible_fraction_in_sample": 0.2806,
+      "estimated_visible_lines": 146720
+    },
+    "100": {
+      "pairs": 1756359,
+      "profile_samples": 2236559317,
+      "mean_pair_km": 63.6,
+      "sampled_pairs": 200000,
+      "sample_seconds": 53.6,
+      "samples_per_second": 4754796,
+      "estimated_full_run_hours": 0.13,
+      "visible_fraction_in_sample": 0.1228,
+      "estimated_visible_lines": 215663
+    },
+    "150": {
+      "pairs": 3459140,
+      "profile_samples": 6521764094,
+      "mean_pair_km": 94.2,
+      "sampled_pairs": 200000,
+      "sample_seconds": 77.8,
+      "samples_per_second": 4849750,
+      "estimated_full_run_hours": 0.37,
+      "visible_fraction_in_sample": 0.0671,
+      "estimated_visible_lines": 231987
+    }
+  }
+}

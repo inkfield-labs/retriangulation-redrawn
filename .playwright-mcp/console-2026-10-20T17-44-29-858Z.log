@@ -1,0 +1,5 @@
+[    3580ms] [WARNING] [.WebGL-0x3ae400100400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ http://localhost:8765/index.html?file=region.pmtiles&z=7.3&lon=-4.6&lat=57.65:43
+[    3750ms] [WARNING] [.WebGL-0x3ae400100400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ http://localhost:8765/index.html?file=region.pmtiles&z=7.3&lon=-4.6&lat=57.65:0
+[    3807ms] [WARNING] [.WebGL-0x3ae400100400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels @ http://localhost:8765/index.html?file=region.pmtiles&z=7.3&lon=-4.6&lat=57.65:0
+[    3849ms] [WARNING] [.WebGL-0x3ae400100400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat) @ http://localhost:8765/index.html?file=region.pmtiles&z=7.3&lon=-4.6&lat=57.65:0
+[    3947ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8765/favicon.ico:0
