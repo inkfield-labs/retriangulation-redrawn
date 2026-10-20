@@ -1,0 +1,30 @@
+a_name,b_name,figures,dist_km,clearance_m,obstruction_km_from_a,obstruction_e,obstruction_n,terrain_m,sight_line_m
+Hensbarrow,Bin Down,[4],27.9,-44.8,0.47,200154,57547,355.8,311.9
+Hensbarrow,Carnmenellis,[4],36.8,-35.6,1.97,198063,56412,341.4,310.5
+Frog Hill,Massingham,[5],30.1,-10.41,20.94,581822,311333,79.4,82.1
+Nedging Tye,Puttocks Hill,[5],23.3,-10.17,11.47,595987,259499,81.8,80.9
+Brown Willy,Hensbarrow,[4],27.7,-9.64,27.46,199811,57727,323.9,314.7
+Harrowby,Collyweston,[5],33.0,-9.38,13.86,496912,322094,107.1,115.8
+Maplestead,Dunmow,[5],21.8,-9.33,10.01,574699,228910,91.4,90.2
+Coombe Hill,Hindhead,[5],74.1,-9.26,1.02,489081,208972,265.4,261.3
+Maplestead,Manningtree,[5],25.8,-6.14,18.61,601289,230912,49.2,52.2
+Faxton,Dunstable Down,[5],59.6,-4.95,5.22,482368,270504,138.8,153.2
+Chedburgh,Puttocks Hill,[5],17.7,-3.96,2.72,580404,257970,120.8,119.6
+Nedging Tye,Crown Corner,[5],31.2,-3.87,26.21,621760,266908,63.9,68.9
+Frog Hill,Fransham,[5],20.0,-3.69,16.52,591575,307020,88.8,89.1
+Crimplesham,Swaffham,[5],19.7,-3.37,17.59,581861,308717,74.5,73.7
+Swilland,Manningtree,[5],26.2,-3.08,18.75,611150,236453,40.3,46.7
+Shurland,Wrotham,[5],42.5,-2.91,35.1,566409,162031,191.3,206.1
+Hensbarrow,Dodman,[4],18.2,-2.03,0.32,199689,57221,311.9,310.2
+Woolpit,Frog Hill,[5],31.4,-1.8,18.76,592200,279511,51.8,66.2
+Deerness,Fair Isle,[6],91.9,-1.72,36.26,382118,1033431,0.0,136.0
+Cold Harbour,Harrowby,[5],55.6,-0.93,51.29,497079,339261,117.8,131.8
+Crowborough,Ditchling,[5],25.2,-0.91,0.12,551080,130674,242.0,241.3
+Massingham,Swaffham,[5],11.8,-0.74,9.94,583228,310937,79.9,80.4
+Massingham,Crimplesham,[5],21.6,-0.69,0.47,579161,319790,91.7,91.7
+Nedging Tye,Woolpit,[5],12.8,-0.33,3.42,601347,253079,87.5,89.3
+Col Bheinn,Scaraben,[6],24.1,-0.29,0.17,288578,911118,540.0,540.0
+Chedburgh,Nedging Tye,[5],24.1,-0.2,0.22,578908,255800,128.4,128.6
+Swilland,Crown Corner,[5],17.9,-0.16,12.74,623417,265455,61.6,65.9
+Uppingham,Faxton,[5],23.9,-0.14,0.32,485058,298569,163.9,164.2
+Acre,Cold Harbour,[5],21.0,-0.04,4.42,515156,393260,160.5,165.5

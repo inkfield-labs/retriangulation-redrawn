@@ -1,0 +1,50 @@
+{
+  "box_national_grid": [
+    196296,
+    296296,
+    818378,
+    918378
+  ],
+  "pillars": 144,
+  "pillar_height_source": {
+    "fb": 120,
+    "top": 24
+  },
+  "pairs_le_150km": 10296,
+  "profile_samples_le_150km": 9691316,
+  "seconds_per_k": {
+    "0.13": 2.17,
+    "0.0": 2.12,
+    "0.2": 1.91
+  },
+  "samples_per_second": 4466656,
+  "by_range": {
+    "50": {
+      "pairs": 5874,
+      "visible_k0": 2788,
+      "visible_k013": 2814,
+      "visible_k020": 2830,
+      "primary_pairs": 10,
+      "primary_visible_k013": 10,
+      "primary_observed_in_box": 10
+    },
+    "100": {
+      "pairs": 10133,
+      "visible_k0": 3470,
+      "visible_k013": 3537,
+      "visible_k020": 3579,
+      "primary_pairs": 27,
+      "primary_visible_k013": 23,
+      "primary_observed_in_box": 10
+    },
+    "150": {
+      "pairs": 10296,
+      "visible_k0": 3473,
+      "visible_k013": 3542,
+      "visible_k020": 3585,
+      "primary_pairs": 28,
+      "primary_visible_k013": 23,
+      "primary_observed_in_box": 10
+    }
+  }
+}
