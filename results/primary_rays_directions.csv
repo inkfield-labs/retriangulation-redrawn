@@ -1,0 +1,2346 @@
+figure,pdf_page,from_raw,to_raw,from_pp,to_pp,status,split
+1,286,Bardon Hill,Cold Ashby,PP58,PP76,ok,False
+1,286,Bardon Hill,Charwelton,PP58,PP78,ok,False
+1,286,Bardon Hill,Walton Hill,PP58,PP61,ok,False
+1,286,Bardon Hill,Castle Ring,PP58,PP60,ok,False
+1,286,Beacon Hill,Martinsell,PP15,PP68,ok,False
+1,286,Beacon Hill,Inkpen,PP15,PP33,ok,False
+1,286,Beacon Hill,Butser,PP15,PP9,ok,False
+1,286,Beacon Hill,Dunnose,PP15,PP10,ok,False
+1,286,Beacon Hill,Coringdon,PP15,PP11,ok,False
+1,286,Beacon Hill,Wingreen,PP15,PP17,ok,False
+1,286,Beacon Hill,Bradley Knoll,PP15,PP14,ok,False
+1,286,Beacon Hill,Westbury Down,PP15,PP13,ok,False
+1,286,Bradley Knoll,Wingreen,PP14,PP17,ok,False
+1,286,Bradley Knoll,Bulbarrow,PP14,PP12,ok,False
+1,286,Bradley Knoll,Pen Hill,PP14,PP77,ok,False
+1,286,Bradley Knoll,Westbury Down,PP14,PP13,ok,False
+1,286,Bradley Knoll,Martinsell,PP14,PP68,ok,False
+1,286,Bradley Knoll,Beacon Hill,PP14,PP15,ok,False
+1,286,Broadway Tower,Cleeve Hill,PP91,PP69,ok,False
+1,286,Broadway Tower,Malvern,PP91,PP79,ok,False
+1,286,Broadway Tower,Titterstone Clee,PP91,PP62,ok,False
+1,286,Broadway Tower,Walton Hill,PP91,PP61,ok,False
+1,286,Broadway Tower,Cold Ashby,PP91,PP76,ok,False
+1,286,Broadway Tower,Charwelton,PP91,PP78,ok,False
+1,286,Broadway Tower,White Horse Hill,PP91,PP34,ok,False
+1,286,Bulbarrow,Wingreen,PP12,PP17,ok,False
+1,286,Bulbarrow,Coringdon,PP12,PP11,ok,False
+1,286,Bulbarrow,Gore Hill,PP12,PP37,ok,False
+1,286,Bulbarrow,Pen Hill,PP12,PP77,ok,False
+1,286,Bulbarrow,Bradley Knoll,PP12,PP14,ok,False
+1,286,Butser,Dunnose,PP9,PP10,ok,False
+1,286,Butser,Coringdon,PP9,PP11,ok,False
+1,286,Butser,Wingreen,PP9,PP17,ok,False
+1,286,Butser,Beacon Hill,PP9,PP15,ok,False
+1,286,Butser,Inkpen,PP9,PP33,ok,False
+1,287,Castle Ring,Walton Hill,PP60,PP61,ok,False
+1,287,Castle Ring,Titterstone Clee,PP60,PP62,ok,False
+1,287,Castle Ring,Wrekin,PP60,PP63,ok,False
+1,287,Castle Ring,Bardon Hill,PP60,PP58,ok,False
+1,287,Charwelton,Broadway Tower Malvern,PP78,PP91,ok,True
+1,287,Charwelton,Broadway Tower Malvern,PP78,PP79,ok,True
+1,287,Charwelton,Walton Hill,PP78,PP61,ok,False
+1,287,Charwelton,Bardon Hill,PP78,PP58,ok,False
+1,287,Charwelton,Cold Ashby,PP78,PP76,ok,False
+1,287,Cleeve Hill,Broadway Tower White Horse Hill,PP69,PP91,ok,True
+1,287,Cleeve Hill,Broadway Tower White Horse Hill,PP69,PP34,ok,True
+1,287,Cleeve Hill,Liddington Castle,PP69,PP35,ok,False
+1,287,Cleeve Hill,Peglers Tump,PP69,PP88,ok,False
+1,287,Cleeve Hill,Malvern,PP69,PP79,ok,False
+1,287,Cold Ashby,Charwelton Broadway Tower Bardon Hill,PP76,PP78,ok,True
+1,287,Cold Ashby,Charwelton Broadway Tower Bardon Hill,PP76,PP91,ok,True
+1,287,Cold Ashby,Charwelton Broadway Tower Bardon Hill,PP76,PP58,ok,True
+1,287,Coringdon,Bulbarrow,PP11,PP12,ok,False
+1,287,Coringdon,Wingreen,PP11,PP17,ok,False
+1,287,Coringdon,Beacon Hill,PP11,PP15,ok,False
+1,287,Coringdon,Butser,PP11,PP9,ok,False
+1,287,Coringdon,Dunnose,PP11,PP10,ok,False
+1,287,Coringdon,Gore Hill,PP11,PP37,ok,False
+1,287,Coringdon,Butser,PP11,PP9,ok,False
+1,287,Dunnose,Coringdon,PP10,PP11,ok,False
+1,287,Dunnose,Wingreen,PP10,PP17,ok,False
+1,287,Dunnose,Beacon Hill,PP10,PP15,ok,False
+1,287,Dunnose,Mynydd Maen,PP10,PP73,ok,False
+1,287,Gwynydd Bach,Radnor Forest,PP72,PP71,ok,False
+1,287,Gwynydd Bach,Titterstone Clee Malvern,PP72,PP62,ok,True
+1,287,Gwynydd Bach,Titterstone Clee Malvern,PP72,PP79,ok,True
+1,287,Gwynydd Bach,Peglers Tump,PP72,PP88,ok,False
+1,287,Gwynydd Bach,White Horse Hill,PP72,PP34,ok,False
+1,287,Inkpen,Butser,PP33,PP9,ok,False
+1,287,Inkpen,Beacon Hill,PP33,PP15,ok,False
+1,287,Inkpen,Martinsell Liddington Castle,PP33,PP68,ok,True
+1,287,Inkpen,Martinsell Liddington Castle,PP33,PP35,ok,True
+1,288,Malvern,Walton Hill,PP79,PP61,ok,False
+1,288,Malvern,Charwelton Broadway Tower,PP79,PP78,ok,True
+1,288,Malvern,Charwelton Broadway Tower,PP79,PP91,ok,True
+1,288,Malvern,Cleeve Hill,PP79,PP69,ok,False
+1,288,Malvern,Peglers Tump,PP79,PP88,ok,False
+1,288,Malvern,Mynydd Maen,PP79,PP73,ok,False
+1,288,Malvern,Gwynydd Bach,PP79,PP72,ok,False
+1,288,Malvern,Radnor Forest,PP79,PP71,ok,False
+1,288,Martinsell,Titterstone Clee Inkpen Beacon Hill,PP68,PP62,ok,True
+1,288,Martinsell,Titterstone Clee Inkpen Beacon Hill,PP68,PP33,ok,True
+1,288,Martinsell,Titterstone Clee Inkpen Beacon Hill,PP68,PP15,ok,True
+1,288,Martinsell,Wingreen,PP68,PP17,ok,False
+1,288,Martinsell,Bradley Knoll,PP68,PP14,ok,False
+1,288,Martinsell,Pen Hill,PP68,PP77,ok,False
+1,288,Martinsell,Peglers Tump,PP68,PP88,ok,False
+1,288,Martinsell,Liddington Castle,PP68,PP35,ok,False
+1,288,Martinsell,White Horse Hill,PP68,PP34,ok,False
+1,288,Mynydd Maen,Gwynydd Bach,PP73,PP72,ok,False
+1,288,Mynydd Maen,Malvern,PP73,PP79,ok,False
+1,288,Mynydd Maen,Peglers Tump,PP73,PP88,ok,False
+1,288,Mynydd Maen,Pen Hill,PP73,PP77,ok,False
+1,288,Peglers Tump,Cleeve Hill,PP88,PP69,ok,False
+1,288,Peglers Tump,White Horse Hill,PP88,PP34,ok,False
+1,288,Peglers Tump,Liddington Castle,PP88,PP35,ok,False
+1,288,Peglers Tump,Martinsell,PP88,PP68,ok,False
+1,288,Peglers Tump,Pen Hill,PP88,PP77,ok,False
+1,288,Peglers Tump,Mynydd Maen,PP88,PP73,ok,False
+1,288,Peglers Tump,Gwynydd Bach,PP88,PP72,ok,False
+1,288,Peglers Tump,Malvern,PP88,PP79,ok,False
+1,288,Pen Hill,Bradley Knoll,PP77,PP14,ok,False
+1,288,Pen Hill,Bulbarrow,PP77,PP12,ok,False
+1,288,Pen Hill,Gore Hill,PP77,PP37,ok,False
+1,288,Pen Hill,Mynydd Maen,PP77,PP73,ok,False
+1,288,Pen Hill,Peglers Tump,PP77,PP88,ok,False
+1,288,Pen Hill,Martinsell Westbury Down,PP77,PP68,ok,True
+1,288,Pen Hill,Martinsell Westbury Down,PP77,PP13,ok,True
+1,288,Titterstone Clee,Wrekin,PP62,PP63,ok,False
+1,288,Titterstone Clee,Castle Ring,PP62,PP60,ok,False
+1,288,Titterstone Clee,Walton Hill,PP62,PP61,ok,False
+1,288,Titterstone Clee,Broadway Tower Malvern,PP62,PP91,ok,True
+1,288,Titterstone Clee,Broadway Tower Malvern,PP62,PP79,ok,True
+1,288,Titterstone Clee,Gwynydd Bach,PP62,PP72,ok,False
+1,288,Titterstone Clee,Radnor Forest,PP62,PP71,ok,False
+1,289,Walton Hill,Wrekin,PP61,PP63,ok,False
+1,289,Walton Hill,Castle Ring,PP61,PP60,ok,False
+1,289,Walton Hill,Bardon Hill,PP61,PP58,ok,False
+1,289,Walton Hill,Cold Ashby,PP61,PP76,ok,False
+1,289,Walton Hill,Charwelton,PP61,PP78,ok,False
+1,289,Walton Hill,Broadway Tower,PP61,PP91,ok,False
+1,289,Walton Hill,Malvern,PP61,PP79,ok,False
+1,289,Walton Hill,Titterstone Clee,PP61,PP62,ok,False
+1,289,White Horse Hill,Martinsell Liddington Castle,PP34,PP68,ok,True
+1,289,White Horse Hill,Martinsell Liddington Castle,PP34,PP35,ok,True
+1,289,White Horse Hill,Peglers Tump,PP34,PP88,ok,False
+1,289,White Horse Hill,Cleeve Hill,PP34,PP69,ok,False
+1,289,White Horse Hill,Broadway Tower,PP34,PP91,ok,False
+1,289,White Horse Hill,Inkpen,PP34,PP33,ok,False
+1,289,Wingreen,Bulbarrow,PP17,PP12,ok,False
+1,289,Wingreen,Gore Hill,PP17,PP37,ok,False
+1,289,Wingreen,Bradley Knoll,PP17,PP14,ok,False
+1,289,Wingreen,Martinsell,PP17,PP68,ok,False
+1,289,Wingreen,Beacon Hill,PP17,PP15,ok,False
+1,289,Wingreen,Butser,PP17,PP9,ok,False
+1,289,Wingreen,Dunnose,PP17,PP10,ok,False
+1,289,Wingreen,Coringdon,PP17,PP11,ok,False
+1,289,Wrekin,Castle Ring,PP63,PP60,ok,False
+1,289,Wrekin,Walton Hill,PP63,PP61,ok,False
+1,289,Wrekin,Titterstone Clee,PP63,PP62,ok,False
+2,292,Acre,Lincoln Minster,PP132,PP80,ok,False
+2,292,Acre,Clifton,PP132,PP53,ok,False
+2,292,Acre,Normanby Gashldr,PP132,PP83,ok,False
+2,292,Acre,Cave Wold,PP132,PP131,ok,False
+2,292,Alport Heights,Harland South,PP56,PP52,ok,False
+2,292,Alport Heights,Loath Hill,PP56,PP54,ok,False
+2,292,Alport Heights,Bardon Hill,PP56,PP58,ok,False
+2,292,Alport Heights,Weaver Hill,PP56,PP51,ok,False
+2,292,Alport Heights,Blake Mere,PP56,PP29,ok,False
+2,292,Bardon Hill,Walton Hill,PP58,PP61,ok,False
+2,292,Bardon Hill,Castle Ring,PP58,PP60,ok,False
+2,292,Bardon Hill,Weaver Hill Alport Heights Loath Hill,PP58,PP51,ok,True
+2,292,Bardon Hill,Weaver Hill Alport Heights Loath Hill,PP58,PP56,ok,True
+2,292,Bardon Hill,Weaver Hill Alport Heights Loath Hill,PP58,PP54,ok,True
+2,292,Bardon Hill,Belvoir Castle,PP58,PP81,ok,False
+2,292,Bardon Hill,Weaver Hill,PP58,PP51,ok,False
+2,292,Blake Mere,HanchurchWtrTwr,PP29,,unmatched,False
+2,292,Blake Mere,Delamere,PP29,PP30,ok,False
+2,292,Blake Mere,The Edge,PP29,PP27,ok,False
+2,292,Blake Mere,Margery,PP29,PP24,ok,False
+2,292,Blake Mere,Harland South,PP29,PP52,ok,False
+2,292,Blake Mere,Alport Heights Hambleton Down,PP29,PP56,ok,True
+2,292,Blake Mere,Alport Heights Hambleton Down,PP29,PP65,ok,True
+2,292,Botton Head,Great Whernside,PP28,PP7,ok,False
+2,292,Botton Head,Water Crag,PP28,PP18,ok,False
+2,292,Botton Head,Royal Oak,PP28,PP25,ok,False
+2,292,Botton Head,Collier Law Warden Law,PP28,PP23,ok,True
+2,292,Botton Head,Collier Law Warden Law,PP28,PP142,ok,True
+2,292,Botton Head,Leavening Brow,PP28,PP8,ok,False
+2,292,Botton Head,York Minster,PP28,PP22,ok,False
+2,293,Boulsworth,Rombalds Moor,PP16,PP70,ok,False
+2,293,Boulsworth,Holme Moss,PP16,PP26,ok,False
+2,293,Boulsworth,The Edge,PP16,PP27,ok,False
+2,293,Boulsworth,Rivington,PP16,PP20,ok,False
+2,293,Boulsworth,Weeton Res'r,PP16,PP164,ok,False
+2,293,Boulsworth,Mallowdale Pike,PP16,PP4,ok,False
+2,293,Boulsworth,Little Whernside,PP16,PP6,ok,False
+2,293,Boulsworth,Great Whernside,PP16,PP7,ok,False
+2,293,Boulsworth,Walton Hill,PP16,PP61,ok,False
+2,293,Castle Ring,Titterstone Clee,PP60,PP62,ok,False
+2,293,Castle Ring,Wrekin,PP60,PP63,ok,False
+2,293,Castle Ring,Hanchurch Wtr Twr,PP60,PP97,ok,False
+2,293,Castle Ring,Weaver Hill,PP60,PP51,ok,False
+2,293,Castle Ring,Bardon Hill,PP60,PP58,ok,False
+2,293,Cave Wold,Normanby Gashldr,PP131,PP83,ok,False
+2,293,Cave Wold,Clifton,PP131,PP53,ok,False
+2,293,Cave Wold,York Minster,PP131,PP22,ok,False
+2,293,Cave Wold,Acre,PP131,PP132,ok,False
+2,293,Clifton,Harland South,PP53,PP52,ok,False
+2,293,Clifton,Margery,PP53,PP24,ok,False
+2,293,Clifton,York Minster,PP53,PP22,ok,False
+2,293,Clifton,Cave Wold,PP53,PP131,ok,False
+2,293,Clifton,Normanby Gashldr,PP53,PP83,ok,False
+2,293,Clifton,Acre,PP53,PP132,ok,False
+2,293,Collier Law,Lincoln Minster Royal Oak,PP23,PP80,ok,True
+2,293,Collier Law,Lincoln Minster Royal Oak,PP23,PP25,ok,True
+2,293,Collier Law,Water Crag,PP23,PP18,ok,False
+2,293,Collier Law,Cross Fell,PP23,PP19,ok,False
+2,293,Collier Law,Warden Law,PP23,PP142,ok,False
+2,293,Collier Law,Botton Head,PP23,PP28,ok,False
+2,293,Collier Law,Cold Fell Pike,PP23,PP99,ok,False
+2,293,Cross Fell,Collier Law Water Crag,PP19,PP23,ok,True
+2,293,Cross Fell,Collier Law Water Crag,PP19,PP18,ok,True
+2,293,Cross Fell,High Street,PP19,PP5,ok,False
+2,293,Cross Fell,Skiddaw,PP19,PP3,ok,False
+2,293,Cross Fell,Cader Berwyn,PP19,PP87,ok,False
+2,293,Delamere,Moel Fammau,PP30,PP86,ok,False
+2,293,Delamere,Rivington,PP30,PP20,ok,False
+2,293,Delamere,Holme Moss,PP30,PP26,ok,False
+2,293,Delamere,The Edge,PP30,PP27,ok,False
+2,293,Delamere,Blake Mere,PP30,PP29,ok,False
+2,293,Delamere,Hanchurch Wtr Twr,PP30,PP97,ok,False
+2,293,Delamere,Wrekin,PP30,PP63,ok,False
+2,294,Great Whernsidc,Rombalds Moor,PP7,PP70,ok,False
+2,294,Great Whernsidc,Boulsworth,PP7,PP16,ok,False
+2,294,Great Whernsidc,Mallowdale Pike,PP7,PP4,ok,False
+2,294,Great Whernsidc,Little Whernside,PP7,PP6,ok,False
+2,294,Great Whernsidc,Water Crag,PP7,PP18,ok,False
+2,294,Great Whernsidc,Botton Head,PP7,PP28,ok,False
+2,294,Great Whernsidc,Hambleton Down,PP7,PP65,ok,False
+2,294,Great Whernsidc,Leavening Brow,PP7,PP8,ok,False
+2,294,Great Whernsidc,York Minster,PP7,PP22,ok,False
+2,294,Hanchurch Wtr Twr,Wrekin,PP97,PP63,ok,False
+2,294,Hanchurch Wtr Twr,Stiperstones,PP97,PP64,ok,False
+2,294,Hanchurch Wtr Twr,Cader Berwyn,PP97,PP87,ok,False
+2,294,Hanchurch Wtr Twr,Moel Fammau,PP97,PP86,ok,False
+2,294,Hanchurch Wtr Twr,Delamere,PP97,PP30,ok,False
+2,294,Hanchurch Wtr Twr,Blake Mere,PP97,PP29,ok,False
+2,294,Hanchurch Wtr Twr,Weaver Hill,PP97,PP51,ok,False
+2,294,Hanchurch Wtr Twr,Castle Ring,PP97,PP60,ok,False
+2,294,Hanchurch Wtr Twr,Walton Hill,PP97,PP61,ok,False
+2,294,Hanchurch Wtr Twr,Titterstone Clee,PP97,PP62,ok,False
+2,294,Harland South,Alport Heights Blake Mere,PP52,PP56,ok,True
+2,294,Harland South,Alport Heights Blake Mere,PP52,PP29,ok,True
+2,294,Harland South,Margery,PP52,PP24,ok,False
+2,294,Harland South,Clifton,PP52,PP53,ok,False
+2,294,Harland South,Lincoln Minster Thoresby Wtr Twr,PP52,PP80,ok,True
+2,294,Harland South,Lincoln Minster Thoresby Wtr Twr,PP52,PP154,ok,True
+2,294,Harland South,Loath Hill,PP52,PP54,ok,False
+2,294,Harland South,Skiddaw,PP52,PP3,ok,False
+2,294,High Street,Cold Fell Pike,PP5,PP99,ok,False
+2,294,High Street,Cross Fell Water Crag,PP5,PP19,ok,True
+2,294,High Street,Cross Fell Water Crag,PP5,PP18,ok,True
+2,294,High Street,Little Whernside,PP5,PP6,ok,False
+2,294,High Street,Mallowdale Pike,PP5,PP4,ok,False
+2,294,High Street,Black Combe The Edge,PP5,PP2,ok,True
+2,294,High Street,Black Combe The Edge,PP5,PP27,ok,True
+2,294,Holme Moss,Delamere,PP26,PP30,ok,False
+2,294,Holme Moss,Rivington,PP26,PP20,ok,False
+2,294,Holme Moss,Boulsworth,PP26,PP16,ok,False
+2,294,Holme Moss,Rombalds Moor,PP26,PP70,ok,False
+2,294,Holme Moss,Upton Beacon,PP26,PP152,ok,False
+2,294,Holme Moss,Margery,PP26,PP24,ok,False
+2,294,Holme Moss,Loath Hill,PP26,PP54,ok,False
+2,294,Lincoln Minster,Thoresby Wtr Twr,PP80,PP154,ok,False
+2,294,Lincoln Minster,Harland South,PP80,PP52,ok,False
+2,294,Lincoln Minster,Clifton,PP80,PP53,ok,False
+2,294,Lincoln Minster,Normanby Gashldr,PP80,PP83,ok,False
+2,294,Lincoln Minster,Acre,PP80,PP132,ok,False
+2,294,Lincoln Minster,Belvoir Castle,PP80,PP81,ok,False
+2,295,Little Whernside,Mallowdale Pike,PP6,PP4,ok,False
+2,295,Little Whernside,Black Combe High Street,PP6,PP2,ok,True
+2,295,Little Whernside,Black Combe High Street,PP6,PP5,ok,True
+2,295,Little Whernside,Water Crag,PP6,PP18,ok,False
+2,295,Little Whernside,Great Whernside,PP6,PP7,ok,False
+2,295,Little Whernside,Boulsworth,PP6,PP16,ok,False
+2,295,Loath Hill,Belvoir Castle,PP54,PP81,ok,False
+2,295,Loath Hill,Bardon Hill,PP54,PP58,ok,False
+2,295,Loath Hill,Alport Heights Harland South,PP54,PP56,ok,True
+2,295,Loath Hill,Alport Heights Harland South,PP54,PP52,ok,True
+2,295,Loath Hill,Thoresby Wtr Twr,PP54,PP154,ok,False
+2,295,Mallowdale Pike,Lincoln Minster Little Whernside,PP4,PP80,ok,True
+2,295,Mallowdale Pike,Lincoln Minster Little Whernside,PP4,PP6,ok,True
+2,295,Mallowdale Pike,Great Whernside,PP4,PP7,ok,False
+2,295,Mallowdale Pike,Boulsworth,PP4,PP16,ok,False
+2,295,Mallowdale Pike,Rivington,PP4,PP20,ok,False
+2,295,Mallowdale Pike,Weeton Res'r,PP4,PP164,ok,False
+2,295,Mallowdale Pike,Black Combe High Street,PP4,PP2,ok,True
+2,295,Mallowdale Pike,Black Combe High Street,PP4,PP5,ok,True
+2,295,Margery,Holme Moss,PP24,PP26,ok,False
+2,295,Margery,Rombalds Moor,PP24,PP70,ok,False
+2,295,Margery,Upton Beacon,PP24,PP152,ok,False
+2,295,Margery,Clifton,PP24,PP53,ok,False
+2,295,Margery,Harland South,PP24,PP52,ok,False
+2,295,Margery,Blake Mere,PP24,PP29,ok,False
+2,295,Margery,The Edge,PP24,PP27,ok,False
+2,295,Rivington,Boulsworth,PP20,PP16,ok,False
+2,295,Rivington,Holme Moss,PP20,PP26,ok,False
+2,295,Rivington,The Edge,PP20,PP27,ok,False
+2,295,Rivington,Delamere,PP20,PP30,ok,False
+2,295,Rivington,Moel Fammau,PP20,PP86,ok,False
+2,295,Rivington,Weeton Res'r,PP20,PP164,ok,False
+2,295,Rivington,Mallowdale Pike,PP20,PP4,ok,False
+2,295,Royal Oak,Collier Law Warden Law,PP25,PP23,ok,True
+2,295,Royal Oak,Collier Law Warden Law,PP25,PP142,ok,True
+2,295,Royal Oak,Botton Head,PP25,PP28,ok,False
+2,295,Royal Oak,Water Crag,PP25,PP18,ok,False
+2,295,Rombalds Moor,Boulsworth,PP70,PP16,ok,False
+2,295,Rombalds Moor,Great Whernside,PP70,PP7,ok,False
+2,295,Rombalds Moor,York Minster,PP70,PP22,ok,False
+2,295,Rombalds Moor,Upton Beacon,PP70,PP152,ok,False
+2,295,Rombalds Moor,Margery,PP70,PP24,ok,False
+2,295,Rombalds Moor,Holme Moss,PP70,PP26,ok,False
+2,296,Skiddaw,Cold Fell Pike,PP3,PP99,ok,False
+2,296,Skiddaw,Cross Fell High Street,PP3,PP19,ok,True
+2,296,Skiddaw,Cross Fell High Street,PP3,PP5,ok,True
+2,296,The Edge,Black Combe Holme Moss,PP27,PP2,ok,True
+2,296,The Edge,Black Combe Holme Moss,PP27,PP26,ok,True
+2,296,The Edge,Margery,PP27,PP24,ok,False
+2,296,The Edge,Blake Mere,PP27,PP29,ok,False
+2,296,The Edge,Delamere,PP27,PP30,ok,False
+2,296,The Edge,Rivington,PP27,PP20,ok,False
+2,296,The Edge,Boulsworth,PP27,PP16,ok,False
+2,296,Titterstone Clee,Wrekin,PP62,PP63,ok,False
+2,296,Titterstone Clee,Hanchurch Wtr Twr,PP62,PP97,ok,False
+2,296,Titterstone Clee,Castle Ring,PP62,PP60,ok,False
+2,296,Titterstone Clee,Walton Hill,PP62,PP61,ok,False
+2,296,Titterstone Clee,Stiperstones,PP62,PP64,ok,False
+2,296,Upton Beacon,Margery,PP152,PP24,ok,False
+2,296,Upton Beacon,Holme Moss,PP152,PP26,ok,False
+2,296,Upton Beacon,Rombalds Moor,PP152,PP70,ok,False
+2,296,Upton Beacon,York Minster,PP152,PP22,ok,False
+2,296,Walton Hill,Wrekin,PP61,PP63,ok,False
+2,296,Walton Hill,Hanchurch Wtr Twr,PP61,PP97,ok,False
+2,296,Walton Hill,Castle Ring,PP61,PP60,ok,False
+2,296,Walton Hill,Bardon Hill,PP61,PP58,ok,False
+2,296,Walton Hill,Titterstone Clee,PP61,PP62,ok,False
+2,296,Water Crag,Royal Oak,PP18,PP25,ok,False
+2,296,Water Crag,Botton Head,PP18,PP28,ok,False
+2,296,Water Crag,Hambleton Down,PP18,PP65,ok,False
+2,296,Water Crag,Great Whernside,PP18,PP7,ok,False
+2,296,Water Crag,Little Whernside,PP18,PP6,ok,False
+2,296,Water Crag,High Street,PP18,PP5,ok,False
+2,296,Weaver Hill,Cross Fell Collier Law Castle Ring,PP51,PP19,ok,True
+2,296,Weaver Hill,Cross Fell Collier Law Castle Ring,PP51,PP23,ok,True
+2,296,Weaver Hill,Cross Fell Collier Law Castle Ring,PP51,PP60,ok,True
+2,296,Weaver Hill,Wrekin,PP51,PP63,ok,False
+2,296,Weaver Hill,Hanchurch Wtr Twr,PP51,PP97,ok,False
+2,296,Weaver Hill,Blake Mere,PP51,PP29,ok,False
+2,296,Weaver Hill,Alport Heights Bardon Hill,PP51,PP56,ok,True
+2,296,Weaver Hill,Alport Heights Bardon Hill,PP51,PP58,ok,True
+2,297,Wrekin,Stiperstones,PP63,PP64,ok,False
+2,297,Wrekin,Cader Berwyn,PP63,PP87,ok,False
+2,297,Wrekin CD),Delamere,PP63,PP30,ok,False
+2,297,Wrekin CD),Hanchurch Wtr Twr,PP63,PP97,ok,False
+2,297,Wrekin CD),Weaver Hill,PP63,PP51,ok,False
+2,297,Wrekin CD),Castle Ring,PP63,PP60,ok,False
+2,297,Wrekin CD),Walton Hill,PP63,PP61,ok,False
+2,297,Wrekin CD),Titterstone Clee,PP63,PP62,ok,False
+2,297,York Minster,Hambleton Down,PP22,PP65,ok,False
+2,297,York Minster,Botton Head,PP22,PP28,ok,False
+2,297,York Minster,Leavening Brow,PP22,PP8,ok,False
+2,297,York Minster,Cave Wold,PP22,PP131,ok,False
+2,297,York Minster,Normanby Gashldr,PP22,PP83,ok,False
+2,297,York Minster,Clifton,PP22,PP53,ok,False
+2,297,York Minster,Upton Beacon Rombalds Moor,PP22,PP152,ok,True
+2,297,York Minster,Upton Beacon Rombalds Moor,PP22,PP70,ok,True
+2,297,York Minster,Great Wheraside,PP22,PP7,ok,False
+3,300,Ben Aigan,Knock,PP348,PP339,ok,False
+3,300,Ben Aigan,Bennachie,PP348,PP341,ok,False
+3,300,Ben Aigan,Corryhabbie,PP348,PP342,ok,False
+3,300,Ben Aigan,Findlays Seat,PP348,PP340,ok,False
+3,300,Ben Aigan,Lossiemouth Base West Terminal,PP348,PP351,ok,False
+3,300,Ben Aigan,Lossiemouth Base East Terminal,PP348,PP350,ok,False
+3,300,Ben Aigan,Bin of Cullen,PP348,PP349,ok,False
+3,300,Ben Cleugh,West Lomond,PP307,PP334,ok,False
+3,300,Ben Cleugh,Scald Law,PP307,PP345,ok,False
+3,300,Ben Cleugh,Black Mount,PP307,PP352,ok,False
+3,300,Ben Cleugh,Corse Hill,PP307,PP329,ok,False
+3,300,Ben Cleugh,Earls Seat,PP307,PP327,ok,False
+3,300,Ben Cleugh,Ben Lomond,PP307,PP336,ok,False
+3,300,Ben Cleugh,Ben Lawers,PP307,PP315,ok,False
+3,300,Ben Cleugh,Meall Dearg,PP307,PP305,ok,False
+3,300,Ben Cleugh,Kings Seat,PP307,PP310,ok,False
+3,300,Ben Cleugh,Craigowl,PP307,PP353,ok,False
+3,300,Beneraird,Cairn Pat,PP363,PP360,ok,False
+3,300,Beneraird,Cnoc Moy Ailsa Craig Lighthouse,PP363,,unmatched,False
+3,300,Beneraird,Goat Fell Brown Carrick,PP363,PP309,ok,True
+3,300,Beneraird,Goat Fell Brown Carrick,PP363,PP346,ok,True
+3,300,Beneraird,Merrick,PP363,PP301,ok,False
+3,300,Beneraird,Cairnsmore of Fleet,PP363,PP343,ok,False
+3,300,Beneraird,Carleton Fell,PP363,PP362,ok,False
+3,300,Beneraird,Inshanks,PP363,PP361,ok,False
+3,300,Ben Lawers,Meall Dearg,PP315,PP305,ok,False
+3,300,Ben Lawers,Ben Cleugh,PP315,PP307,ok,False
+3,300,Ben Lawers,Ben Lomond,PP315,PP336,ok,False
+3,300,Ben Lawers,Ben Alder,PP315,PP335,ok,False
+3,300,Ben Lawers,Cam Gower,PP315,PP332,ok,False
+3,301,Ben Lomond,Hill of Stake,PP336,PP319,ok,False
+3,301,Ben Lomond,Ben Lawers,PP336,PP315,ok,False
+3,301,Ben Lomond,Ben Cleugh,PP336,PP307,ok,False
+3,301,Ben Lomond,Earls Seat,PP336,PP327,ok,False
+3,301,Ben Macdhui,Glas Maol,PP302,PP322,ok,False
+3,301,Ben Macdhui,Cam Gower,PP302,PP332,ok,False
+3,301,Ben Macdhui,Ben Alder,PP302,PP335,ok,False
+3,301,Ben Macdhui,Beinn Bhreac Mhor,PP302,PP356,ok,False
+3,301,Ben Macdhui,Cam nan-tri- Corryhabbie,PP302,PP325,ok,True
+3,301,Ben Macdhui,Cam nan-tri- Corryhabbie,PP302,PP342,ok,True
+3,301,Ben Macdhui,Mount Battock,PP302,PP304,ok,False
+3,301,Bennachie,Brimmond,PP341,PP316,ok,False
+3,301,Bennachie,Trusta,PP341,PP306,ok,False
+3,301,Bennachie,Mount Battock,PP341,PP304,ok,False
+3,301,Bennachie,Corryhabbie,PP341,PP342,ok,False
+3,301,Bennachie,Ben Aigan,PP341,PP348,ok,False
+3,301,Bennachie,Knock,PP341,PP339,ok,False
+3,301,Bennachie,Mormond,PP341,PP338,ok,False
+3,301,Bin of Cullen,Knock,PP349,PP339,ok,False
+3,301,Bin of Cullen,Corryhabbie,PP349,PP342,ok,False
+3,301,Bin of Cullen,Ben Aigan,PP349,PP348,ok,False
+3,301,Bin of Cullen,Findlays Seat,PP349,PP340,ok,False
+3,301,Bin of Cullen,Cutties Hillock East,PP349,PP357,ok,False
+3,301,Bin of Cullen,Lossiemouth Base East Terminal,PP349,PP350,ok,False
+3,301,Bin of Cullen,Lossiemouth Base West Terminal,PP349,PP351,ok,False
+3,301,Black Combe,Rottington,PP2,PP1,ok,False
+3,301,Black Combe,Skiddaw,PP2,PP3,ok,False
+3,301,Black Combe,Sea Fell,PP2,PP92,ok,False
+3,301,Black Combe,High Street,PP2,PP5,ok,False
+3,301,Black Combe,Little Whernside,PP2,PP6,ok,False
+3,301,Black Combe,Mallowdale Pike,PP2,PP4,ok,False
+3,301,Black Combe,Weeton Reservoir,PP2,PP164,ok,False
+3,301,Black Mount,Scald Law,PP352,PP345,ok,False
+3,301,Black Mount,Sayers Law,PP352,PP333,ok,False
+3,301,Black Mount,Dunrig,PP352,PP313,ok,False
+3,301,Black Mount,Hart Fell,PP352,PP320,ok,False
+3,301,Black Mount,Tinto,PP352,PP318,ok,False
+3,301,Black Mount,Cairn Table,PP352,PP311,ok,False
+3,301,Black Mount,Corse Hill,PP352,PP329,ok,False
+3,301,Black Mount,Earls Seat,PP352,PP327,ok,False
+3,302,Botton Head,Hambleton Down,PP28,PP65,ok,False
+3,302,Botton Head,Great Whernside,PP28,PP7,ok,False
+3,302,Botton Head,Royal Oak,PP28,PP25,ok,False
+3,302,Botton Head,Warden Law,PP28,PP142,ok,False
+3,302,Botton Head,Easington,PP28,PP55,ok,False
+3,302,Botton Head,Loose Howe,PP28,PP44,ok,False
+3,302,Botton Head,Leavening Brow,PP28,PP8,ok,False
+3,302,Botton Head,York Minster,PP28,PP22,ok,False
+3,302,Boulsworth,Rivington,PP16,PP20,ok,False
+3,302,Boulsworth,Weeton Reservoir,PP16,PP164,ok,False
+3,302,Boulsworth,Mallowdale Pike,PP16,PP4,ok,False
+3,302,Brimmond,Bennachie,PP316,PP341,ok,False
+3,302,Brimmond,Mormond,PP316,PP338,ok,False
+3,302,Brimmond,Trusta,PP316,PP306,ok,False
+3,302,Brimmond,Mount Battock,PP316,PP304,ok,False
+3,302,Cairn Pat,Inshanks,PP360,PP361,ok,False
+3,302,Cairn Pat,Cnoc Moy,PP360,PP365,ok,False
+3,302,Cairn Pat,Goat Fell,PP360,PP309,ok,False
+3,302,Cairn Pat,Ailsa Craig Lighthouse,PP360,,unmatched,False
+3,302,Cairn Pat,Beneraird,PP360,PP363,ok,False
+3,302,Cairn Pat,Merrick,PP360,PP301,ok,False
+3,302,Cairn Pat,Cairnsmore of Fleet,PP360,PP343,ok,False
+3,302,Cairn Pat,Carleton Fell,PP360,PP362,ok,False
+3,302,Cairnsmore of Deugh,Cairnsmore of Fleet,PP328,PP343,ok,False
+3,302,Cairnsmore of Deugh,Merrick,PP328,PP301,ok,False
+3,302,Cairnsmore of Deugh,Brown Carrick,PP328,PP346,ok,False
+3,302,Cairnsmore of Deugh,Corse Hill,PP328,PP329,ok,False
+3,302,Cairnsmore of Deugh,Cairn Table,PP328,PP311,ok,False
+3,302,Cairnsmore of Deugh,Tinto,PP328,PP318,ok,False
+3,302,Cairnsmore of Deugh,Hart Fell,PP328,PP320,ok,False
+3,302,Cairnsmore of Deugh,CrifTell,PP328,PP96,ok,False
+3,302,Cairnsmore of Deugh,Carleton Fell,PP328,PP362,ok,False
+3,302,Cairnsmore of Fleet,Cairn Pat,PP343,PP360,ok,False
+3,302,Cairnsmore of Fleet,Beneraird,PP343,PP363,ok,False
+3,302,Cairnsmore of Fleet,Merrick,PP343,PP301,ok,False
+3,302,Cairnsmore of Fleet,Cairnsmore of Deugh,PP343,PP328,ok,False
+3,302,Cairnsmore of Fleet,Criffell,PP343,PP96,ok,False
+3,302,Cairnsmore of Fleet,Rottington,PP343,PP1,ok,False
+3,303,Cairn Table,Corse Hill,PP311,PP329,ok,False
+3,303,Cairn Table,Black Mount,PP311,PP352,ok,False
+3,303,Cairn Table,Tinto,PP311,PP318,ok,False
+3,303,Cairn Table,Hart Fell,PP311,PP320,ok,False
+3,303,Cairn Table,Criffell,PP311,PP96,ok,False
+3,303,Cairn Table,Cairnsmore of Deugh,PP311,PP328,ok,False
+3,303,Cairn Table,Merrick,PP311,PP301,ok,False
+3,303,Cairn Table,Brown Carrick,PP311,PP346,ok,False
+3,303,Cam Gower,Kings Seat,PP332,PP310,ok,False
+3,303,Cam Gower,Meall Dearg,PP332,PP305,ok,False
+3,303,Cam Gower,Ben Lawers,PP332,PP315,ok,False
+3,303,Cam Gower,Ben Alder,PP332,PP335,ok,False
+3,303,Cam Gower,Beinn Bhreac Mhor,PP332,PP356,ok,False
+3,303,Cam Gower,Ben Macdhui,PP332,PP302,ok,False
+3,303,Cam Gower,Glas Maol,PP332,PP322,ok,False
+3,303,Cam Gower,Craigowl,PP332,PP353,ok,False
+3,303,Cheviot,Whitelyne Common,PP308,PP93,ok,False
+3,303,Cheviot,Wisp Hill,PP308,PP317,ok,False
+3,303,Cheviot,Dunrig,PP308,PP313,ok,False
+3,303,Cheviot,Sayers Law,PP308,PP333,ok,False
+3,303,Cheviot,Lumsdaine,PP308,PP324,ok,False
+3,303,Cheviot,Greensheen Hill,PP308,PP344,ok,False
+3,303,Collier Law,Royal Oak,PP23,PP25,ok,False
+3,303,Collier Law,Cross Fell,PP23,PP19,ok,False
+3,303,Collier Law,Warden Law,PP23,PP142,ok,False
+3,303,Corryhabbie,Cam nan-tri- Findlays Seat,PP342,PP325,ok,True
+3,303,Corryhabbie,Cam nan-tri- Findlays Seat,PP342,PP340,ok,True
+3,303,Corryhabbie,Ben Aigan,PP342,PP348,ok,False
+3,303,Corryhabbie,Bin of Cullen,PP342,PP349,ok,False
+3,303,Corryhabbie,Knock,PP342,PP339,ok,False
+3,303,Corryhabbie,Bennachie,PP342,PP341,ok,False
+3,303,Corryhabbie,Mount Battock,PP342,PP304,ok,False
+3,303,Corryhabbie,Glas Maol,PP342,PP322,ok,False
+3,303,Corryhabbie,Ben Macdhui,PP342,PP302,ok,False
+3,303,Corryhabbie,Beinn Bhreac Mhor,PP342,PP356,ok,False
+3,304,Corse Hill,Cairn Table,PP329,PP311,ok,False
+3,304,Corse Hill,Cairnsmore of Deugh,PP329,PP328,ok,False
+3,304,Corse Hill,Brown Carrick,PP329,PP346,ok,False
+3,304,Corse Hill,Goat Fell,PP329,PP309,ok,False
+3,304,Corse Hill,Hill of Stake,PP329,PP319,ok,False
+3,304,Corse Hill,Earls Seat,PP329,PP327,ok,False
+3,304,Corse Hill,Ben Cleugh,PP329,PP307,ok,False
+3,304,Corse Hill,Black Mount,PP329,PP352,ok,False
+3,304,Corse Hill,Tinto,PP329,PP318,ok,False
+3,304,Craigowl,Meall Dearg,PP353,PP305,ok,False
+3,304,Craigowl,Cam Gower,PP353,PP332,ok,False
+3,304,Craigowl,Glas Maol,PP353,PP322,ok,False
+3,304,Craigowl,Mount Battock,PP353,PP304,ok,False
+3,304,Craigowl,Wuddy Law,PP353,PP354,ok,False
+3,304,Craigowl,West Hills,PP353,PP312,ok,False
+3,304,Craigowl,Kellie Law,PP353,PP321,ok,False
+3,304,Craigowl,West Lomond,PP353,PP334,ok,False
+3,304,Craigowl,Ben Cleugh,PP353,PP307,ok,False
+3,304,Craigowl,Kings Seat,PP353,PP310,ok,False
+3,304,Criffell,Cairnsmore of Deugh,PP96,PP328,ok,False
+3,304,Criffell,Cairn Table,PP96,PP311,ok,False
+3,304,Criffell,Hart Fell,PP96,PP320,ok,False
+3,304,Criffell,Wisp Hill,PP96,PP317,ok,False
+3,304,Criffell,Whitelyne Common,PP96,PP93,ok,False
+3,304,Criffell,Cold Fell Pike,PP96,PP99,ok,False
+3,304,Criffell,Cross Fell,PP96,PP19,ok,False
+3,304,Criffell,Skiddaw Sea Fell,PP96,PP3,ok,True
+3,304,Criffell,Skiddaw Sea Fell,PP96,PP92,ok,True
+3,304,Criffell,Rottington,PP96,PP1,ok,False
+3,304,Criffell,Cairnsmore of Fleet,PP96,PP343,ok,False
+3,304,Criffell,Merrick,PP96,PP301,ok,False
+3,304,Cross Fell,Cold Fell Pike,PP19,PP99,ok,False
+3,304,Cross Fell,Whitelyne Common,PP19,PP93,ok,False
+3,304,Cross Fell,Collier Law,PP19,PP23,ok,False
+3,304,Cross Fell,High Street,PP19,PP5,ok,False
+3,304,Cross Fell,Skiddaw,PP19,PP3,ok,False
+3,304,Cross Fell,Criffell,PP19,PP96,ok,False
+3,304,Cutties Hillock,Findlays Seat,PP347,PP340,ok,False
+3,304,Cutties Hillock,Lossiemouth Base West Terminal,PP347,PP351,ok,False
+3,305,Cutties Hillock East,Findlays Seat,PP357,PP340,ok,False
+3,305,Cutties Hillock East,Lossiemouth Base West Terminal,PP357,PP351,ok,False
+3,305,Cutties Hillock East,Lossiemouth Base East Terminal,PP357,PP350,ok,False
+3,305,Cutties Hillock East,Bin of Cullen,PP357,PP349,ok,False
+3,305,Cutties Hillock East,Knock,PP357,PP339,ok,False
+3,305,Dunrig,Black Mount,PP313,PP352,ok,False
+3,305,Dunrig,Scald Law,PP313,PP345,ok,False
+3,305,Dunrig,Sayers Law,PP313,PP333,ok,False
+3,305,Dunrig,Cheviot,PP313,PP308,ok,False
+3,305,Dunrig,Wisp Hill,PP313,PP317,ok,False
+3,305,Dunrig,Hart Fell,PP313,PP320,ok,False
+3,305,Earls Seat,Corse Hill,PP327,PP329,ok,False
+3,305,Earls Seat,Hill of Stake,PP327,PP319,ok,False
+3,305,Earls Seat,Ben Lomond,PP327,PP336,ok,False
+3,305,Earls Seat,Ben Cleugh,PP327,PP307,ok,False
+3,305,Earls Seat,Black Mount,PP327,PP352,ok,False
+3,305,Findlays Seat,Knock,PP340,PP339,ok,False
+3,305,Findlays Seat,Ben Aigan,PP340,PP348,ok,False
+3,305,Findlays Seat,Cam nan-tri- Cutties Hillock,PP340,PP325,ok,True
+3,305,Findlays Seat,Cam nan-tri- Cutties Hillock,PP340,PP347,ok,True
+3,305,Findlays Seat,Cutties Hillock East,PP340,PP357,ok,False
+3,305,Findlays Seat,Lossiemouth Base West Terminal,PP340,PP351,ok,False
+3,305,Findlays Seat,Lossiemouth Base East Terminal,PP340,PP350,ok,False
+3,305,Findlays Seat,Bin of Cullen,PP340,PP349,ok,False
+3,305,Findlays Seat,Craigowl,PP340,PP353,ok,False
+3,305,Glas Maol,Kings Seat,PP322,PP310,ok,False
+3,305,Glas Maol,Meall Dearg,PP322,PP305,ok,False
+3,305,Glas Maol,Carn Gower,PP322,PP332,ok,False
+3,305,Glas Maol,Ben Macdhui,PP322,PP302,ok,False
+3,305,Glas Maol,Corryhabbie,PP322,PP342,ok,False
+3,305,Glas Maol,Mount Battock,PP322,PP304,ok,False
+3,305,Glas Maol,Wuddy Law,PP322,PP354,ok,False
+3,305,Glas Maol,West Hills,PP322,PP312,ok,False
+3,305,Glas Maol,Botton Head,PP322,PP28,ok,False
+3,305,Great Whernside,Hambleton Down,PP7,PP65,ok,False
+3,305,Great Whernside,Leavening Brow,PP7,PP8,ok,False
+3,305,Great Whernside,York Minster,PP7,PP22,ok,False
+3,306,Great Whernside,Dunrig,PP7,PP313,ok,False
+3,306,Hart Fell,Wisp Hill,PP320,PP317,ok,False
+3,306,Hart Fell,Criffell,PP320,PP96,ok,False
+3,306,Hart Fell,Cairnsmore of Deugh,PP320,PP328,ok,False
+3,306,Hart Fell,Cairn Table,PP320,PP311,ok,False
+3,306,Hart Fell,Tinto,PP320,PP318,ok,False
+3,306,Hart Fell,Black Mount,PP320,PP352,ok,False
+3,306,Hart Fell,Scald Law,PP320,PP345,ok,False
+3,306,Hart Fell,Sea Fell,PP320,PP92,ok,False
+3,306,High Street,Skiddaw,PP5,PP3,ok,False
+3,306,High Street,Cold Fell Pike,PP5,PP99,ok,False
+3,306,High Street,Cross Fell,PP5,PP19,ok,False
+3,306,High Street,Little Whernside,PP5,PP6,ok,False
+3,306,High Street,Mallowdale Pike,PP5,PP4,ok,False
+3,306,High Street,Black Combe,PP5,PP2,ok,False
+3,306,High Street,Brown Carrick,PP5,PP346,ok,False
+3,306,Hill of Stake,Goat Fell,PP319,PP309,ok,False
+3,306,Hill of Stake,Ben Lomond,PP319,PP336,ok,False
+3,306,Hill of Stake,Earls Seat,PP319,PP327,ok,False
+3,306,Hill of Stake,Corse Hill,PP319,PP329,ok,False
+3,306,Hill of Stake,West Lomond,PP319,PP334,ok,False
+3,306,Kellie Law,Craigowl,PP321,PP353,ok,False
+3,306,Kellie Law,West Hills,PP321,PP312,ok,False
+3,306,Kellie Law,Wuddy Law,PP321,PP354,ok,False
+3,306,Kellie Law,Lumsdaine,PP321,PP324,ok,False
+3,306,Kellie Law,Sayers Law,PP321,PP333,ok,False
+3,306,Kellie Law,Scald Law,PP321,PP345,ok,False
+3,306,Kellie Law,Ben Aigan,PP321,PP348,ok,False
+3,306,Knock,Findlays Seat Bin of Cullen,PP339,PP340,ok,True
+3,306,Knock,Findlays Seat Bin of Cullen,PP339,PP349,ok,True
+3,306,Knock,Mormond,PP339,PP338,ok,False
+3,306,Knock,Bennachie,PP339,PP341,ok,False
+3,306,Knock,Corryhabbie,PP339,PP342,ok,False
+3,306,Knock,Mallowdale Pike,PP339,PP4,ok,False
+3,306,Little Whernside,Black Combe,PP6,PP2,ok,False
+3,306,Little Whernside,High Street,PP6,PP5,ok,False
+3,306,Little Whernside,Easington,PP6,PP55,ok,False
+3,306,Loose Howe,Leavening Brow,PP44,PP8,ok,False
+3,306,Loose Howe,York Minster,PP44,PP22,ok,False
+3,306,Loose Howe,Hambleton Down i,PP44,PP65,ok,False
+3,306,Loose Howe,Botton Head,PP44,PP28,ok,False
+3,307,Lossiemouth Base,Findlays Seat,,PP340,unmatched,False
+3,307,Lossiemouth Base East Terminal,Cutties Hillock East,PP350,PP357,ok,False
+3,307,Lossiemouth Base East Terminal,Lossiemouth Base West Terminal Bin of Cullen,PP350,PP351,ok,True
+3,307,Lossiemouth Base East Terminal,Lossiemouth Base West Terminal Bin of Cullen,PP350,PP349,ok,True
+3,307,Lossiemouth Base East Terminal,Ben Aigan,PP350,PP348,ok,False
+3,307,Lossiemouth Base,Findlays Seat,,PP340,unmatched,False
+3,307,Lossiemouth Base West Terminal,Cutties Hillock East,PP351,PP357,ok,False
+3,307,Lossiemouth Base West Terminal,Cutties Hillock,PP351,PP347,ok,False
+3,307,Lossiemouth Base West Terminal,Bin of Cullen,PP351,PP349,ok,False
+3,307,Lossiemouth Base West Terminal,Knock,PP351,PP339,ok,False
+3,307,Lossiemouth Base West Terminal,Lossiemouth Base East Terminal,PP351,PP350,ok,False
+3,307,Lossiemouth Base West Terminal,Ben Aigan,PP351,PP348,ok,False
+3,307,Lumsdaine,Sayers Law,PP324,PP333,ok,False
+3,307,Lumsdaine,Greensheen Hill,PP324,PP344,ok,False
+3,307,Mallowdale Pike,Little Whernside,PP4,PP6,ok,False
+3,307,Mallowdale Pike,Boulsworth,PP4,PP16,ok,False
+3,307,Mallowdale Pike,Rivington,PP4,PP20,ok,False
+3,307,Mallowdale Pike,Weeton Reservoir,PP4,PP164,ok,False
+3,307,Mallowdale Pike,Black Combe,PP4,PP2,ok,False
+3,307,Mallowdale Pike,High Street,PP4,PP5,ok,False
+3,307,Meall Dearg,West Lomond,PP305,PP334,ok,False
+3,307,Meall Dearg,Ben Cleugh,PP305,PP307,ok,False
+3,307,Meall Dearg,Ben Lawers,PP305,PP315,ok,False
+3,307,Meall Dearg,Carn Gower,PP305,PP332,ok,False
+3,307,Meall Dearg,Glas Maol,PP305,PP322,ok,False
+3,307,Meall Dearg,Craigowl,PP305,PP353,ok,False
+3,307,Meall Dearg,Kings Seat,PP305,PP310,ok,False
+3,307,Merrick,Cairnsmore of Deugh,PP301,PP328,ok,False
+3,307,Merrick,Criffell,PP301,PP96,ok,False
+3,307,Merrick,Cairnsmore of Fleet (AO Carleton Fell,PP301,PP343,ok,True
+3,307,Merrick,Cairnsmore of Fleet (AO Carleton Fell,PP301,PP362,ok,True
+3,307,Merrick,Inshanks,PP301,PP361,ok,False
+3,307,Merrick,Cairn Pat,PP301,PP360,ok,False
+3,307,Merrick,Beneraird,PP301,PP363,ok,False
+3,307,Merrick,Ailsa Craig Lighthouse,PP301,,unmatched,False
+3,307,Merrick,Cnoc Moy,PP301,PP365,ok,False
+3,307,Merrick,Goat Fell,PP301,PP309,ok,False
+3,307,Merrick,Cairn Table,PP301,PP311,ok,False
+3,308,Mount Battock,Craigowl,PP304,PP353,ok,False
+3,308,Mount Battock,Glas Maol,PP304,PP322,ok,False
+3,308,Mount Battock,Ben Macdhui,PP304,PP302,ok,False
+3,308,Mount Battock,Corryhabbie,PP304,PP342,ok,False
+3,308,Mount Battock,Bennachie,PP304,PP341,ok,False
+3,308,Mount Battock,Brimmond,PP304,PP316,ok,False
+3,308,Mount Battock,Trusta,PP304,PP306,ok,False
+3,308,Mount Battock,Wuddy Law,PP304,PP354,ok,False
+3,308,Mount Battock,West Hills,PP304,PP312,ok,False
+3,308,Rivington,Boulsworth,PP20,PP16,ok,False
+3,308,Rivington,Weeton Reservoir,PP20,PP164,ok,False
+3,308,Rivington,Mallowdale Pike,PP20,PP4,ok,False
+3,308,Royal Oak,Collier Law,PP25,PP23,ok,False
+3,308,Royal Oak,Warden Law,PP25,PP142,ok,False
+3,308,Royal Oak,Easington,PP25,PP55,ok,False
+3,308,Royal Oak,Botton Head,PP25,PP28,ok,False
+3,308,Sayers Law,Lumsdaine,PP333,PP324,ok,False
+3,308,Sayers Law,Greensheen Hill Cheviot,PP333,PP344,ok,True
+3,308,Sayers Law,Greensheen Hill Cheviot,PP333,PP308,ok,True
+3,308,Sayers Law,Wisp Hill,PP333,PP317,ok,False
+3,308,Sayers Law,Dunrig,PP333,PP313,ok,False
+3,308,Sayers Law,Black Mount,PP333,PP352,ok,False
+3,308,Sayers Law,Scald Law,PP333,PP345,ok,False
+3,308,Sayers Law,West Lomond,PP333,PP334,ok,False
+3,308,Sayers Law,Kellie Law,PP333,PP321,ok,False
+3,308,Scald Law,Black Mount,PP345,PP352,ok,False
+3,308,Scald Law,Tinto,PP345,PP318,ok,False
+3,308,Scald Law,Ben Cleugh,PP345,PP307,ok,False
+3,308,Scald Law,West Lomond,PP345,PP334,ok,False
+3,308,Scald Law,Kellie Law,PP345,PP321,ok,False
+3,308,Scald Law,Sayers Law,PP345,PP333,ok,False
+3,308,Scald Law,Dunrig,PP345,PP313,ok,False
+3,308,Scald Law,Hart Fell,PP345,PP320,ok,False
+3,308,Skiddaw,Criffell,PP3,PP96,ok,False
+3,308,Skiddaw,Wisp Hill,PP3,PP317,ok,False
+3,308,Skiddaw,Whitelyne Common,PP3,PP93,ok,False
+3,308,Skiddaw,Cold Fell Pike Cross Fell,PP3,PP99,ok,True
+3,308,Skiddaw,Cold Fell Pike Cross Fell,PP3,PP19,ok,True
+3,308,Skiddaw,High Street,PP3,PP5,ok,False
+3,308,Skiddaw,Sea Fell,PP3,PP92,ok,False
+3,308,Skiddaw,Black Combe Rottington,PP3,PP2,ok,True
+3,308,Skiddaw,Black Combe Rottington,PP3,PP1,ok,True
+3,309,Skiddaw,Greensheen Hill Warden Law Collier Law,PP3,PP344,ok,True
+3,309,Skiddaw,Greensheen Hill Warden Law Collier Law,PP3,PP142,ok,True
+3,309,Skiddaw,Greensheen Hill Warden Law Collier Law,PP3,PP23,ok,True
+3,309,Skiddaw,Cross Fell,PP3,PP19,ok,False
+3,309,Skiddaw,Cold Fell Pike,PP3,PP99,ok,False
+3,309,Skiddaw,Whitelyne Common,PP3,PP93,ok,False
+3,309,Trusta,Cheviot Mount Battock,PP306,PP308,ok,True
+3,309,Trusta,Cheviot Mount Battock,PP306,PP304,ok,True
+3,309,Trusta,Bennachie,PP306,PP341,ok,False
+3,309,Trusta,Brimmond,PP306,PP316,ok,False
+3,309,Trusta,Wuddy Law,PP306,PP354,ok,False
+3,309,Warden Law,Royal Oak,PP142,PP25,ok,False
+3,309,Warden Law,Collier Law,PP142,PP23,ok,False
+3,309,Warden Law,Easington Botton Head,PP142,PP55,ok,True
+3,309,Warden Law,Easington Botton Head,PP142,PP28,ok,True
+3,309,West Lomond,Kellie Law,PP334,PP321,ok,False
+3,309,West Lomond,Sayers Law,PP334,PP333,ok,False
+3,309,West Lomond,Scald Law,PP334,PP345,ok,False
+3,309,West Lomond,Ben Cleugh,PP334,PP307,ok,False
+3,309,West Lomond,Meall Dearg,PP334,PP305,ok,False
+3,309,West Lomond,Kings Seat,PP334,PP310,ok,False
+3,309,West Lomond,Craigowl,PP334,PP353,ok,False
+3,309,West Lomond,Cold Fell Pike,PP334,PP99,ok,False
+3,309,Whitelyne Common,Skiddaw Criffell,PP93,PP3,ok,True
+3,309,Whitelyne Common,Skiddaw Criffell,PP93,PP96,ok,True
+3,309,Whitelyne Common,Wisp Hill,PP93,PP317,ok,False
+3,309,Whitelyne Common,Cheviot Cross Fell,PP93,PP308,ok,True
+3,309,Whitelyne Common,Cheviot Cross Fell,PP93,PP19,ok,True
+3,309,Wisp Hill,Hart Fell,PP317,PP320,ok,False
+3,309,Wisp Hill,Dunrig Sayers Law,PP317,PP313,ok,True
+3,309,Wisp Hill,Dunrig Sayers Law,PP317,PP333,ok,True
+3,309,Wisp Hill,Cheviot Whitelyne Common,PP317,PP308,ok,True
+3,309,Wisp Hill,Cheviot Whitelyne Common,PP317,PP93,ok,True
+3,309,Wisp Hill,Skiddaw Criffell,PP317,PP3,ok,True
+3,309,Wisp Hill,Skiddaw Criffell,PP317,PP96,ok,True
+3,309,Wuddy Law,Craigowl,PP354,PP353,ok,False
+3,309,Wuddy Law,Glas Maol,PP354,PP322,ok,False
+3,309,Wuddy Law,Mount Battock,PP354,PP304,ok,False
+3,309,Wuddy Law,Trusta,PP354,PP306,ok,False
+3,309,Wuddy Law,Kellie Law,PP354,PP321,ok,False
+3,309,Wuddy Law,West Hills,PP354,PP312,ok,False
+3,310,York Minster,Hambleton Down,PP22,PP65,ok,False
+3,310,York Minster,Botton Head,PP22,PP28,ok,False
+3,310,York Minster,Loose Howe,PP22,PP44,ok,False
+3,310,York Minster,Leavening Brow,PP22,PP8,ok,False
+3,310,York Minster,Great Whernside,PP22,PP7,ok,False
+4,314,Aberystwyth,Talsarn,PP108,PP151,ok,False
+4,314,Aberystwyth,Cader Idris,PP108,PP105,ok,False
+4,314,Aberystwyth,Plynlimon,PP108,PP101,ok,False
+4,314,Aberystwyth,Llyn Du,PP108,PP148,ok,False
+4,314,Aran Fawddwy,Cader Berwyn,PP102,PP87,ok,False
+4,314,Aran Fawddwy,Radnor Forest,PP102,PP71,ok,False
+4,314,Aran Fawddwy,Plynlimon,PP102,PP101,ok,False
+4,314,Aran Fawddwy,Cader Idris,PP102,PP105,ok,False
+4,314,Aran Fawddwy,Arenig,PP102,PP118,ok,False
+4,314,Aran Fawddwy,Cader Berwyn,PP102,PP87,ok,False
+4,314,Arenig,Aran Fawddwy,PP118,PP102,ok,False
+4,314,Arenig,Cader Idris,PP118,PP105,ok,False
+4,314,Arenig,Yr Eifl,PP118,PP109,ok,False
+4,314,Arenig,Garnedd Ugain,PP118,PP111,ok,False
+4,314,Arenig,Great Ormes Head,PP118,PP115,ok,False
+4,314,Arenig,Moelfre Isaf,PP118,PP163,ok,False
+4,314,Arenig,Moel Fammau,PP118,PP86,ok,False
+4,314,Arenig,Cyrn-y-Brain,PP118,PP103,ok,False
+4,314,Arenig,Dunkery,PP118,PP74,ok,False
+4,314,Bagborough,Mynydd Maen,PP49,PP73,ok,False
+4,314,Bagborough,Blagdon,PP49,PP41,ok,False
+4,314,Bagborough,Pen Hill,PP49,PP77,ok,False
+4,314,Bagborough,Gore Hill,PP49,PP37,ok,False
+4,314,Bagborough,Pilsdon,PP49,PP36,ok,False
+4,314,Bagborough,Dumpdon,PP49,PP202,ok,False
+4,314,Bagborough,Little Haldon,PP49,PP168,ok,False
+4,314,Bagborough,Yes Tor,PP49,PP203,ok,False
+4,314,Bagborough,Trendrine Hill,PP49,PP178,ok,False
+4,314,Bartinney,Carnmenellis,PP180,PP177,ok,False
+4,314,Bartinney,Tregonning Hill,PP180,PP181,ok,False
+4,314,Bartinney,Goonhilly Down,PP180,PP182,ok,False
+4,315,Bin Down,Wembury,PP198,PP210,ok,False
+4,315,Bin Down,Dodman,PP198,PP176,ok,False
+4,315,Bin Down,Hensbarrow,PP198,PP174,ok,False
+4,315,Bin Down,Brown Willy,PP198,PP172,ok,False
+4,315,Bin Down,Yes Tor,PP198,PP203,ok,False
+4,315,Bin Down,Ryders Hill,PP198,PP167,ok,False
+4,315,Bin Down,Three Barrows,PP198,PP209,ok,False
+4,315,Brown Willy,Hensbarrow,PP172,PP174,ok,False
+4,315,Brown Willy,Trevose Head,PP172,PP173,ok,False
+4,315,Brown Willy,Hendon Moor,PP172,PP166,ok,False
+4,315,Brown Willy,Yes Tor,PP172,PP203,ok,False
+4,315,Brown Willy,Ryders Hill,PP172,PP167,ok,False
+4,315,Brown Willy,Bin Down,PP172,PP198,ok,False
+4,315,Brown Willy,Dodman,PP172,PP176,ok,False
+4,315,Bradley Knoll,Bulbarrow,PP14,PP12,ok,False
+4,315,Bradley Knoll,Pilsdon,PP14,PP36,ok,False
+4,315,Bradley Knoll,Pen Hill,PP14,PP77,ok,False
+4,315,Bulbarrow,Wingreen,PP12,PP17,ok,False
+4,315,Bulbarrow,Coringdon,PP12,PP11,ok,False
+4,315,Bulbarrow,Blackdown,PP12,PP46,ok,False
+4,315,Bulbarrow,Gore Hill,PP12,PP37,ok,False
+4,315,Bulbarrow,Pen Hill,PP12,PP77,ok,False
+4,315,Bulbarrow,Bradley Knoll,PP12,PP14,ok,False
+4,315,Cader Berwyn,Cyrn-y-Brain,PP87,PP103,ok,False
+4,315,Cader Berwyn,Delamere,PP87,PP30,ok,False
+4,315,Cader Berwyn,Hanchurch Wtr Twr,PP87,PP97,ok,False
+4,315,Cader Berwyn,Wrekin,PP87,PP63,ok,False
+4,315,Cader Berwyn,Stiperstones,PP87,PP64,ok,False
+4,315,Cader Berwyn,Radnor Forest,PP87,PP71,ok,False
+4,315,Cader Berwyn,Aran Fawddwy,PP87,PP102,ok,False
+4,315,Cader Berwyn,Arenig,PP87,PP118,ok,False
+4,315,Cader Berwyn,Moel Fammau,PP87,PP86,ok,False
+4,315,Cader Idris,Plynlimon,PP105,PP101,ok,False
+4,315,Cader Idris,Aberystwyth,PP105,PP108,ok,False
+4,315,Cader Idris,Rhiw Yr Eifl,PP105,PP110,ok,True
+4,315,Cader Idris,Rhiw Yr Eifl,PP105,PP109,ok,True
+4,315,Cader Idris,Garnedd Ugain,PP105,PP111,ok,False
+4,315,Cader Idris,Arenig,PP105,PP118,ok,False
+4,315,Cader Idris,Aran Fawddwy,PP105,PP102,ok,False
+4,316,Cader Idris,Mynydd Rhos-Wen,PP105,PP113,ok,False
+4,316,Capel Cynon,Prescelly,PP114,PP107,ok,False
+4,316,Capel Cynon,Garn Fawr,PP114,PP106,ok,False
+4,316,Capel Cynon,Talsarn,PP114,PP151,ok,False
+4,316,Capel Cynon,Llyn Du,PP114,PP148,ok,False
+4,316,Capel Cynon,Drygarn,PP114,PP90,ok,False
+4,316,Capel Cynon,St. Agnes Beacon,PP114,PP175,ok,False
+4,316,Carnmenellis,Hensbarrow,PP177,PP174,ok,False
+4,316,Carnmenellis,Dodman,PP177,PP176,ok,False
+4,316,Carnmenellis,Goonhilly Down,PP177,PP182,ok,False
+4,316,Carnmenellis,Tregonning Hill,PP177,PP181,ok,False
+4,316,Carnmenellis,Bartinney,PP177,PP180,ok,False
+4,316,Carnmenellis,Cam Galver,PP177,PP179,ok,False
+4,316,Carnmenellis,Trendrine Hill,PP177,PP178,ok,False
+4,316,Cefn Bryn,Pendine,PP119,PP149,ok,False
+4,316,Cefn Bryn,Mynydd Rhos-Wen,PP119,PP113,ok,False
+4,316,Cefn Bryn,Trecastle,PP119,PP85,ok,False
+4,316,Cefn Bryn,Mynydd Margam,PP119,PP150,ok,False
+4,316,Cefn Bryn,Dunkery,PP119,PP74,ok,False
+4,316,Cefn Bryn,Parracombe,PP119,PP140,ok,False
+4,316,Cefn Bryn,Eastacott Hill,PP119,PP165,ok,False
+4,316,Cefn Bryn,Rat Island Lighth'se,PP119,,unmatched,False
+4,316,Cefn Bryn,Lundy Island N.W. Point Lighthouse,PP119,,unmatched,False
+4,316,Cefn Bryn,Marros Beacon,PP119,PP104,ok,False
+4,316,Cyrn-y-Brain,Moel Fammau,PP103,PP86,ok,False
+4,316,Cyrn-y-Brain,Delamere,PP103,PP30,ok,False
+4,316,Cyrn-y-Brain,Wirswall,PP103,PP21,ok,False
+4,316,Cyrn-y-Brain,Cader Berwyn,PP103,PP87,ok,False
+4,316,Cyrn-y-Brain,Arenig,PP103,PP118,ok,False
+4,316,Cyrn-y-Brain,Bulbarrow,PP103,PP12,ok,False
+4,316,Coringdon,Wingreen,PP11,PP17,ok,False
+4,316,Coringdon,Blackdown,PP11,PP46,ok,False
+4,316,Coringdon,Pilsdon,PP11,PP36,ok,False
+4,316,Coringdon,Gore Hill,PP11,PP37,ok,False
+4,316,Coringdon,Bin Down,PP11,PP198,ok,False
+4,316,Dodman,Goonhilly Down,PP176,PP182,ok,False
+4,316,Dodman,Carnmenellis,PP176,PP177,ok,False
+4,316,Dodman,St. Agnes Beacon,PP176,PP175,ok,False
+4,316,Dodman,Hensbarrow,PP176,PP174,ok,False
+4,316,Dodman,Brown Willy,PP176,PP172,ok,False
+4,317,Dodman,Radnor Forest,PP176,PP71,ok,False
+4,317,Drygarn,Gwynydd Bach,PP90,PP72,ok,False
+4,317,Drygarn,Trecastle,PP90,PP85,ok,False
+4,317,Drygarn,Mynydd Rhos-Wen,PP90,PP113,ok,False
+4,317,Drygarn,Capel Cynon,PP90,PP114,ok,False
+4,317,Drygarn,Llyn Du,PP90,PP148,ok,False
+4,317,Drygarn,Plynlimon,PP90,PP101,ok,False
+4,317,Drygarn,Parracombe,PP90,PP140,ok,False
+4,317,Dunkery,Cefn Bryn,PP74,PP119,ok,False
+4,317,Dunkery,Mynydd Margam,PP74,PP150,ok,False
+4,317,Dunkery,Llangeinor,PP74,PP89,ok,False
+4,317,Dunkery,Mynydd Maen,PP74,PP73,ok,False
+4,317,Dunkery,Bagborough,PP74,PP49,ok,False
+4,317,Dunkery,Dumpdon,PP74,PP202,ok,False
+4,317,Dunkery,Little Haldon,PP74,PP168,ok,False
+4,317,Dunkery,Yes Tor,PP74,PP203,ok,False
+4,317,Dunkery,Wirswall,PP74,PP21,ok,False
+4,317,Delamere,Cader Berwyn,PP30,PP87,ok,False
+4,317,Delamere,Cyrn-y-Brain,PP30,PP103,ok,False
+4,317,Delamere,Moel Fammau,PP30,PP86,ok,False
+4,317,Delamere,Rivington,PP30,PP20,ok,False
+4,317,Delamere,Hanchurch Wtr Twr,PP30,PP97,ok,False
+4,317,Delamere,Wrekin,PP30,PP63,ok,False
+4,317,Delamere,Hendon Moor,PP30,PP166,ok,False
+4,317,Eastacott Hill,Rat Island Lighth'se,PP165,,unmatched,False
+4,317,Eastacott Hill,Lundy Island Lighthouse,PP165,,unmatched,False
+4,317,Eastacott Hill,Lundy Island N.W. Point Lighthouse,PP165,,unmatched,False
+4,317,Eastacott Hill,Cefn Bryn,PP165,PP119,ok,False
+4,317,Eastacott Hill,Parracombe,PP165,PP140,ok,False
+4,317,Eastacott Hill,Yes Tor,PP165,PP203,ok,False
+4,317,Eastacott Hill,Little Haldon,PP165,PP168,ok,False
+4,317,Furland,Pilsdon,PP169,PP36,ok,False
+4,317,Furland,Portlemouth,PP169,PP208,ok,False
+4,317,Furland,Three Barrows,PP169,PP209,ok,False
+4,317,Furland,Ryders Hill,PP169,PP167,ok,False
+4,317,Furland,YrEifl,PP169,PP109,ok,False
+4,317,Garnedd Ugain,Holyhead,PP111,PP117,ok,False
+4,317,Garnedd Ugain,Llaneilian,PP111,PP116,ok,False
+4,317,Garnedd Ugain,Moelfre Isaf,PP111,PP163,ok,False
+4,317,Garnedd Ugain,Moel Fammau,PP111,PP86,ok,False
+4,317,Garnedd Ugain,Arenig,PP111,PP118,ok,False
+4,317,Garnedd Ugain,Cader Idris,PP111,PP105,ok,False
+4,317,Garnedd Ugain,Rhiw,PP111,PP110,ok,False
+4,318,Gwynydd Bach,Mynydd Maen,PP72,PP73,ok,False
+4,318,Gwynydd Bach,Llangeinor,PP72,PP89,ok,False
+4,318,Gwynydd Bach,Trecastle,PP72,PP85,ok,False
+4,318,Gwynydd Bach,Llyn Du,PP72,PP148,ok,False
+4,318,Gwynydd Bach,Drygarn,PP72,PP90,ok,False
+4,318,Gwynydd Bach,Radnor Forest,PP72,PP71,ok,False
+4,318,Gwynydd Bach,Titterstone Clee,PP72,PP62,ok,False
+4,318,Gwynydd Bach,Malvern,PP72,PP79,ok,False
+4,318,Hendon Moor,Eastacott Hill,PP166,PP165,ok,False
+4,318,Hendon Moor,Parracombe,PP166,PP140,ok,False
+4,318,Hendon Moor,Yes Tor,PP166,PP203,ok,False
+4,318,Hendon Moor,Brown Willy,PP166,PP172,ok,False
+4,318,Hendon Moor,Trevose Head,PP166,PP173,ok,False
+4,318,Hendon Moor,Lundy Island Lighthouse,PP166,,unmatched,False
+4,318,Hendon Moor,Rat Island Lighth'se,PP166,,unmatched,False
+4,318,Hensbarrow,Bin Down,PP174,PP198,ok,False
+4,318,Hensbarrow,Dodman,PP174,PP176,ok,False
+4,318,Hensbarrow,Carnmenellis,PP174,PP177,ok,False
+4,318,Hensbarrow,St. Agnes Beacon,PP174,PP175,ok,False
+4,318,Hensbarrow,Trevose Head,PP174,PP173,ok,False
+4,318,Hensbarrow,Brown Willy,PP174,PP172,ok,False
+4,318,Hanchurch Wtr Twr,Wrekin,PP97,PP63,ok,False
+4,318,Hanchurch Wtr Twr,Stiperstones,PP97,PP64,ok,False
+4,318,Hanchurch Wtr Twr,Cader Berwyn,PP97,PP87,ok,False
+4,318,Hanchurch Wtr Twr,Moel Fammau,PP97,PP86,ok,False
+4,318,Hanchurch Wtr Twr,Delamere,PP97,PP30,ok,False
+4,318,Hanchurch Wtr Twr,Furland,PP97,PP169,ok,False
+4,318,Little Haldon,Three Barrows,PP168,PP209,ok,False
+4,318,Little Haldon,Ryders Hill,PP168,PP167,ok,False
+4,318,Little Haldon,Yes Tor,PP168,PP203,ok,False
+4,318,Little Haldon,Dunkery,PP168,PP74,ok,False
+4,318,Little Haldon,Bagborough,PP168,PP49,ok,False
+4,318,Little Haldon,Dumpdon,PP168,PP202,ok,False
+4,318,Little Haldon,Pilsdon,PP168,PP36,ok,False
+4,318,Llaneilian,Holyhead,PP116,PP117,ok,False
+4,318,Llaneilian,Great Ormes Head,PP116,PP115,ok,False
+4,318,Llaneilian,Moelfre Isaf,PP116,PP163,ok,False
+4,318,Llaneilian,Garnedd Ugain,PP116,PP111,ok,False
+4,318,Llaneilian,Yr Eifl,PP116,PP109,ok,False
+4,319,Llangeinor,Mynydd Maen,PP89,PP73,ok,False
+4,319,Llangeinor,Dunkery,PP89,PP74,ok,False
+4,319,Llangeinor,Parracombe,PP89,PP140,ok,False
+4,319,Llangeinor,Mynydd Margam,PP89,PP150,ok,False
+4,319,Llangeinor,Trecastle,PP89,PP85,ok,False
+4,319,Llangeinor,Gwynydd Bach,PP89,PP72,ok,False
+4,319,Moel Fammau,Cyrn-y-Brain Cader Berwyn,PP86,PP103,ok,True
+4,319,Moel Fammau,Cyrn-y-Brain Cader Berwyn,PP86,PP87,ok,True
+4,319,Moel Fammau,Arenig,PP86,PP118,ok,False
+4,319,Moel Fammau,Garnedd Ugain,PP86,PP111,ok,False
+4,319,Moel Fammau,Moelfre Isaf,PP86,PP163,ok,False
+4,319,Moel Fammau,Great Ormes Head,PP86,PP115,ok,False
+4,319,Moel Fammau,Rivington,PP86,PP20,ok,False
+4,319,Moel Fammau,Delamere,PP86,PP30,ok,False
+4,319,Moel Fammau,Hanchurch Wtr Twr,PP86,PP97,ok,False
+4,319,Mynydd Rhos-Wen,Talsarn,PP113,PP151,ok,False
+4,319,Mynydd Rhos-Wen,Drygarn,PP113,PP90,ok,False
+4,319,Mynydd Rhos-Wen,Trecastle,PP113,PP85,ok,False
+4,319,Mynydd Rhos-Wen,Cefn Bryn,PP113,PP119,ok,False
+4,319,Mynydd Rhos-Wen,Pendine,PP113,PP149,ok,False
+4,319,Mynydd Rhos-Wen,Prescelly,PP113,PP107,ok,False
+4,319,Mynydd Rhos-Wen,Capel Cynon,PP113,PP114,ok,False
+4,319,Malvern,Gwynydd Bach,PP79,PP72,ok,False
+4,319,Malvern,Radnor Forest,PP79,PP71,ok,False
+4,319,Malvern,Titterstone Clee,PP79,PP62,ok,False
+4,319,Mynydd Maen,Llangeinor,PP73,PP89,ok,False
+4,319,Mynydd Maen,Trecastle,PP73,PP85,ok,False
+4,319,Mynydd Maen,Gwynydd Bach,PP73,PP72,ok,False
+4,319,Mynydd Maen,Pen Hill,PP73,PP77,ok,False
+4,319,Mynydd Maen,Blagdon,PP73,PP41,ok,False
+4,319,Mynydd Maen,Bagborough,PP73,PP49,ok,False
+4,319,Mynydd Maen,Dunkery,PP73,PP74,ok,False
+4,319,Mynydd Maen,Eastacott Hill,PP73,PP165,ok,False
+4,319,Parracombe,Rat Island Lighth'se,PP140,,unmatched,False
+4,319,Parracombe,Lundy Island Lighthouse,PP140,,unmatched,False
+4,319,Parracombe,Lundy Island N.W. Point Lighthouse,PP140,,unmatched,False
+4,319,Parracombe,Cefn Bryn,PP140,PP119,ok,False
+4,319,Parracombe,Mynydd Margam,PP140,PP150,ok,False
+4,319,Parracombe,Llangeinor,PP140,PP89,ok,False
+4,319,Parracombe,Dunkery,PP140,PP74,ok,False
+4,319,Parracombe,Yes Tor,PP140,PP203,ok,False
+4,319,Parracombe,Hendon Moor,PP140,PP166,ok,False
+4,320,Parracombe,St. Anns Hill,PP140,PP112,ok,False
+4,320,Pendine,Prescelly,PP149,PP107,ok,False
+4,320,Pendine,Mynydd Rhos-Wen,PP149,PP113,ok,False
+4,320,Pendine,Cefn Bryn,PP149,PP119,ok,False
+4,320,Pendine,Rat Island Lighth'se,PP149,,unmatched,False
+4,320,Pendine,Lundy Island N.W. Point Lighthouse,PP149,,unmatched,False
+4,320,Pendine,Marros Beacon,PP149,PP104,ok,False
+4,320,Pilsdon,Blackdown,PP36,PP46,ok,False
+4,320,Pilsdon,Furland,PP36,PP169,ok,False
+4,320,Pilsdon,Little Haldon,PP36,PP168,ok,False
+4,320,Pilsdon,Dumpdon,PP36,PP202,ok,False
+4,320,Pilsdon,Bagborough,PP36,PP49,ok,False
+4,320,Pilsdon,Pen Hill,PP36,PP77,ok,False
+4,320,Pilsdon,Bradley Knoll,PP36,PP14,ok,False
+4,320,Pilsdon,Gore Hill,PP36,PP37,ok,False
+4,320,Pilsdon,Coringdon,PP36,PP11,ok,False
+4,320,Plynlimon,Talsarn,PP101,PP151,ok,False
+4,320,Plynlimon,Capel Cynon,PP101,PP114,ok,False
+4,320,Plynlimon,Aberystwyth,PP101,PP108,ok,False
+4,320,Plynlimon,Cader Idris Aran Fawddwy,PP101,PP105,ok,True
+4,320,Plynlimon,Cader Idris Aran Fawddwy,PP101,PP102,ok,True
+4,320,Plynlimon,Stiperstones,PP101,PP64,ok,False
+4,320,Plynlimon,Radnor Forest,PP101,PP71,ok,False
+4,320,Plynlimon,Drygarn,PP101,PP90,ok,False
+4,320,Plynlimon,Llyn Du,PP101,PP148,ok,False
+4,320,Portlemouth,Furland,PP208,PP169,ok,False
+4,320,Portlemouth,Wembury,PP208,PP210,ok,False
+4,320,Portlemouth,Three Barrows,PP208,PP209,ok,False
+4,320,Portlemouth,Ryders Hill,PP208,PP167,ok,False
+4,320,Prescelly,Pendine,PP107,PP149,ok,False
+4,320,Prescelly,Marros Beacon,PP107,PP104,ok,False
+4,320,Prescelly,St. Anns Hill,PP107,PP112,ok,False
+4,320,Prescelly,Garn Fawr,PP107,PP106,ok,False
+4,320,Prescelly,Capel Cynon,PP107,PP114,ok,False
+4,320,Prescelly,Mynydd Rhos-Wen,PP107,PP113,ok,False
+4,320,Pen Hill,Bradley Knoll,PP77,PP14,ok,False
+4,320,Pen Hill,Bulbarrow,PP77,PP12,ok,False
+4,320,Pen Hill,Gore Hill,PP77,PP37,ok,False
+4,320,Pen Hill,Pilsdon,PP77,PP36,ok,False
+4,320,Pen Hill,Bagborough,PP77,PP49,ok,False
+4,320,Pen Hill,Blagdon,PP77,PP41,ok,False
+4,320,Pen Hill,Mynydd Maen,PP77,PP73,ok,False
+4,321,Pen Hill,Stiperstones,PP77,PP64,ok,False
+4,321,Radnor Forest,Titterstone Clee,PP71,PP62,ok,False
+4,321,Radnor Forest,Malvern,PP71,PP79,ok,False
+4,321,Radnor Forest,Trecastle,PP71,PP85,ok,False
+4,321,Radnor Forest,Dry gam,PP71,PP90,ok,False
+4,321,Radnor Forest,Plynlimon,PP71,PP101,ok,False
+4,321,Radnor Forest,Aran Fawddwy,PP71,PP102,ok,False
+4,321,Radnor Forest,Cader Berwyn,PP71,PP87,ok,False
+4,321,Radnor Forest,Furland,PP71,PP169,ok,False
+4,321,Ryders Hill,Portlemouth,PP167,PP208,ok,False
+4,321,Ryders Hill,Three Barrows,PP167,PP209,ok,False
+4,321,Ryders Hill,Bin Down,PP167,PP198,ok,False
+4,321,Ryders Hill,Brown Willy,PP167,PP172,ok,False
+4,321,Ryders Hill,Yes Tor,PP167,PP203,ok,False
+4,321,Ryders Hill,Little Haldon,PP167,PP168,ok,False
+4,321,Ryders Hill,Delamere,PP167,PP30,ok,False
+4,321,Rivington,Moel Fammau,PP20,PP86,ok,False
+4,321,Rivington,Carnmenellis,PP20,PP177,ok,False
+4,321,St. Agnes Beacon,Tregonning Hill,PP175,PP181,ok,False
+4,321,St. Agnes Beacon,Trendrine Hill,PP175,PP178,ok,False
+4,321,St. Agnes Beacon,Trevose Head,PP175,PP173,ok,False
+4,321,St. Agnes Beacon,Hensbarrow,PP175,PP174,ok,False
+4,321,St. Agnes Beacon,Dodman,PP175,PP176,ok,False
+4,321,St. Agnes Beacon,Gam Fawr,PP175,PP106,ok,False
+4,321,St. Anns Hill,Prescelly,PP112,PP107,ok,False
+4,321,St. Anns Hill,Pendine,PP112,PP149,ok,False
+4,321,St. Anns Hill,Marros Beacon,PP112,PP104,ok,False
+4,321,St. Anns Hill,Wrekin,PP112,PP63,ok,False
+4,321,Stiperstones,Titterstone Clee,PP64,PP62,ok,False
+4,321,Stiperstones,Radnor Forest,PP64,PP71,ok,False
+4,321,Stiperstones,Plynlimon,PP64,PP101,ok,False
+4,321,Stiperstones,Cader Berwyn,PP64,PP87,ok,False
+4,321,Stiperstones,Wirswall,PP64,PP21,ok,False
+4,321,Stiperstones,Hanchurch Wtr Twr,PP64,PP97,ok,False
+4,321,Stiperstones,Little Haldon,PP64,PP168,ok,False
+4,321,Three Barrows,Furland,PP209,PP169,ok,False
+4,321,Three Barrows,Portlemouth,PP209,PP208,ok,False
+4,321,Three Barrows,Wembury,PP209,PP210,ok,False
+4,321,Three Barrows,Bin Down,PP209,PP198,ok,False
+4,321,Three Barrows,Ryders Hill,PP209,PP167,ok,False
+4,322,Three Barrows,Mynydd Rhos-Wen,PP209,PP113,ok,False
+4,322,Trecastle,Talsarn,PP85,PP151,ok,False
+4,322,Trecastle,Llyn Du,PP85,PP148,ok,False
+4,322,Trecastle,Drygarn,PP85,PP90,ok,False
+4,322,Trecastle,Radnor Forest,PP85,PP71,ok,False
+4,322,Trecastle,Gwynydd Bach,PP85,PP72,ok,False
+4,322,Trecastle,Mynydd Maen,PP85,PP73,ok,False
+4,322,Trecastle,Llangeinor,PP85,PP89,ok,False
+4,322,Trecastle,Mynydd Margam,PP85,PP150,ok,False
+4,322,Trecastle,Cefn Bryn,PP85,PP119,ok,False
+4,322,Trecastle,St. Agnes Beacon,PP85,PP175,ok,False
+4,322,Tregonning Hill,Carnmenellis,PP181,PP177,ok,False
+4,322,Tregonning Hill,Goonhilly Down,PP181,PP182,ok,False
+4,322,Tregonning Hill,Bartinney,PP181,PP180,ok,False
+4,322,Tregonning Hill,Cam Galver,PP181,PP179,ok,False
+4,322,Tregonning Hill,Trendrine Hill,PP181,PP178,ok,False
+4,322,Tregonning Hill,St. Agnes Beacon,PP181,PP175,ok,False
+4,322,Trendrine Hill,Carnmenellis,PP178,PP177,ok,False
+4,322,Trendrine Hill,Tregonning Hill,PP178,PP181,ok,False
+4,322,Trendrine Hill,Bartinney,PP178,PP180,ok,False
+4,322,Trendrine Hill,Cam Galver,PP178,PP179,ok,False
+4,322,Trendrine Hill,St. Agnes Beacon,PP178,PP175,ok,False
+4,322,Trevose Head,Hendon Moor,PP173,PP166,ok,False
+4,322,Trevose Head,Brown Willy,PP173,PP172,ok,False
+4,322,Trevose Head,Hensbarrow,PP173,PP174,ok,False
+4,322,Trevose Head,Wrekin,PP173,PP63,ok,False
+4,322,Titterstone Clee,Malvern,PP62,PP79,ok,False
+4,322,Titterstone Clee,Gwynydd Bach,PP62,PP72,ok,False
+4,322,Titterstone Clee,Radnor Forest,PP62,PP71,ok,False
+4,322,Titterstone Clee,Stiperstones,PP62,PP64,ok,False
+4,322,Titterstone Clee,Bulbarrow,PP62,PP12,ok,False
+4,322,Wingreen,Gore Hill,PP17,PP37,ok,False
+4,322,Wingreen,Coringdon,PP17,PP11,ok,False
+4,322,Wingreen,Stiperstones,PP17,PP64,ok,False
+4,322,Wrekin,Cader Berwyn,PP63,PP87,ok,False
+4,322,Wrekin,Wirswall,PP63,PP21,ok,False
+4,322,Wrekin,Delamere,PP63,PP30,ok,False
+4,322,Wrekin,Hanchurch Wtr Twr,PP63,PP97,ok,False
+4,322,Wrekin,Titterstone Clee,PP63,PP62,ok,False
+4,323,Yes Tor,Little Haldon,PP203,PP168,ok,False
+4,323,Yes Tor,Ryders Hill,PP203,PP167,ok,False
+4,323,Yes Tor,Bin Down,PP203,PP198,ok,False
+4,323,Yes Tor,Brown Willy,PP203,PP172,ok,False
+4,323,Yes Tor,Eastacott Hill,PP203,PP165,ok,False
+4,323,Yes Tor,Parracombe,PP203,PP140,ok,False
+4,323,Yes Tor,Dunkery,PP203,PP74,ok,False
+4,323,Yes Tor,Bagborough,PP203,PP49,ok,False
+4,323,Yr Eifl,Rhiw,PP109,PP110,ok,False
+4,323,Yr Eifl,Holyhead,PP109,PP117,ok,False
+4,323,Yr Eifl,Llaneilian,PP109,PP116,ok,False
+4,323,Yr Eifl,Garnedd Ugain,PP109,PP111,ok,False
+4,323,Yr Eifl,Arenig,PP109,PP118,ok,False
+4,323,Yr Eifl,Cader Idris,PP109,PP105,ok,False
+5,327,Abberton Wtr Twr Stoke by Nayland,Ch Twr,PP249,,unmatched,False
+5,327,Abberton Wtr Twr Stoke by Nayland,Manningtree,PP249,PP245,ok,False
+5,327,Abberton Wtr Twr Stoke by Nayland,Walton on the Naze Twr,PP249,PP227,ok,False
+5,327,Abberton Wtr Twr Stoke by Nayland,Rumfields Wtr Twr,PP249,PP201,ok,False
+5,327,Abberton Wtr Twr Stoke by Nayland,Shurland,PP249,PP191,ok,False
+5,327,Abberton Wtr Twr Stoke by Nayland,Hockley Wtr Twr,PP249,PP220,ok,False
+5,327,Abberton Wtr Twr Stoke by Nayland,Maplestead,PP249,PP235,ok,False
+5,327,Acre,Lincoln Minster,PP132,PP80,ok,False
+5,327,Acre,Cold Harbour,PP132,PP266,ok,False
+5,327,Acre,Boston Tower,PP132,PP264,ok,False
+5,327,Alport Heights,Loath Hill,PP56,PP54,ok,False
+5,327,Alport Heights,Charnwood,PP56,PP57,ok,False
+5,327,Alport Heights,Bardon Hill,PP56,PP58,ok,False
+5,327,Bardon Hill,Cold Ashby,PP58,PP76,ok,False
+5,327,Bardon Hill,Alport Heights,PP58,PP56,ok,False
+5,327,Bardon Hill CH.),Loath Hill,PP279,PP54,ok,False
+5,327,Bardon Hill CH.),Belvoir Castle,PP279,PP81,ok,False
+5,327,Bardon Hill CH.),Charnwood,PP279,PP57,ok,False
+5,327,Beachy Head,Ditchling,PP194,PP32,ok,False
+5,327,Beachy Head,Firle Beacon,PP194,PP199,ok,False
+5,327,Beachy Head,Fairlight Down,PP194,PP193,ok,False
+5,327,Belvoir Castle,Lincoln Minster,PP81,PP80,ok,False
+5,327,Belvoir Castle,Buckminster Wtr Twr,PP81,PP153,ok,False
+5,327,Belvoir Castle,Bardon Hill,PP81,PP58,ok,False
+5,327,Belvoir Castle,Loath Hill,PP81,PP54,ok,False
+5,328,Benfleet Wtr Twr Warley Wtr Twr,Hockley Wtr Twr,PP224,PP220,ok,False
+5,328,Benfleet Wtr Twr Warley Wtr Twr,Rumfields Wtr Twr,PP224,PP201,ok,False
+5,328,Benfleet Wtr Twr Warley Wtr Twr,Shurland,PP224,PP191,ok,False
+5,328,Benfleet Wtr Twr Warley Wtr Twr,Lenham Wtr Twr,PP224,PP205,ok,False
+5,328,Benfleet Wtr Twr Warley Wtr Twr,Wrotham,PP224,PP192,ok,False
+5,328,Benfleet Wtr Twr Warley Wtr Twr,Severndroog Castle,PP224,PP189,ok,False
+5,328,Bignor Beacon,Ditchling,PP39,PP32,ok,False
+5,328,Bignor Beacon,Selsey,PP39,PP47,ok,False
+5,328,Bignor Beacon,Dunnose,PP39,PP10,ok,False
+5,328,Bignor Beacon,Butser,PP39,PP9,ok,False
+5,328,Bignor Beacon,Leith Hill Tower,PP39,PP50,ok,False
+5,328,Bolnhurst,Fayway,PP433,PP432,ok,False
+5,328,Bolnhurst,Wyton Wtr Twr,PP433,PP444,ok,False
+5,328,Bolnhurst,Ely Cathedral,PP433,PP430,ok,False
+5,328,Bolnhurst,Therfield,PP433,PP441,ok,False
+5,328,Bolnhurst,Dunstable Down,PP433,PP94,ok,False
+5,328,Bolnhurst,Faxton,PP433,PP443,ok,False
+5,328,Boston Tower,Coldharbour,PP264,PP266,ok,False
+5,328,Boston Tower,Dexthorpe,PP264,PP265,ok,False
+5,328,Boston Tower,Skegness Wtr Twr,PP264,PP267,ok,False
+5,328,Boston Tower,Docking Ch Twr,PP264,PP284,ok,False
+5,328,Boston Tower,Walpole St Peters,PP264,PP427,ok,False
+5,328,Boston Tower,Peterborough Cathedral,PP264,PP447,ok,False
+5,328,Boston Tower,Collyweston,PP264,PP431,ok,False
+5,328,Boston Tower,Harrowby,PP264,PP429,ok,False
+5,328,Boston Tower,Lincoln Minster,PP264,PP80,ok,False
+5,328,Boston Tower,Acre,PP264,PP132,ok,False
+5,328,Broadway Tower,Cleeve Hill,PP91,PP69,ok,False
+5,328,Broadway Tower,Charwelton,PP91,PP78,ok,False
+5,328,Broadway Tower,Rollright,PP91,PP66,ok,False
+5,328,Broadway Tower,Icomb Tower,PP91,PP67,ok,False
+5,328,Broadway Tower,Wyck Beacon,PP91,PP144,ok,False
+5,328,Broadway Tower,White Horse Hill,PP91,PP34,ok,False
+5,328,Buckminster Wtr,Collyweston,PP153,PP431,ok,False
+5,328,Buckminster Wtr Twr,Uppingham,PP153,PP442,ok,False
+5,328,Buckminster Wtr Twr,Tilton Pile,PP153,PP75,ok,False
+5,328,Buckminster Wtr Twr,Charnwood,PP153,PP57,ok,False
+5,328,Buckminster Wtr Twr,Belvoir Castle,PP153,PP81,ok,False
+5,328,Bunwell Ch Twr,Hingham Ch Twr,PP255,PP287,ok,False
+5,328,Bunwell Ch Twr,Framingham,PP255,PP261,ok,False
+5,328,Bunwell Ch Twr,Metfield,PP255,PP258,ok,False
+5,328,Bunwell Ch Twr,Crown Corner,PP255,PP260,ok,False
+5,328,Bunwell Ch Twr,South Lopham Ch Twr,PP255,PP237,ok,False
+5,328,Bunwell Ch Twr,Frog Hill,PP255,PP262,ok,False
+5,329,Burrough Green,Helion Bumpstead,PP241,PP248,ok,False
+5,329,Burrough Green Wtr Twr,Therfield,PP241,PP441,ok,False
+5,329,Burrough Green Wtr Twr,Wyton Wtr Twr,PP241,PP444,ok,False
+5,329,Burrough Green Wtr Twr,Ely Cathedral,PP241,PP430,ok,False
+5,329,Burrough Green Wtr Twr,Chedburgh,PP241,PP236,ok,False
+5,329,Butser,Hindhead,PP9,PP31,ok,False
+5,329,Butser,Ditchling,PP9,PP32,ok,False
+5,329,Butser,Linch Ball,PP9,PP38,ok,False
+5,329,Butser,Bignor Beacon,PP9,PP39,ok,False
+5,329,Butser,Selsey,PP9,PP47,ok,False
+5,329,Butser,Dunnose,PP9,PP10,ok,False
+5,329,Butser,Inkpen,PP9,PP33,ok,False
+5,329,Caister Wtr Twr,North Walsham Wtr Twr,PP293,PP283,ok,False
+5,329,Caister Wtr Twr,Church Farm Wtr Twr,PP293,PP279,ok,False
+5,329,Caister Wtr Twr,Framingham,PP293,PP261,ok,False
+5,329,Caister Wtr Twr,Piggs Grave,PP293,PP263,ok,False
+5,329,Charnwood,Tilton Pile,PP57,PP75,ok,False
+5,329,Charnwood,Cold Ashby,PP57,PP76,ok,False
+5,329,Charnwood,Bardon Hill,PP57,PP58,ok,False
+5,329,Charnwood,Alport Heights,PP57,PP56,ok,False
+5,329,Charnwood,Loath Hill,PP57,PP54,ok,False
+5,329,Charwelton,Buckminster Wtr Twr Broadway Tower,PP78,PP153,ok,True
+5,329,Charwelton,Buckminster Wtr Twr Broadway Tower,PP78,PP91,ok,True
+5,329,Charwelton,Cold Ashby,PP78,PP76,ok,False
+5,329,Charwelton,Dunstable Down,PP78,PP94,ok,False
+5,329,Charwelton,Muswell Hill,PP78,PP100,ok,False
+5,329,Charwelton,Rollright,PP78,PP66,ok,False
+5,329,Chedburgh,Maplestead,PP236,PP235,ok,False
+5,329,Chedburgh,Helion Bumpstead,PP236,PP248,ok,False
+5,329,Chedburgh,Burrough Green Wtr Twr,PP236,PP241,ok,False
+5,329,Chedburgh,Ely Cathedral,PP236,PP430,ok,False
+5,329,Chedburgh,Puttocks Hill,PP236,PP246,ok,False
+5,329,Chedburgh,South Lopham Ch Twr,PP236,PP237,ok,False
+5,329,Chedburgh,Woolpit,PP236,PP247,ok,False
+5,329,Chedburgh,Nedging Tye,PP236,PP240,ok,False
+5,329,Chedburgh,Stoke by Nayland Ch Twr,PP236,PP249,ok,False
+5,330,Chipping Barnet,Epping Wtr Twr,PP185,PP188,ok,False
+5,330,Chipping Barnet Ch Twr,Warley Wtr Twr Severndroog Castle,PP185,PP224,ok,True
+5,330,Chipping Barnet Ch Twr,Warley Wtr Twr Severndroog Castle,PP185,PP189,ok,True
+5,330,Chipping Barnet Ch Twr,Leith Hill Tower,PP185,PP50,ok,False
+5,330,Chipping Barnet Ch Twr,Hindhead,PP185,PP31,ok,False
+5,330,Chipping Barnet Ch Twr,Shirburn Hill,PP185,PP207,ok,False
+5,330,Chipping Barnet Ch Twr,Coombe Hill,PP185,PP204,ok,False
+5,330,Chipping Barnet Ch Twr,Dunstable Down,PP185,PP94,ok,False
+5,330,Chipping Barnet Ch Twr,Sibleys Wtr Twr,PP185,PP434,ok,False
+5,330,Church Farm Wtr Southwold Ch Twr  Twr,Metfield,PP280,PP258,ok,False
+5,330,Church Farm Wtr Southwold Ch Twr  Twr,Ilketshall St Andrews Ch Twr,PP280,PP290,ok,False
+5,330,Church Farm Wtr Southwold Ch Twr  Twr,Framingham,PP280,PP261,ok,False
+5,330,Church Farm Wtr Southwold Ch Twr  Twr,Caister Wtr Twr,PP280,PP293,ok,False
+5,330,Church Farm Wtr Southwold Ch Twr  Twr,Kessingland Ch Twr,PP280,PP278,ok,False
+5,330,Cleeve Hill,Broadway Tower,PP69,PP91,ok,False
+5,330,Cleeve Hill,Rollright,PP69,PP66,ok,False
+5,330,Cleeve Hill,Icomb Tower,PP69,PP67,ok,False
+5,330,Cleeve Hill,Wyck Beacon,PP69,PP144,ok,False
+5,330,Cleeve Hill,White Horse Hill,PP69,PP34,ok,False
+5,330,Cleeve Hill,Liddington Castle,PP69,PP35,ok,False
+5,330,Cold Ashby,Charwelton,PP76,PP78,ok,False
+5,330,Cold Ashby,Bardon Hill,PP76,PP58,ok,False
+5,330,Cold Ashby,Charnwood,PP76,PP57,ok,False
+5,330,Cold Ashby,Tilton Pile,PP76,PP75,ok,False
+5,330,Cold Ashby,Uppingham,PP76,PP442,ok,False
+5,330,Cold Ashby,Faxton,PP76,PP443,ok,False
+5,330,Cold Harbour,Acre,PP266,PP132,ok,False
+5,330,Cold Harbour,Mablethorpe Wtr Twr,PP266,PP269,ok,False
+5,330,Cold Harbour,Dexthorpe,PP266,PP265,ok,False
+5,330,Cold Harbour,Boston Tower,PP266,PP264,ok,False
+5,330,Cold Harbour,Harrowby,PP266,PP429,ok,False
+5,330,Cold Harbour,Lincoln Minster,PP266,PP80,ok,False
+5,330,Collyweston,Tilton Pile,PP431,PP75,ok,False
+5,330,Collyweston,Buckminster Wtr Twr Harrowby,PP431,PP153,ok,True
+5,330,Collyweston,Buckminster Wtr Twr Harrowby,PP431,PP429,ok,True
+5,330,Collyweston,Boston Tower,PP431,PP264,ok,False
+5,330,Collyweston,Walpole St Peters,PP431,PP427,ok,False
+5,330,Collyweston,Peterborough Cathedral,PP431,PP447,ok,False
+5,330,Collyweston,Ely Cathedral,PP431,PP430,ok,False
+5,330,Collyweston,Wyton Wtr Twr,PP431,PP444,ok,False
+5,330,Collyweston,Fayway,PP431,PP432,ok,False
+5,330,Collyweston,Uppingham,PP431,PP442,ok,False
+5,331,Coombe Hill,Dunstable Down,PP204,PP94,ok,False
+5,331,Coombe Hill,Chipping Barnet Ch Twr,PP204,PP185,ok,False
+5,331,Coombe Hill,Hindhead,PP204,PP31,ok,False
+5,331,Coombe Hill,Shirburn Hill,PP204,PP207,ok,False
+5,331,Coombe Hill,White Horse Hill,PP204,PP34,ok,False
+5,331,Coombe Hill,Muswell Hill,PP204,PP100,ok,False
+5,331,Crimplesham,Frog Hill,PP424,PP262,ok,False
+5,331,Crimplesham,Ely Cathedral,PP424,PP430,ok,False
+5,331,Crimplesham,Peterborough Cathedral,PP424,PP447,ok,False
+5,331,Crimplesham,Walpole St Peters,PP424,PP427,ok,False
+5,331,Crimplesham,Massingham,PP424,PP272,ok,False
+5,331,Crimplesham,Swaffham,PP424,PP425,ok,False
+5,331,Crowborough,Ditchling,PP196,PP32,ok,False
+5,331,Crowborough,Leith Hill Tower,PP196,PP50,ok,False
+5,331,Crowborough,East Grinstead Ch Twr,PP196,PP170,ok,False
+5,331,Crowborough,Wrotham,PP196,PP192,ok,False
+5,331,Crowborough,Brenchley Air Beacon,PP196,,unmatched,False
+5,331,Crowborough,Lenham Wtr Twr,PP196,PP205,ok,False
+5,331,Crowborough,Bethersden Air Beacon,PP196,,unmatched,False
+5,331,Crowborough,Fairlight Down,PP196,PP193,ok,False
+5,331,Crowborough,Firle Beacon,PP196,PP199,ok,False
+5,331,Crown Corner,South Lopham Ch Twr,PP260,PP237,ok,False
+5,331,Crown Corner,Bunwell Ch Twr,PP260,PP255,ok,False
+5,331,Crown Corner,Metfield,PP260,PP258,ok,False
+5,331,Crown Corner,Salle,PP260,PP259,ok,False
+5,331,Crown Corner,Felixstowe Wtr Twr,PP260,PP233,ok,False
+5,331,Crown Corner,Swilland,PP260,PP244,ok,False
+5,331,Crown Corner,Nedging Tye,PP260,PP240,ok,False
+5,331,Dexthorpe,Woolpit Mablethorpe Wtr Twr,PP265,PP269,ok,False
+5,331,Dexthorpe,Skegness Wtr Twr,PP265,PP267,ok,False
+5,331,Dexthorpe,Boston Tower,PP265,PP264,ok,False
+5,331,Dexthorpe,Cold Harbour,PP265,PP266,ok,False
+5,332,Ditchling,Beachy Head,PP32,PP194,ok,False
+5,332,Ditchling,Dunnose,PP32,PP10,ok,False
+5,332,Ditchling,Bignor Beacon,PP32,PP39,ok,False
+5,332,Ditchling,Linch Ball,PP32,PP38,ok,False
+5,332,Ditchling,Butser,PP32,PP9,ok,False
+5,332,Ditchling,Leith Hill Tower,PP32,PP50,ok,False
+5,332,Ditchling,East Grinstead Ch Twr,PP32,PP170,ok,False
+5,332,Ditchling,Crowborough,PP32,PP196,ok,False
+5,332,Ditchling,Fairlight Down,PP32,PP193,ok,False
+5,332,Ditchling,Firle Beacon,PP32,PP199,ok,False
+5,332,Docking Ch Twr,Piggs Grave Massingham Walpole St Peters,PP284,PP263,ok,True
+5,332,Docking Ch Twr,Piggs Grave Massingham Walpole St Peters,PP284,PP272,ok,True
+5,332,Docking Ch Twr,Piggs Grave Massingham Walpole St Peters,PP284,PP427,ok,True
+5,332,Docking Ch Twr,Boston Tower,PP284,PP264,ok,False
+5,332,Docking Ch Twr,Skegness Wtr Twr,PP284,PP267,ok,False
+5,332,Dunmow,Sibleys Wtr Twr,PP437,PP434,ok,False
+5,332,Dunmow,Helion Bumpstead,PP437,PP248,ok,False
+5,332,Dunmow,Maplestead,PP437,PP235,ok,False
+5,332,Dunmow,Hockley Wtr Twr,PP437,PP220,ok,False
+5,332,Dunmow,Warley Wtr Twr,PP437,PP224,ok,False
+5,332,Dunmow,Epping Wtr Twr,PP437,PP188,ok,False
+5,332,Dunnose,Butser,PP10,PP9,ok,False
+5,332,Dunnose,Linch Ball,PP10,PP38,ok,False
+5,332,Dunnose,Bignor Beacon,PP10,PP39,ok,False
+5,332,Dunnose,Selsey,PP10,PP47,ok,False
+5,332,Dunnose,Ditchling,PP10,PP32,ok,False
+5,332,Dunstable Down,Muswell Hill Charwelton,PP94,PP100,ok,True
+5,332,Dunstable Down,Muswell Hill Charwelton,PP94,PP78,ok,True
+5,332,Dunstable Down,Faxton Bolnhurst,PP94,PP443,ok,True
+5,332,Dunstable Down,Faxton Bolnhurst,PP94,PP433,ok,True
+5,332,Dunstable Down,Therfield,PP94,PP441,ok,False
+5,332,Dunstable Down,Epping Wtr Twr,PP94,PP188,ok,False
+5,332,Dunstable Down,Chipping Barnet Ch Twr,PP94,PP185,ok,False
+5,332,Dunstable Down,Coombe Hill,PP94,PP204,ok,False
+5,332,East Grinstead,Ditchling,PP170,PP32,ok,False
+5,332,East Grinstead Cb Twr,Leith Hill Tower,PP170,PP50,ok,False
+5,332,East Grinstead Cb Twr,Crowborough,PP170,PP196,ok,False
+5,333,East Grinstead Cb Twr,Wyton Wtr Twr,PP170,PP444,ok,False
+5,333,Ely Cathedral,Fayway,PP430,PP432,ok,False
+5,333,Ely Cathedral,Collyweston,PP430,PP431,ok,False
+5,333,Ely Cathedral,Peterborough Cathedral,PP430,PP447,ok,False
+5,333,Ely Cathedral,Walpole St Peters,PP430,PP427,ok,False
+5,333,Ely Cathedral,Crimplesham,PP430,PP424,ok,False
+5,333,Ely Cathedral,Swaffham,PP430,PP425,ok,False
+5,333,Ely Cathedral,Frog Hill,PP430,PP262,ok,False
+5,333,Ely Cathedral,Puttocks Hill,PP430,PP246,ok,False
+5,333,Ely Cathedral,Chedburgh,PP430,PP236,ok,False
+5,333,Ely Cathedral,Burrough Green Wtr Twr,PP430,PP241,ok,False
+5,333,Ely Cathedral,Therfield,PP430,PP441,ok,False
+5,333,Ely Cathedral,Bolnhurst,PP430,PP433,ok,False
+5,333,Epping Wtr Twr,Warley Wtr Twr,PP188,PP224,ok,False
+5,333,Epping Wtr Twr,Wrotham,PP188,PP192,ok,False
+5,333,Epping Wtr Twr,Severndroog Castle,PP188,PP189,ok,False
+5,333,Epping Wtr Twr,Chipping Barnet Ch Twr,PP188,PP185,ok,False
+5,333,Epping Wtr Twr,Dunstable Down,PP188,PP94,ok,False
+5,333,Epping Wtr Twr,Therfield,PP188,PP441,ok,False
+5,333,Epping Wtr Twr,Sibleys Wtr Twr,PP188,PP434,ok,False
+5,333,Epping Wtr Twr,Dunmow,PP188,PP437,ok,False
+5,333,Fairlight Down,Beachy Head,PP193,PP194,ok,False
+5,333,Fairlight Down,Firle Beacon,PP193,PP199,ok,False
+5,333,Fairlight Down,Ditchling,PP193,PP32,ok,False
+5,333,Fairlight Down,Crowborough,PP193,PP196,ok,False
+5,333,Fairlight Down,Brenchley Air Beacon,PP193,,unmatched,False
+5,333,Fairlight Down,Wrotham,PP193,PP192,ok,False
+5,333,Fairlight Down,Lenham Wtr Twr,PP193,PP205,ok,False
+5,333,Fairlight Down,Bethersden Air Beacon,PP193,,unmatched,False
+5,333,Fairlight Down,Paddlesworth,PP193,PP190,ok,False
+5,333,Faxton,Cold Ashby,PP443,PP76,ok,False
+5,333,Faxton,Tilton Pile,PP443,PP75,ok,False
+5,333,Faxton,Uppingham,PP443,PP442,ok,False
+5,333,Faxton,Fayway,PP443,PP432,ok,False
+5,333,Faxton,Bolnhurst,PP443,PP433,ok,False
+5,333,Faxton,Dunstable Down,PP443,PP94,ok,False
+5,334,Faxton,Uppingham,PP443,PP442,ok,False
+5,334,Fayway,Collyweston,PP432,PP431,ok,False
+5,334,Fayway,Ely Cathedral,PP432,PP430,ok,False
+5,334,Fayway,Wyton Wtr Twr,PP432,PP444,ok,False
+5,334,Fayway,Therfield,PP432,PP441,ok,False
+5,334,Fayway,Bolnhurst,PP432,PP433,ok,False
+5,334,Fayway,Faxton,PP432,PP443,ok,False
+5,334,Felixstowe Wtr,Walton on the Naze Twr,PP233,PP227,ok,False
+5,334,Felixstowe Wtr Twr,Manningtree,PP233,PP245,ok,False
+5,334,Felixstowe Wtr Twr,Stoke by Nayland Ch Twr,PP233,PP249,ok,False
+5,334,Felixstowe Wtr Twr,Nedging Tye,PP233,PP240,ok,False
+5,334,Felixstowe Wtr Twr,Swilland,PP233,PP244,ok,False
+5,334,Felixstowe Wtr Twr,Crown Corner,PP233,PP260,ok,False
+5,334,Felixstowe Wtr Twr,Salle,PP233,PP259,ok,False
+5,334,Felixstowe Wtr Twr,Orford Castle,PP233,PP254,ok,False
+5,334,Felixstowe Wtr Twr,Beachy Head,PP233,PP194,ok,False
+5,334,Firle Beacon,Ditchling,PP199,PP32,ok,False
+5,334,Firle Beacon,Leith Hill Tower,PP199,PP50,ok,False
+5,334,Firle Beacon,Crowborough,PP199,PP196,ok,False
+5,334,Firle Beacon,Fairlight Down,PP199,PP193,ok,False
+5,334,Firle Beacon,Hingham Ch Twr,PP199,PP287,ok,False
+5,334,Framingham,Piggs Grave,PP261,PP263,ok,False
+5,334,Framingham,North Walsham Wtr Twr,PP261,PP283,ok,False
+5,334,Framingham,Caister Wtr Twr,PP261,PP293,ok,False
+5,334,Framingham,Church Farm Wtr Twr,PP261,PP279,ok,False
+5,334,Framingham,Ilketshall St Andrews Ch Twr,PP261,PP290,ok,False
+5,334,Framingham,Metfield,PP261,PP258,ok,False
+5,334,Framingham,Bunwell Ch Twr,PP261,PP255,ok,False
+5,334,Fransham,Piggs Grave Hingham Ch Twr,PP426,PP263,ok,True
+5,334,Fransham,Piggs Grave Hingham Ch Twr,PP426,PP287,ok,True
+5,334,Fransham,Frog Hill,PP426,PP262,ok,False
+5,334,Fransham,Swaffham,PP426,PP425,ok,False
+5,334,Fransham,Massingham,PP426,PP272,ok,False
+5,335,Frog Hill,Swaffham,PP262,PP425,ok,False
+5,335,Frog Hill,Fransham,PP262,PP426,ok,False
+5,335,Frog Hill,Hingham Ch Twr,PP262,PP287,ok,False
+5,335,Frog Hill,Bunwell Ch Twr,PP262,PP255,ok,False
+5,335,Frog Hill,South Lopham Ch Twr,PP262,PP237,ok,False
+5,335,Frog Hill,Woolpit,PP262,PP247,ok,False
+5,335,Frog Hill,Puttocks Hill,PP262,PP246,ok,False
+5,335,Frog Hill,Ely Cathedral,PP262,PP430,ok,False
+5,335,Frog Hill,Crimplesham,PP262,PP424,ok,False
+5,335,Frog Hill,Massingham,PP262,PP272,ok,False
+5,335,Harrowby,Loath Hill,PP429,PP54,ok,False
+5,335,Harrowby,Lincoln Minster,PP429,PP80,ok,False
+5,335,Harrowby,Cold Harbour,PP429,PP266,ok,False
+5,335,Harrowby,Boston Tower,PP429,PP264,ok,False
+5,335,Harrowby,Collyweston,PP429,PP431,ok,False
+5,335,Harrowby,Tilton Pile,PP429,PP75,ok,False
+5,335,Harrowby,Belvoir Castle,PP429,PP81,ok,False
+5,335,Helion Bumpstead Sibleys Wtr Twr,Therfield,PP434,PP441,ok,False
+5,335,Helion Bumpstead Sibleys Wtr Twr,Burrough Green Wtr Twr,PP434,PP241,ok,False
+5,335,Helion Bumpstead Sibleys Wtr Twr,Chedburgh,PP434,PP236,ok,False
+5,335,Helion Bumpstead Sibleys Wtr Twr,Maplestead,PP434,PP235,ok,False
+5,335,Helion Bumpstead Sibleys Wtr Twr,Dunmow,PP434,PP437,ok,False
+5,335,Hindhead,Linch Ball,PP31,PP38,ok,False
+5,335,Hindhead,Butser,PP31,PP9,ok,False
+5,335,Hindhead,Inkpen,PP31,PP33,ok,False
+5,335,Hindhead,Shirburn Hill,PP31,PP207,ok,False
+5,335,Hindhead,Coombe Hill,PP31,PP204,ok,False
+5,335,Hindhead,Chipping Barnet Ch Twr,PP31,PP185,ok,False
+5,335,Hindhead,Leith Hill Tower,PP31,PP50,ok,False
+5,335,Hingham Ch Twr South Lopham Ch,Twr,PP237,,unmatched,False
+5,335,Hingham Ch Twr South Lopham Ch,Puttocks Hill,PP237,PP246,ok,False
+5,335,Hingham Ch Twr South Lopham Ch,Frog Hill,PP237,PP262,ok,False
+5,335,Hingham Ch Twr South Lopham Ch,Swaffham,PP237,PP425,ok,False
+5,335,Hingham Ch Twr South Lopham Ch,Fransham,PP237,PP426,ok,False
+5,335,Hingham Ch Twr South Lopham Ch,Piggs Grave,PP237,PP263,ok,False
+5,335,Hingham Ch Twr South Lopham Ch,Framingham,PP237,PP261,ok,False
+5,335,Hingham Ch Twr South Lopham Ch,Bunwell Ch Twr,PP237,PP255,ok,False
+5,336,Hockley Wtr Twr Warley Wtr Twr,Dunmow,PP224,PP437,ok,False
+5,336,Hockley Wtr Twr Warley Wtr Twr,Maplestead,PP224,PP235,ok,False
+5,336,Hockley Wtr Twr Warley Wtr Twr,Abberton Wtr Twr,PP224,PP230,ok,False
+5,336,Hockley Wtr Twr Warley Wtr Twr,Rumfields Wtr Twr,PP224,PP201,ok,False
+5,336,Hockley Wtr Twr Warley Wtr Twr,Shurland,PP224,PP191,ok,False
+5,336,Hockley Wtr Twr Warley Wtr Twr,Lenham Wtr Twr,PP224,PP205,ok,False
+5,336,Hockley Wtr Twr Warley Wtr Twr,Bentleet Wtr Twr,PP224,PP219,ok,False
+5,336,Ilketshall St,Kessingland Ch Twr,PP290,PP278,ok,False
+5,336,Ilketshall St,Southwold Ch Twr,PP290,PP280,ok,False
+5,336,Ilketshall St Andrews Ch Twr,Metfield,PP290,PP258,ok,False
+5,336,Ilketshall St Andrews Ch Twr,Framingham,PP290,PP261,ok,False
+5,336,Ilketshall St Andrews Ch Twr,Church Farm Wtr Twr,PP290,PP279,ok,False
+5,336,Inkpen,White Horse Hill,PP33,PP34,ok,False
+5,336,Inkpen,Shirburn Hill,PP33,PP207,ok,False
+5,336,Inkpen,Hindhead,PP33,PP31,ok,False
+5,336,Inkpen,Butser,PP33,PP9,ok,False
+5,336,Inkpen,Liddington Castle,PP33,PP35,ok,False
+5,336,Inkpen,Southwold Ch Twr,PP33,PP280,ok,False
+5,336,Kessingland Ch Twr,Metfield,PP278,PP258,ok,False
+5,336,Kessingland Ch Twr,Ilketshall St Andrews Ch Twr,PP278,PP290,ok,False
+5,336,Kessingland Ch Twr,Church Farm Wtr Twr,PP278,PP279,ok,False
+5,336,Leith Hill Tower,Linch Ball,PP50,PP38,ok,False
+5,336,Leith Hill Tower,Hindhead,PP50,PP31,ok,False
+5,336,Leith Hill Tower,Shirburn Hill,PP50,PP207,ok,False
+5,336,Leith Hill Tower,Chipping Barnet Ch Twr,PP50,PP185,ok,False
+5,336,Leith Hill Tower,Severndroog Castle,PP50,PP189,ok,False
+5,336,Leith Hill Tower,Wrotham,PP50,PP192,ok,False
+5,336,Leith Hill Tower,Ch Twr,PP50,,unmatched,False
+5,336,Leith Hill Tower,Crowborough,PP50,PP196,ok,False
+5,336,Leith Hill Tower,Firle Beacon,PP50,PP199,ok,False
+5,336,Leith Hill Tower,Ditchling,PP50,PP32,ok,False
+5,336,Leith Hill Tower,Bignor Beacon,PP50,PP39,ok,False
+5,337,Lenham Wtr Twr Shurland,Rumfields Wtr Twr,PP191,PP201,ok,False
+5,337,Lenham Wtr Twr Shurland,Bethersden Air Beacon,PP191,,unmatched,False
+5,337,Lenham Wtr Twr Shurland,Fairlight Down,PP191,PP193,ok,False
+5,337,Lenham Wtr Twr Shurland,Crowborough,PP191,PP196,ok,False
+5,337,Lenham Wtr Twr Shurland,Brenchley Air Beacon,PP191,,unmatched,False
+5,337,Lenham Wtr Twr Shurland,Wrotham,PP191,PP192,ok,False
+5,337,Lenham Wtr Twr Shurland,Warley Wtr Twr,PP191,PP224,ok,False
+5,337,Lenham Wtr Twr Shurland,Benfleet Wtr Twr,PP191,PP219,ok,False
+5,337,Lenham Wtr Twr Shurland,Hockley Wtr Twr,PP191,PP220,ok,False
+5,337,Liddington Castle Inkpen,Cleeve Hill,PP33,PP69,ok,False
+5,337,Liddington Castle Inkpen,White Horse Hill,PP33,PP34,ok,False
+5,337,Linch Ball,Hindhead,PP38,PP31,ok,False
+5,337,Linch Ball,Leith Hill Tower,PP38,PP50,ok,False
+5,337,Linch Ball,Selsey,PP38,PP47,ok,False
+5,337,Linch Ball,Dunnose,PP38,PP10,ok,False
+5,337,Linch Ball,Butser,PP38,PP9,ok,False
+5,337,Lincoln Minster,Acre,PP80,PP132,ok,False
+5,337,Lincoln Minster,Cold Harbour,PP80,PP266,ok,False
+5,337,Lincoln Minster,Boston Tower,PP80,PP264,ok,False
+5,337,Lincoln Minster,Harrowby,PP80,PP429,ok,False
+5,337,Lincoln Minster,Belvoir Castle,PP80,PP81,ok,False
+5,337,Lincoln Minster,Loath Hill,PP80,PP54,ok,False
+5,337,Loath Hill,Lincoln Minster,PP54,PP80,ok,False
+5,337,Loath Hill,Harrowby,PP54,PP429,ok,False
+5,337,Loath Hill,Belvoir Castle,PP54,PP81,ok,False
+5,337,Loath Hill,Charnwood,PP54,PP57,ok,False
+5,337,Loath Hill,Bardon Hill,PP54,PP58,ok,False
+5,337,Loath Hill,Alport Heights,PP54,PP56,ok,False
+5,337,Mablethorpe Wtr Skegness Wtr Twr  Twr,Dexthorpe,PP267,PP265,ok,False
+5,337,Mablethorpe Wtr Skegness Wtr Twr  Twr,Cold Harbour,PP267,PP266,ok,False
+5,337,Manningtree,Abberton Wtr Twr,PP245,PP230,ok,False
+5,337,Manningtree,Maplestead,PP245,PP235,ok,False
+5,337,Manningtree,Stoke by Nayland Ch Twr,PP245,PP249,ok,False
+5,337,Manningtree,Nedging Tye,PP245,PP240,ok,False
+5,337,Manningtree,Swilland,PP245,PP244,ok,False
+5,337,Manningtree,Felixstowe Wtr Twr,PP245,PP233,ok,False
+5,337,Manningtree,Walton on the Naze Twr,PP245,PP227,ok,False
+5,338,Maplestead,Abberton Wtr Twr,PP235,PP230,ok,False
+5,338,Maplestead,Hockley Wtr Twr,PP235,PP220,ok,False
+5,338,Maplestead,Dunmow,PP235,PP437,ok,False
+5,338,Maplestead,Sibleys Wtr Twr,PP235,PP434,ok,False
+5,338,Maplestead,Helion Bumpstead,PP235,PP248,ok,False
+5,338,Maplestead,Chedburgh,PP235,PP236,ok,False
+5,338,Maplestead,Nedging Tye,PP235,PP240,ok,False
+5,338,Maplestead,Stoke by Nayland Ch Twr,PP235,PP249,ok,False
+5,338,Maplestead,Manningtree,PP235,PP245,ok,False
+5,338,Massingham,Fransham,PP272,PP426,ok,False
+5,338,Massingham,Swaffham,PP272,PP425,ok,False
+5,338,Massingham,Frog Hill,PP272,PP262,ok,False
+5,338,Massingham,Crimplesham,PP272,PP424,ok,False
+5,338,Massingham,Walpole St Peters,PP272,PP427,ok,False
+5,338,Massingham,Docking Ch Twr,PP272,PP284,ok,False
+5,338,Massingham,Piggs Grave,PP272,PP263,ok,False
+5,338,Massingham,Southwold Ch Twr,PP272,PP280,ok,False
+5,338,Metfield,Salle,PP258,PP259,ok,False
+5,338,Metfield,Crown Corner,PP258,PP260,ok,False
+5,338,Metfield,Bunwell Ch Twr,PP258,PP255,ok,False
+5,338,Metfield,Framingham,PP258,PP261,ok,False
+5,338,Metfield,Ilketshall St Andrews Ch Twr,PP258,PP290,ok,False
+5,338,Metfield,Church Farm Wtr Twr,PP258,PP279,ok,False
+5,338,Metfield,Kessingland Ch Twr,PP258,PP278,ok,False
+5,338,Muswell Hill,Dunstable Down,PP100,PP94,ok,False
+5,338,Muswell Hill,Coombe Hill,PP100,PP204,ok,False
+5,338,Muswell Hill,Shirburn Hill,PP100,PP207,ok,False
+5,338,Muswell Hill,White Horse Hill,PP100,PP34,ok,False
+5,338,Muswell Hill,Wyck Beacon,PP100,PP144,ok,False
+5,338,Muswell Hill,Icomb Tower,PP100,PP67,ok,False
+5,338,Muswell Hill,Charwelton,PP100,PP78,ok,False
+5,338,Nedging Tye,Stoke by Nayland Ch Twr,PP240,PP249,ok,False
+5,338,Nedging Tye,Maplestead,PP240,PP235,ok,False
+5,338,Nedging Tye,Chedburgh,PP240,PP236,ok,False
+5,338,Nedging Tye,Puttocks Hill,PP240,PP246,ok,False
+5,338,Nedging Tye,Woolpit,PP240,PP247,ok,False
+5,338,Nedging Tye,Crown Corner,PP240,PP260,ok,False
+5,338,Nedging Tye,Swilland,PP240,PP244,ok,False
+5,338,Nedging Tye,Felixstowe Wtr Twr,PP240,PP233,ok,False
+5,338,Nedging Tye,Manningtree,PP240,PP245,ok,False
+5,339,North Walsham,Piggs Grave,PP283,PP263,ok,False
+5,339,North Walsham Wtr Twr,Caister Wtr Twr,PP283,PP293,ok,False
+5,339,North Walsham Wtr Twr,Framingham,PP283,PP261,ok,False
+5,339,Orford Castle,Felixstowe Wtr Twr,PP254,PP233,ok,False
+5,339,Orford Castle,Swilland,PP254,PP244,ok,False
+5,339,Orford Castle,Salle,PP254,PP259,ok,False
+5,339,Orford Castle,Walton on the Naze Twr,PP254,PP227,ok,False
+5,339,Paddlesworth,Rumfields Wtr Twr,PP190,PP201,ok,False
+5,339,Paddlesworth,Fairlight Down,PP190,PP193,ok,False
+5,339,Paddlesworth,Crowborough,PP190,PP196,ok,False
+5,339,Paddlesworth,Bethersden Air Beacon,PP190,,unmatched,False
+5,339,Paddlesworth,Brenchley Air Beacon,PP190,,unmatched,False
+5,339,Peterborough,Wyton Wtr Twr,PP447,PP444,ok,False
+5,339,Peterborough Cathedral,Collyweston,PP447,PP431,ok,False
+5,339,Peterborough Cathedral,Boston Tower,PP447,PP264,ok,False
+5,339,Peterborough Cathedral,Walpole St Peters,PP447,PP427,ok,False
+5,339,Peterborough Cathedral,Ely Cathedral,PP447,PP430,ok,False
+5,339,Piggs Grave,Docking Ch Twr,PP263,PP284,ok,False
+5,339,Piggs Grave,North Walsham Wtr Twr,PP263,PP283,ok,False
+5,339,Piggs Grave,Caister Wtr Twr,PP263,PP293,ok,False
+5,339,Piggs Grave,Framingham,PP263,PP261,ok,False
+5,339,Piggs Grave,Hingham Ch Twr,PP263,PP287,ok,False
+5,339,Piggs Grave,Fransham,PP263,PP426,ok,False
+5,339,Piggs Grave,Massingham,PP263,PP272,ok,False
+5,339,Puttocks Hill,South Lopham Ch Twr,PP246,PP237,ok,False
+5,339,Puttocks Hill,Woolpit,PP246,PP247,ok,False
+5,339,Puttocks Hill,Nedging Tye,PP246,PP240,ok,False
+5,339,Puttocks Hill,Chedburgh,PP246,PP236,ok,False
+5,339,Puttocks Hill,Ely Cathedral,PP246,PP430,ok,False
+5,339,Puttocks Hill,Frog Hill,PP246,PP262,ok,False
+5,339,Puttocks Hill,Hingham Ch Twr,PP246,PP287,ok,False
+5,339,Rollright,Wyck Beacon,PP66,PP144,ok,False
+5,339,Rollright,Icomb Tower,PP66,PP67,ok,False
+5,339,Rollright,Cleeve Hill,PP66,PP69,ok,False
+5,339,Rollright,Broadway Tower,PP66,PP91,ok,False
+5,339,Rollright,Charwelton,PP66,PP78,ok,False
+5,340,Rumfields Wtr Twr,Lenham Wtr Twr Shurland Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr Qi) Walton on the Naze Twr Paddlesworth Southwold Ch Twr P 2 ),PP201,PP205,ok,True
+5,340,Rumfields Wtr Twr,Lenham Wtr Twr Shurland Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr Qi) Walton on the Naze Twr Paddlesworth Southwold Ch Twr P 2 ),PP201,PP191,ok,True
+5,340,Rumfields Wtr Twr,Lenham Wtr Twr Shurland Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr Qi) Walton on the Naze Twr Paddlesworth Southwold Ch Twr P 2 ),PP201,PP219,ok,True
+5,340,Rumfields Wtr Twr,Lenham Wtr Twr Shurland Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr Qi) Walton on the Naze Twr Paddlesworth Southwold Ch Twr P 2 ),PP201,PP220,ok,True
+5,340,Rumfields Wtr Twr,Lenham Wtr Twr Shurland Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr Qi) Walton on the Naze Twr Paddlesworth Southwold Ch Twr P 2 ),PP201,PP230,ok,True
+5,340,Rumfields Wtr Twr,Lenham Wtr Twr Shurland Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr Qi) Walton on the Naze Twr Paddlesworth Southwold Ch Twr P 2 ),PP201,PP227,ok,True
+5,340,Rumfields Wtr Twr,Lenham Wtr Twr Shurland Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr Qi) Walton on the Naze Twr Paddlesworth Southwold Ch Twr P 2 ),PP201,PP190,ok,True
+5,340,Rumfields Wtr Twr,Lenham Wtr Twr Shurland Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr Qi) Walton on the Naze Twr Paddlesworth Southwold Ch Twr P 2 ),PP201,PP280,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP254,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP60,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP233,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP244,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP260,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP258,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP188,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP224,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP219,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP192,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP50,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP185,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP100,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP204,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP185,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP50,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP31,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP33,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP35,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP60,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP34,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP219,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP220,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP230,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP227,ok,True
+5,340,Shurland,Orford Castle Felixstowe Wtr Twr TI) Swilland Crown Corner Metfield Epping Wtr Twr Warley Wtr Twr Benfleet Wtr Twr Wrotham Leith Hill Tower Chipping Barnet Ch Twr Muswell Hill Coombe Hill Chipping Barnet Ch Twr Leith Hill Tower Hindhead Inkpen Liddington Castle White Horse Hill Benfleet Wtr Twr Hockley Wtr Twr Abberton Wtr Twr QO Walton on the Naze Twr Rumfields Wtr Twr T) j,PP191,PP201,ok,True
+5,341,Skegness Wtr Twr Dexthorpe,Mablethorpe Wtr Twr,PP265,PP269,ok,False
+5,341,Skegness Wtr Twr Dexthorpe,Docking Ch Twr,PP265,PP284,ok,False
+5,341,Skegness Wtr Twr Dexthorpe,Walpole St Peters,PP265,PP427,ok,False
+5,341,Skegness Wtr Twr Dexthorpe,Boston Tower,PP265,PP264,ok,False
+5,341,South Lopham,Hingham Ch Twr,PP237,PP287,ok,False
+5,341,South Lopham Ch Twr,Bunwell Ch Twr,PP237,PP255,ok,False
+5,341,South Lopham Ch Twr,Crown Corner,PP237,PP260,ok,False
+5,341,South Lopham Ch Twr,Woolpit,PP237,PP247,ok,False
+5,341,South Lopham Ch Twr,Chedburgh,PP237,PP236,ok,False
+5,341,South Lopham Ch Twr,Puttocks Hill,PP237,PP246,ok,False
+5,341,South Lopham Ch Twr,Frog Hill,PP237,PP262,ok,False
+5,341,Southwold Ch,Kessingland Ch Twr,PP280,PP278,ok,False
+5,341,Southwold Ch Twr,Salle Metfield,PP280,PP259,ok,True
+5,341,Southwold Ch Twr,Salle Metfield,PP280,PP258,ok,True
+5,341,Southwold Ch Twr,Ilketshall St Andrews Ch Twr,PP280,PP290,ok,False
+5,341,Stoke by Nayland Abberton Wtr Twr  Ch Twr,Church Farm Wtr Twr Maplestead,,PP279,unmatched,True
+5,341,Stoke by Nayland Abberton Wtr Twr  Ch Twr,Church Farm Wtr Twr Maplestead,,PP235,unmatched,True
+5,341,Stoke by Nayland Abberton Wtr Twr  Ch Twr,Chedburgh,,PP236,unmatched,False
+5,341,Stoke by Nayland Abberton Wtr Twr  Ch Twr,Nedging Tye,,PP240,unmatched,False
+5,341,Stoke by Nayland Abberton Wtr Twr  Ch Twr,Felixstowe Wtr Twr,,PP233,unmatched,False
+5,341,Stoke by Nayland Abberton Wtr Twr  Ch Twr,Manningtree,,PP245,unmatched,False
+5,341,Swaffham,Fransham,PP425,PP426,ok,False
+5,341,Swaffham,Hingham Ch Twr,PP425,PP287,ok,False
+5,341,Swaffham,Frog Hill,PP425,PP262,ok,False
+5,341,Swaffham,Ely Cathedral,PP425,PP430,ok,False
+5,341,Swaffham,Crimplesham,PP425,PP424,ok,False
+5,341,Swaffham,Walpole St Peters,PP425,PP427,ok,False
+5,341,Swaffham,Massingham,PP425,PP272,ok,False
+5,341,Swilland,Felixstowe Wtr Twr,PP244,PP233,ok,False
+5,341,Swilland,Manningtree,PP244,PP245,ok,False
+5,341,Swilland,Nedging Tye,PP244,PP240,ok,False
+5,341,Swilland,Woolpit,PP244,PP247,ok,False
+5,341,Swilland,Crown Corner,PP244,PP260,ok,False
+5,341,Swilland,Salle,PP244,PP259,ok,False
+5,341,Swilland,Orford Castle,PP244,PP254,ok,False
+5,342,Therfield,Sibleys Wtr Twr,PP441,PP434,ok,False
+5,342,Therfield,Epping Wtr Twr,PP441,PP188,ok,False
+5,342,Therfield,Dunstable Down,PP441,PP94,ok,False
+5,342,Therfield,Bolnhurst,PP441,PP433,ok,False
+5,342,Therfield,Fayway,PP441,PP432,ok,False
+5,342,Therfield,Wyton Wtr Twr,PP441,PP444,ok,False
+5,342,Therfield,Ely Cathedral,PP441,PP430,ok,False
+5,342,Therfield,Burrough Green Wtr Twr,PP441,PP241,ok,False
+5,342,Therfield,Helion Bumpstead,PP441,PP248,ok,False
+5,342,Tilton Pile,Buckminster Wtr Twr,PP75,PP153,ok,False
+5,342,Tilton Pile,Collyweston,PP75,PP431,ok,False
+5,342,Tilton Pile,Uppingham,PP75,PP442,ok,False
+5,342,Tilton Pile,Faxton,PP75,PP443,ok,False
+5,342,Tilton Pile,Cold Ashby,PP75,PP76,ok,False
+5,342,Tilton Pile,Charnwood,PP75,PP57,ok,False
+5,342,Tilton Pile,Harrowby,PP75,PP429,ok,False
+5,342,Tilton Pile,Ilketshall St Andrews Ch Twr,PP75,PP290,ok,False
+5,342,Tilton Pile,Metfield,PP75,PP258,ok,False
+5,342,Tilton Pile,Crown Corner,PP75,PP260,ok,False
+5,342,Tilton Pile,Bunwell Ch Twr,PP75,PP255,ok,False
+5,342,Tilton Pile,Framingham,PP75,PP261,ok,False
+5,342,Tilton Pile,Tilton Pile,PP75,PP75,ok,False
+5,342,Uppingham,Buckminster Wtr Twr,PP442,PP153,ok,False
+5,342,Uppingham,Collyweston,PP442,PP431,ok,False
+5,342,Uppingham,Fayway,PP442,PP432,ok,False
+5,342,Uppingham,Faxton,PP442,PP443,ok,False
+5,342,Uppingham,Cold Ashby,PP442,PP76,ok,False
+5,342,Walpole St Peters Ely Cathedral,Peterborough Cathedral,PP430,PP447,ok,False
+5,342,Walpole St Peters Ely Cathedral,Collyweston,PP430,PP431,ok,False
+5,342,Walpole St Peters Ely Cathedral,Boston Tower,PP430,PP264,ok,False
+5,342,Walpole St Peters Ely Cathedral,Skegness Wtr Twr,PP430,PP267,ok,False
+5,342,Walpole St Peters Ely Cathedral,Docking Ch Twr,PP430,PP284,ok,False
+5,342,Walpole St Peters Ely Cathedral,Massingham,PP430,PP272,ok,False
+5,342,Walpole St Peters Ely Cathedral,Swaffham,PP430,PP425,ok,False
+5,342,Walpole St Peters Ely Cathedral,Crimplesham,PP430,PP424,ok,False
+5,343,Walton on the,Abberton Wtr Twr,PP227,PP230,ok,False
+5,343,Walton on the Naze Twr,Manningtree,PP227,PP245,ok,False
+5,343,Walton on the Naze Twr,Felixstowe Wtr Twr,PP227,PP233,ok,False
+5,343,Walton on the Naze Twr,Orford Castle,PP227,PP254,ok,False
+5,343,Walton on the Naze Twr,Rumfields Wtr Twr,PP227,PP201,ok,False
+5,343,Walton on the Naze Twr,Shurland,PP227,PP191,ok,False
+5,343,Warley Wtr Twr,Benfleet Wtr Twr,PP224,PP219,ok,False
+5,343,Warley Wtr Twr,Lenham Wtr Twr,PP224,PP205,ok,False
+5,343,Warley Wtr Twr,Wrotham,PP224,PP192,ok,False
+5,343,Warley Wtr Twr,Severndroog Castle,PP224,PP189,ok,False
+5,343,Warley Wtr Twr,Chipping Barnet Ch Twr,PP224,PP185,ok,False
+5,343,Warley Wtr Twr,Epping Wtr Twr,PP224,PP188,ok,False
+5,343,Warley Wtr Twr,Dunmow,PP224,PP437,ok,False
+5,343,Warley Wtr Twr,Hockley Wtr Twr,PP224,PP220,ok,False
+5,343,White Horse Hill,Liddington Castle,PP34,PP35,ok,False
+5,343,White Horse Hill,Cleeve Hill,PP34,PP69,ok,False
+5,343,White Horse Hill,Broadway Tower,PP34,PP91,ok,False
+5,343,White Horse Hill,Wyck Beacon,PP34,PP144,ok,False
+5,343,White Horse Hill,Rollright,PP34,PP66,ok,False
+5,343,White Horse Hill,Muswell Hill,PP34,PP100,ok,False
+5,343,White Horse Hill,Coombe Hill,PP34,PP204,ok,False
+5,343,White Horse Hill,Shirburn Hill,PP34,PP207,ok,False
+5,343,White Horse Hill,Inkpen,PP34,PP33,ok,False
+5,343,Woolpit,South Lopham Ch Twr,PP247,PP237,ok,False
+5,343,Woolpit,Crown Corner,PP247,PP260,ok,False
+5,343,Woolpit,Swilland,PP247,PP244,ok,False
+5,343,Woolpit,Nedging Tye,PP247,PP240,ok,False
+5,343,Woolpit,Chedburgh,PP247,PP236,ok,False
+5,343,Woolpit,Puttocks Hill,PP247,PP246,ok,False
+5,343,Woolpit,Frog Hill,PP247,PP262,ok,False
+5,343,Wrotham,Benfleet Wtr Twr,PP192,PP219,ok,False
+5,343,Wrotham,Shurland,PP192,PP191,ok,False
+5,343,Wrotham,Lenham Wtr Twr,PP192,PP205,ok,False
+5,343,Wrotham,Fairlight Down,PP192,PP193,ok,False
+5,343,Wrotham,Brenchley Air Beacon,PP192,,unmatched,False
+5,343,Wrotham,Crowborough,PP192,PP196,ok,False
+5,343,Wrotham,Leith Hill Tower,PP192,PP50,ok,False
+5,343,Wrotham,Severndroog Castle,PP192,PP189,ok,False
+5,343,Wrotham,Epping Wtr Twr,PP192,PP188,ok,False
+5,343,Wrotham,Warley Wtr Twr,PP192,PP224,ok,False
+5,344,Wyck Beacon,Broadway Tower,PP144,PP91,ok,False
+5,344,Wyck Beacon,Icomb Tower,PP144,PP67,ok,False
+5,344,Wyck Beacon,Rollright,PP144,PP66,ok,False
+5,344,Wyck Beacon,Muswell Hill,PP144,PP100,ok,False
+5,344,Wyck Beacon,White Horse Hill,PP144,PP34,ok,False
+5,344,Wyck Beacon,Cleeve Hill,PP144,PP69,ok,False
+5,344,Wyton Wtr Twr,Ely Cathedral,PP444,PP430,ok,False
+5,344,Wyton Wtr Twr,Burrough Green Wtr Twr,PP444,PP241,ok,False
+5,344,Wyton Wtr Twr,Therfield,PP444,PP441,ok,False
+5,344,Wyton Wtr Twr,Bolnhurst,PP444,PP433,ok,False
+5,344,Wyton Wtr Twr,Fayway,PP444,PP432,ok,False
+5,344,Wyton Wtr Twr,Collyweston,PP444,PP431,ok,False
+5,344,Wyton Wtr Twr,Peterborough Cathedral,PP444,PP447,ok,False
+6,347,Ailsa Craig,Brown Carrick,PP479,PP346,ok,False
+6,347,Ailsa Craig,Cairnsmore of Deugh,PP479,PP328,ok,False
+6,347,Ailsa Craig,Merrick,PP479,PP301,ok,False
+6,347,Ailsa Craig,Beneraird,PP479,PP363,ok,False
+6,347,Ailsa Craig,Cairn Pat,PP479,PP360,ok,False
+6,347,Ailsa Craig,Cnoc Moy,PP479,PP365,ok,False
+6,347,Ailsa Craig,Goat Fell,PP479,PP309,ok,False
+6,347,An Cuaidh,Point of Stoer,PP373,PP394,ok,False
+6,347,An Cuaidh,Anteallach,PP373,PP389,ok,False
+6,347,An Cuaidh,Beinn Bhan,PP373,PP382,ok,False
+6,347,An Cuaidh,Storr,PP373,PP396,ok,False
+6,347,An Cuaidh,Clisham,PP373,PP472,ok,False
+6,347,An Cuaidh,Muirnag,PP373,PP474,ok,False
+6,347,Anteallach,Point of Stoer,PP389,PP394,ok,False
+6,347,Anteallach,Conival,PP389,PP384,ok,False
+6,347,Anteallach,Ben Wyvis,PP389,PP379,ok,False
+6,347,Anteallach,Beinn a' Bha' ach Ard,PP389,PP380,ok,False
+6,347,Anteallach,Cam Eige,PP389,PP386,ok,False
+6,347,Anteallach,Beinn Bhan,PP389,PP382,ok,False
+6,347,Anteallach,Storr,PP389,PP396,ok,False
+6,347,Anteallach,An Cuaidh,PP389,PP373,ok,False
+6,347,Askival,Meall nan Con,PP374,PP393,ok,False
+6,347,Askival,Ben Hogh,PP374,PP369,ok,False
+6,347,Askival,Ben Hynish,PP374,PP368,ok,False
+6,347,Askival,Heaval,PP374,PP475,ok,False
+6,347,Askival,Beinn Mhor,PP374,PP476,ok,False
+6,347,Askival,Healaval Beg,PP374,PP390,ok,False
+6,347,Askival,Beinn na Caillich,PP374,PP375,ok,False
+6,347,Askival,Sgurr na Ciche,PP374,PP371,ok,False
+6,348,Bad Mor,Scaraben,PP376,PP397,ok,False
+6,348,Bad Mor,Ben Klibreck,PP376,PP381,ok,False
+6,348,Bad Mor,Ben Hutig,PP376,PP378,ok,False
+6,348,Bad Mor,Ward Hill,PP376,PP466,ok,False
+6,348,Bad Mor,Dunnet Head,PP376,PP388,ok,False
+6,348,Bad Mor,Warth Hill,PP376,PP399,ok,False
+6,348,Bad Mor,Spital Hill,PP376,PP398,ok,False
+6,348,Bad Mor,Hill of Yarrows,PP376,PP391,ok,False
+6,348,Balta,Fetlar,PP455,PP459,ok,False
+6,348,Balta,Yell Saxavord,PP455,PP467,ok,True
+6,348,Balta,Yell Saxavord,PP455,PP463,ok,True
+6,348,Beinn Bhan,Anteallach,PP382,PP389,ok,False
+6,348,Beinn Bhan,Cam Eige,PP382,PP386,ok,False
+6,348,Beinn Bhan,Sgurr na Ciche,PP382,PP371,ok,False
+6,348,Beinn Bhan,Beinn na Caillich,PP382,PP375,ok,False
+6,348,Beinn Bhan,Healaval Beg,PP382,PP390,ok,False
+6,348,Beinn Bhan,Storr,PP382,PP396,ok,False
+6,348,Beinn Bhan,An Cuaidh,PP382,PP373,ok,False
+6,348,Beinn Bheula,Ben Lomond,PP330,PP336,ok,False
+6,348,Beinn Bheula,Hill of Stake,PP330,PP319,ok,False
+6,348,Beinn Bheula,Sliabh Gaoil,PP330,PP303,ok,False
+6,348,Beinn Bheula,Carra Duagh,PP330,PP385,ok,False
+6,348,Beinn Bheula,Ben Cruachan,PP330,PP314,ok,False
+6,348,Beinn Bhreac Mhor,Cam nan-tri- Corryhabbie,PP356,PP325,ok,True
+6,348,Beinn Bhreac Mhor,Cam nan-tri- Corryhabbie,PP356,PP342,ok,True
+6,348,Beinn Bhreac Mhor,Ben Macdhui,PP356,PP302,ok,False
+6,348,Beinn Bhreac Mhor,Cam Gower,PP356,PP332,ok,False
+6,348,Beinn Bhreac Mhor,Cam an Fhreiceadain,PP356,PP331,ok,False
+6,348,Beinn Bhreac Mhor,Ben Alder,PP356,PP335,ok,False
+6,348,Beinn Bhreac Mhor,Cam Eige,PP356,PP386,ok,False
+6,348,Beinn Bhreac Mhor,Beinn a' Bha' ach Ard,PP356,PP380,ok,False
+6,348,Beinn Bhreac Mhor,Ben Wyvis,PP356,PP379,ok,False
+6,348,Beinn Mhor,Heaval,PP476,PP475,ok,False
+6,348,Beinn Mhor,Marrival,PP476,PP477,ok,False
+6,348,Beinn Mhor,Healaval Beg,PP476,PP390,ok,False
+6,348,Beinn Mhor,Askival,PP476,PP374,ok,False
+6,348,Beinn Mhor,Ben Hogh,PP476,PP369,ok,False
+6,349,Beinn na,Healaval Beg,PP375,PP390,ok,False
+6,349,Beinn na Caillich,Storr,PP375,PP396,ok,False
+6,349,Beinn na Caillich,Beinn Bhan,PP375,PP382,ok,False
+6,349,Beinn na Caillich,Cam Eige,PP375,PP386,ok,False
+6,349,Beinn na Caillich,Sgurr na Ciche,PP375,PP371,ok,False
+6,349,Beinn na Caillich,Meall nan Con,PP375,PP393,ok,False
+6,349,Beinn na Caillich,Askival,PP375,PP374,ok,False
+6,349,Beinn Tart,Sliabh Gaoil,PP383,PP303,ok,False
+6,349,Beinn Tart,Cnoc Moy,PP383,PP365,ok,False
+6,349,Beinn Tart,Ben Hynish,PP383,PP368,ok,False
+6,349,Beinn Tart,Ben More,PP383,PP377,ok,False
+6,349,Beinn Tart,Jura,PP383,PP392,ok,False
+6,349,Ben Alder,Carn an Fhreiceadain,PP335,PP331,ok,False
+6,349,Ben Alder,Ben Macdhui,PP335,PP302,ok,False
+6,349,Ben Alder,Cam Gower,PP335,PP332,ok,False
+6,349,Ben Alder,Ben Lawers,PP335,PP315,ok,False
+6,349,Ben Alder,Ben Cruachan,PP335,PP314,ok,False
+6,349,Ben Alder,Ben Nevis,PP335,PP323,ok,False
+6,349,Ben Alder,Cam Eige,PP335,PP386,ok,False
+6,349,Ben Alder,Beinn Bhreac Mhor,PP335,PP356,ok,False
+6,349,Ben Cruachan,Carra Duagh,PP314,PP385,ok,False
+6,349,Ben Cruachan,Ben More,PP314,PP377,ok,False
+6,349,Ben Cruachan,Creach Bheinn,PP314,PP372,ok,False
+6,349,Ben Cruachan,Ben Nevis,PP314,PP323,ok,False
+6,349,Ben Cruachan,Ben Alder,PP314,PP335,ok,False
+6,349,Ben Cruachan,Ben Lawers,PP314,PP315,ok,False
+6,349,Ben Cruachan,Ben Lomond,PP314,PP336,ok,False
+6,349,Ben Cruachan,Beinn Bheula,PP314,PP330,ok,False
+6,349,Beneraird,Cairn Pat,PP363,PP360,ok,False
+6,349,Beneraird,Cnoc Moy,PP363,PP365,ok,False
+6,349,Beneraird,Ailsa Craig,PP363,PP479,ok,False
+6,349,Beneraird,Goat Fell,PP363,PP309,ok,False
+6,349,Beneraird,Brown Carrick,PP363,PP346,ok,False
+6,349,Beneraird,Merrick,PP363,PP301,ok,False
+6,349,Beneraird,Cairnsmore of Fleet,PP363,PP343,ok,False
+6,349,Ben Hogh,Ben Hynish,PP369,PP368,ok,False
+6,349,Ben Hogh,Heaval,PP369,PP475,ok,False
+6,349,Ben Hogh,Beinn Mhor,PP369,PP476,ok,False
+6,349,Ben Hogh,Askival,PP369,PP374,ok,False
+6,349,Ben Hogh,Meall nan Con,PP369,PP393,ok,False
+6,349,Ben Hogh,Ben More,PP369,PP377,ok,False
+6,350,Ben Hutig,Bad Mor,PP378,PP376,ok,False
+6,350,Ben Hutig,Ben Klibreck,PP378,PP381,ok,False
+6,350,Ben Hutig,Conival,PP378,PP384,ok,False
+6,350,Ben Hutig,Creag Riabhach,PP378,PP387,ok,False
+6,350,Ben Hutig,Ward Hill,PP378,PP466,ok,False
+6,350,Ben Hutig,Dunnet Head,PP378,PP388,ok,False
+6,350,Ben Hynish,Ben Hogh,PP368,PP369,ok,False
+6,350,Ben Hynish,Meall nan Con,PP368,PP393,ok,False
+6,350,Ben Hynish,Ben More,PP368,PP377,ok,False
+6,350,Ben Hynish,Jura,PP368,PP392,ok,False
+6,350,Ben Hynish,Beinn Tart a' Mhill,PP368,PP383,ok,False
+6,350,Ben Hynish,Heaval,PP368,PP475,ok,False
+6,350,Ben Hynish,Askival,PP368,PP374,ok,False
+6,350,Ben Klibreck,Cnoc an t'Sabhail,PP381,PP359,ok,False
+6,350,Ben Klibreck,Ben Wyvis,PP381,PP379,ok,False
+6,350,Ben Klibreck,Conival,PP381,PP384,ok,False
+6,350,Ben Klibreck,Ben Hutig,PP381,PP378,ok,False
+6,350,Ben Klibreck,Bad Mor,PP381,PP376,ok,False
+6,350,Ben Klibreck,Scaraben,PP381,PP397,ok,False
+6,350,Ben Klibreck,Col Bheinn,PP381,PP358,ok,False
+6,350,Ben Lawers,Meall Dearg,PP315,PP305,ok,False
+6,350,Ben Lawers,Ben Cleugh,PP315,PP307,ok,False
+6,350,Ben Lawers,Ben Lomond,PP315,PP336,ok,False
+6,350,Ben Lawers,Ben Cruachan,PP315,PP314,ok,False
+6,350,Ben Lawers,Ben Nevis,PP315,PP323,ok,False
+6,350,Ben Lawers,Ben Alder,PP315,PP335,ok,False
+6,350,Ben Lawers,Cam Gower,PP315,PP332,ok,False
+6,350,Ben Lomond,Hill of Stake,PP336,PP319,ok,False
+6,350,Ben Lomond,Beinn Bheula,PP336,PP330,ok,False
+6,350,Ben Lomond,Ben Cruachan,PP336,PP314,ok,False
+6,350,Ben Lomond,Ben Nevis,PP336,PP323,ok,False
+6,350,Ben Lomond,Ben Lawers,PP336,PP315,ok,False
+6,350,Ben Lomond,Ben Cleugh,PP336,PP307,ok,False
+6,350,Ben Lomond,Earls Seat,PP336,PP327,ok,False
+6,350,Ben Lomond,Glas Maol,PP336,PP322,ok,False
+6,350,Ben Macdhui,Carn Gower,PP302,PP332,ok,False
+6,350,Ben Macdhui,Ben Alder,PP302,PP335,ok,False
+6,350,Ben Macdhui,Beinn Bhreac Mhor,PP302,PP356,ok,False
+6,350,Ben Macdhui,Carn nan-tri- Corryhabbie,PP302,PP325,ok,True
+6,350,Ben Macdhui,Carn nan-tri- Corryhabbie,PP302,PP342,ok,True
+6,350,Ben Macdhui,Mount Battock,PP302,PP304,ok,False
+6,351,Ben More  Meall nan Con,Creach Bheinn,PP393,PP372,ok,False
+6,351,Ben More  Meall nan Con,Ben Cruachan,PP393,PP314,ok,False
+6,351,Ben More  Meall nan Con,Carra Duagh,PP393,PP385,ok,False
+6,351,Ben More  Meall nan Con,Jura,PP393,PP392,ok,False
+6,351,Ben More  Meall nan Con,Beinn Tart Ben Hynish,PP393,PP383,ok,True
+6,351,Ben More  Meall nan Con,Beinn Tart Ben Hynish,PP393,PP368,ok,True
+6,351,Ben More  Meall nan Con,Ben Hogh,PP393,PP369,ok,False
+6,351,Ben Nevis,Creach Bheinn,PP323,PP372,ok,False
+6,351,Ben Nevis,Meall nan Con,PP323,PP393,ok,False
+6,351,Ben Nevis,Sgurr na Ciche,PP323,PP371,ok,False
+6,351,Ben Nevis,Cam Eige,PP323,PP386,ok,False
+6,351,Ben Nevis,Ben Alder,PP323,PP335,ok,False
+6,351,Ben Nevis,Ben Lawers,PP323,PP315,ok,False
+6,351,Ben Nevis,Ben Lomond,PP323,PP336,ok,False
+6,351,Ben Nevis,Ben Cruachan,PP323,PP314,ok,False
+6,351,Ben Wyvis,Beinn a' Bha* ach Ard,PP379,PP380,ok,False
+6,351,Ben Wyvis,Cam Eige,PP379,PP386,ok,False
+6,351,Ben Wyvis,Anteallach,PP379,PP389,ok,False
+6,351,Ben Wyvis,Conival,PP379,PP384,ok,False
+6,351,Ben Wyvis,Ben Klibreck,PP379,PP381,ok,False
+6,351,Ben Wyvis,Cnoc an Cam nan-tri- Beinn Bhreac Mhor,PP379,PP359,ok,True
+6,351,Ben Wyvis,Cnoc an Cam nan-tri- Beinn Bhreac Mhor,PP379,PP325,ok,True
+6,351,Ben Wyvis,Cnoc an Cam nan-tri- Beinn Bhreac Mhor,PP379,PP356,ok,True
+6,351,Brassa,Yell,PP456,PP467,ok,False
+6,351,Brassa,Fetlar,PP456,PP459,ok,False
+6,351,Brassa,Fair Isle,PP456,PP458,ok,False
+6,351,Brassa,Foula,PP456,PP461,ok,False
+6,351,Brassa,Ronas Hill,PP456,PP462,ok,False
+6,351,Brown Carrick,Beneraird,PP346,PP363,ok,False
+6,351,Brown Carrick,Ailsa Craig,PP346,PP479,ok,False
+6,351,Brown Carrick,Cnoc Moy,PP346,PP365,ok,False
+6,351,Brown Carrick,Goat Fell,PP346,PP309,ok,False
+6,351,Brown Carrick,Hill of Stake,PP346,PP319,ok,False
+6,351,Brown Carrick,Corse Hill,PP346,PP329,ok,False
+6,351,Brown Carrick,Cairnsmore of Deugh,PP346,PP328,ok,False
+6,351,Cairn Pat,Cnoc Moy,PP360,PP365,ok,False
+6,351,Cairn Pat,Goat Fell,PP360,PP309,ok,False
+6,351,Cairn Pat,Ailsa Craig,PP360,PP479,ok,False
+6,351,Cairn Pat,Beneraird,PP360,PP363,ok,False
+6,351,Cairn Pat,Merrick,PP360,PP301,ok,False
+6,351,Cairn Pat,Cairnsmore of Fleet,PP360,PP343,ok,False
+6,352,Cairnsmore of,Cairnsmore of Fleet,,PP343,unmatched,False
+6,352,Cairnsmore of Deugh,Merrick,PP328,PP301,ok,False
+6,352,Cairnsmore of Deugh,Ailsa Craig,PP328,PP479,ok,False
+6,352,Cairnsmore of Deugh,Brown Carrick,PP328,PP346,ok,False
+6,352,Cairnsmore of Deugh,Corse Hill,PP328,PP329,ok,False
+6,352,Cairnsmore of Deugh,Cairn Table,PP328,PP311,ok,False
+6,352,Cairnsmore of Deugh,Tinto,PP328,PP318,ok,False
+6,352,Cairnsmore of Deugh,Hart Fell,PP328,PP320,ok,False
+6,352,Cairnsmore of Deugh,Criffell,PP328,PP96,ok,False
+6,352,Carn nan-tri-,Beinn Bhreac Mhor,PP325,PP356,ok,False
+6,352,Carn nan-tri-,Beinn a' Bha' ach Ard,PP325,PP380,ok,False
+6,352,Carn nan-tri-,Ben Wyvis,PP325,PP379,ok,False
+6,352,Carn nan-tri-,Cnoc an V Sabhail,PP325,PP359,ok,False
+6,352,Carn nan-tri-,Findlays Seat,PP325,PP340,ok,False
+6,352,Carn nan-tri-,Corryhabbie,PP325,PP342,ok,False
+6,352,Carn nan-tri-,Ben Macdhui,PP325,PP302,ok,False
+6,352,Cam Eige,Beinn a' Bha* ach Ard,PP386,PP380,ok,False
+6,352,Cam Eige,Beinn Bhreac Mhor,PP386,PP356,ok,False
+6,352,Cam Eige,Ben Alder,PP386,PP335,ok,False
+6,352,Cam Eige,Ben Nevis,PP386,PP323,ok,False
+6,352,Cam Eige,Sgurr na Ciche,PP386,PP371,ok,False
+6,352,Cam Eige,Beinn na Caillich,PP386,PP375,ok,False
+6,352,Cam Eige,Beinn Bhan,PP386,PP382,ok,False
+6,352,Cam Eige,Anteallach,PP386,PP389,ok,False
+6,352,Cam Eige,Ben Wyvis,PP386,PP379,ok,False
+6,352,Carn Gower,Kings Seat,PP332,PP310,ok,False
+6,352,Carn Gower,Meall Dearg,PP332,PP305,ok,False
+6,352,Carn Gower,Ben Lawers,PP332,PP315,ok,False
+6,352,Carn Gower,Ben Alder,PP332,PP335,ok,False
+6,352,Carn Gower,Carn an Fhreiceadain,PP332,PP331,ok,False
+6,352,Carn Gower,Beinn Bhreac Mhor,PP332,PP356,ok,False
+6,352,Carn Gower,Ben Macdhui,PP332,PP302,ok,False
+6,352,Carn Gower,Glas Maol,PP332,PP322,ok,False
+6,352,Carn Gower,Craigowl,PP332,PP353,ok,False
+6,352,Carra Duagh,Beinn Bheula,PP385,PP330,ok,False
+6,352,Carra Duagh,Sliabh Gaoil,PP385,PP303,ok,False
+6,352,Carra Duagh,Jura,PP385,PP392,ok,False
+6,352,Carra Duagh,Ben More,PP385,PP377,ok,False
+6,352,Carra Duagh,Creach Bheinn,PP385,PP372,ok,False
+6,352,Carra Duagh,Ben Cruachan,PP385,PP314,ok,False
+6,353,Clisham,Muirnag,PP472,PP474,ok,False
+6,353,Clisham,Point of Stoer,PP472,PP394,ok,False
+6,353,Clisham,An Cuaidh,PP472,PP373,ok,False
+6,353,Clisham,Storr,PP472,PP396,ok,False
+6,353,Clisham,Healaval Beg,PP472,PP390,ok,False
+6,353,Clisham,Marrival,PP472,PP477,ok,False
+6,353,Clisham,Mealisval,PP472,PP473,ok,False
+6,353,Cnoc an,Col Bheinn,PP359,PP358,ok,False
+6,353,Cnoc an,Findlays Seat,PP359,PP340,ok,False
+6,353,Cnoc an,Carn nan-tri- Ben Wyvis,PP359,PP325,ok,True
+6,353,Cnoc an,Carn nan-tri- Ben Wyvis,PP359,PP379,ok,True
+6,353,Cnoc an,Conival,PP359,PP384,ok,False
+6,353,Cnoc an,Ben Klibreck,PP359,PP381,ok,False
+6,353,Cnoc Moy,Goat Fell,PP365,PP309,ok,False
+6,353,Cnoc Moy,Brown Carrick,PP365,PP346,ok,False
+6,353,Cnoc Moy,Ailsa Craig,PP365,PP479,ok,False
+6,353,Cnoc Moy,Beneraird,PP365,PP363,ok,False
+6,353,Cnoc Moy,Cairn Pat,PP365,PP360,ok,False
+6,353,Cnoc Moy,Beinn Tart a' Mhill,PP365,PP383,ok,False
+6,353,Cnoc Moy,Jura,PP365,PP392,ok,False
+6,353,Cnoc Moy,Sliabh Gaoil,PP365,PP303,ok,False
+6,353,Col Bheinn,Cnoc an t' Sabhail,PP358,PP359,ok,False
+6,353,Col Bheinn,Ben Klibreck,PP358,PP381,ok,False
+6,353,Col Bheinn,Scaraben,PP358,PP397,ok,False
+6,353,Col Bheinn,Findlays Seat,PP358,PP340,ok,False
+6,353,Conival,Cnoc an t* Sabhail,PP384,PP359,ok,False
+6,353,Conival,Ben Wyvis,PP384,PP379,ok,False
+6,353,Conival,Anteallach,PP384,PP389,ok,False
+6,353,Conival,Point of Stoer,PP384,PP394,ok,False
+6,353,Conival,Creag Riabhach,PP384,PP387,ok,False
+6,353,Conival,Ben Hutig,PP384,PP378,ok,False
+6,353,Conival,Ben Klibreck,PP384,PP381,ok,False
+6,353,Corryhabbie,Carn nan-tri- Findlays Seat,PP342,PP325,ok,True
+6,353,Corryhabbie,Carn nan-tri- Findlays Seat,PP342,PP340,ok,True
+6,353,Corryhabbie,Ben Aigan,PP342,PP348,ok,False
+6,353,Corryhabbie,Bin of Cullen,PP342,PP349,ok,False
+6,353,Corryhabbie,Knock,PP342,PP339,ok,False
+6,353,Corryhabbie,Bennachie,PP342,PP341,ok,False
+6,353,Corryhabbie,Mount Battock,PP342,PP304,ok,False
+6,353,Corryhabbie,Glas Maol,PP342,PP322,ok,False
+6,353,Corryhabbie,Ben Macdhui,PP342,PP302,ok,False
+6,353,Corryhabbie,Cam an Fhreiceadain,PP342,PP331,ok,False
+6,353,Corryhabbie,Beinn Bhreac Mhor,PP342,PP356,ok,False
+6,354,Corse Hill,Cairn Table,PP329,PP311,ok,False
+6,354,Corse Hill,Cairnsmore of Deugh,PP329,PP328,ok,False
+6,354,Corse Hill,Brown Carrick,PP329,PP346,ok,False
+6,354,Corse Hill,Goat Fell,PP329,PP309,ok,False
+6,354,Corse Hill,Hill of Stake,PP329,PP319,ok,False
+6,354,Corse Hill,Earls Seat,PP329,PP327,ok,False
+6,354,Corse Hill,Ben Cleugh,PP329,PP307,ok,False
+6,354,Corse Hill,Black Mount,PP329,PP352,ok,False
+6,354,Corse Hill,Tinto,PP329,PP318,ok,False
+6,354,Creach Bheinn,Carra Duagh,PP372,PP385,ok,False
+6,354,Creach Bheinn,Ben More,PP372,PP377,ok,False
+6,354,Creach Bheinn,Meall nan Con,PP372,PP393,ok,False
+6,354,Creach Bheinn,Sgurr na Ciche,PP372,PP371,ok,False
+6,354,Creach Bheinn,Ben Nevis,PP372,PP323,ok,False
+6,354,Creach Bheinn,Ben Cruachan,PP372,PP314,ok,False
+6,354,Creag Riabhach Point of Stoer,Muirnag,PP394,PP474,ok,False
+6,354,Creag Riabhach Point of Stoer,Ben Hutig,PP394,PP378,ok,False
+6,354,Creag Riabhach Point of Stoer,Conival,PP394,PP384,ok,False
+6,354,Deerness,South Ronaldsay,PP457,PP464,ok,False
+6,354,Deerness,Ward Hill,PP457,PP466,ok,False
+6,354,Deerness,Fitty Hill,PP457,PP460,ok,False
+6,354,Deerness,Stronsay,PP457,PP465,ok,False
+6,354,Deerness,Fair Isle,PP457,PP458,ok,False
+6,354,Deerness,Warth Hill,PP457,PP399,ok,False
+6,354,Dunnet Head,Warth Hill,PP388,PP399,ok,False
+6,354,Dunnet Head,Hill of Yarrows,PP388,PP391,ok,False
+6,354,Dunnet Head,Spital Hill,PP388,PP398,ok,False
+6,354,Dunnet Head,Bad Mor,PP388,PP376,ok,False
+6,354,Dunnet Head,Ben Hutig,PP388,PP378,ok,False
+6,354,Dunnet Head,Ward Hill,PP388,PP466,ok,False
+6,354,Dunnet Head,South Ronaldsay,PP388,PP464,ok,False
+6,354,Fair Isle,Brassa,PP458,PP456,ok,False
+6,354,Fair Isle,Deerness,PP458,PP457,ok,False
+6,354,Fair Isle,Stronsay,PP458,PP465,ok,False
+6,354,Fair Isle,Fitty Hill,PP458,PP460,ok,False
+6,354,Fair Isle,Foula,PP458,PP461,ok,False
+6,354,Fetlar,Yell Ronas Hill,PP459,PP467,ok,True
+6,354,Fetlar,Yell Ronas Hill,PP459,PP462,ok,True
+6,354,Fetlar,Saxavord,PP459,PP463,ok,False
+6,354,Fetlar,Balta,PP459,PP455,ok,False
+6,354,Fetlar,Brassa,PP459,PP456,ok,False
+6,355,Fetlar,Cnoc an V Sabhail,PP459,PP359,ok,False
+6,355,Findlays Seat,Col Bheinn,PP340,PP358,ok,False
+6,355,Findlays Seat,Scaraben,PP340,PP397,ok,False
+6,355,Findlays Seat,Corryhabbie,PP340,PP342,ok,False
+6,355,Fitty Hill,Cam nan-tri- Stronsay,PP460,PP325,ok,True
+6,355,Fitty Hill,Cam nan-tri- Stronsay,PP460,PP465,ok,True
+6,355,Fitty Hill,Deerness,PP460,PP457,ok,False
+6,355,Fitty Hill,Ward Hill,PP460,PP466,ok,False
+6,355,Fitty Hill,Foula,PP460,PP461,ok,False
+6,355,Fitty Hill,Fair Isle,PP460,PP458,ok,False
+6,355,Foula,Brassa,PP461,PP456,ok,False
+6,355,Foula,Fair Isle,PP461,PP458,ok,False
+6,355,Foula,Fitty Hill,PP461,PP460,ok,False
+6,355,Foula,Ronas Hill,PP461,PP462,ok,False
+6,355,Foula,Yell,PP461,PP467,ok,False
+6,355,Goat Fell,Sliabh Gaoil,PP309,PP303,ok,False
+6,355,Goat Fell,Hill of Stake,PP309,PP319,ok,False
+6,355,Goat Fell,Corse Hill,PP309,PP329,ok,False
+6,355,Goat Fell,Brown Carrick,PP309,PP346,ok,False
+6,355,Goat Fell,Ailsa Craig,PP309,PP479,ok,False
+6,355,Goat Fell,Cnoc Moy,PP309,PP365,ok,False
+6,355,Goat Fell,Jura,PP309,PP392,ok,False
+6,355,Healaval Beg,Beinn na Caillich,PP390,PP375,ok,False
+6,355,Healaval Beg,Askival,PP390,PP374,ok,False
+6,355,Healaval Beg,Heaval,PP390,PP475,ok,False
+6,355,Healaval Beg,Beinn Mhor,PP390,PP476,ok,False
+6,355,Healaval Beg,Marrival,PP390,PP477,ok,False
+6,355,Healaval Beg,Clisham,PP390,PP472,ok,False
+6,355,Healaval Beg,Storr,PP390,PP396,ok,False
+6,355,Healaval Beg,Beinn Bhan,PP390,PP382,ok,False
+6,355,Heaval,Beinn Mhor,PP475,PP476,ok,False
+6,355,Heaval,Healaval Beg,PP475,PP390,ok,False
+6,355,Heaval,Askival,PP475,PP374,ok,False
+6,355,Heaval,Ben Hogh,PP475,PP369,ok,False
+6,355,Heaval,Ben Hynish,PP475,PP368,ok,False
+6,355,Heaval,Marrival,PP475,PP477,ok,False
+6,355,Hill of Stake,Brown Carrick,PP319,PP346,ok,False
+6,355,Hill of Stake,Goat Fell,PP319,PP309,ok,False
+6,355,Hill of Stake,Sliabh Gaoil,PP319,PP303,ok,False
+6,355,Hill of Stake,Beinn Bheula,PP319,PP330,ok,False
+6,355,Hill of Stake,Ben Lomond,PP319,PP336,ok,False
+6,355,Hill of Stake,Earls Seat,PP319,PP327,ok,False
+6,355,Hill of Stake,Corse Hill,PP319,PP329,ok,False
+6,356,Hill of Yarrows Spital Hill,Dunnet Head,PP398,PP388,ok,False
+6,356,Hill of Yarrows Spital Hill,Warth Hill,PP398,PP399,ok,False
+6,356,Hill of Yarrows Spital Hill,Scaraben,PP398,PP397,ok,False
+6,356,Hill of Yarrows Spital Hill,Bad Mor,PP398,PP376,ok,False
+6,356,Hill of Yarrows Spital Hill,Sliabh Gaoil,PP398,PP303,ok,False
+6,356,Jura,Goat Fell,PP392,PP309,ok,False
+6,356,Jura,Cnoc Moy,PP392,PP365,ok,False
+6,356,Jura,Beinn Tart a' Mhill,PP392,PP383,ok,False
+6,356,Jura,Ben Hynish,PP392,PP368,ok,False
+6,356,Jura,Ben More,PP392,PP377,ok,False
+6,356,Jura,Carra Duagh,PP392,PP385,ok,False
+6,356,Jura,Healaval Beg,PP392,PP390,ok,False
+6,356,Marrival,Beinn Mhor,PP477,PP476,ok,False
+6,356,Marrival,Heaval,PP477,PP475,ok,False
+6,356,Marrival,Mealisval,PP477,PP473,ok,False
+6,356,Marrival,Clisham,PP477,PP472,ok,False
+6,356,Marrival,Storr,PP477,PP396,ok,False
+6,356,Marrival,Marrival,PP477,PP477,ok,False
+6,356,Mealisval,Muirnag,PP473,PP474,ok,False
+6,356,Mealisval,Clisham,PP473,PP472,ok,False
+6,356,Mealisval,Ben Hogh,PP473,PP369,ok,False
+6,356,Meall nan Con,Askival,PP393,PP374,ok,False
+6,356,Meall nan Con,Beinn na Caillich,PP393,PP375,ok,False
+6,356,Meall nan Con,Sgurr na Ciche,PP393,PP371,ok,False
+6,356,Meall nan Con,Ben Nevis,PP393,PP323,ok,False
+6,356,Meall nan Con,Creach Bheinn,PP393,PP372,ok,False
+6,356,Meall nan Con,Ben More,PP393,PP377,ok,False
+6,356,Meall nan Con,Ben Hynish,PP393,PP368,ok,False
+6,356,Merrick,Cairnsmore of Deugh,PP301,PP328,ok,False
+6,356,Merrick,Criffell,PP301,PP96,ok,False
+6,356,Merrick,Cairnsmore of Fleet,PP301,PP343,ok,False
+6,356,Merrick,Cairn Pat,PP301,PP360,ok,False
+6,356,Merrick,Beneraird,PP301,PP363,ok,False
+6,356,Merrick,Ailsa Craig,PP301,PP479,ok,False
+6,356,Merrick,Cnoc Moy,PP301,PP365,ok,False
+6,356,Merrick,Goat Fell,PP301,PP309,ok,False
+6,356,Merrick,Cairn Table,PP301,PP311,ok,False
+6,357,Muirnag,Point of Stoer,PP474,PP394,ok,False
+6,357,Muirnag,An Cuaidh,PP474,PP373,ok,False
+6,357,Muirnag,Clisham,PP474,PP472,ok,False
+6,357,Muirnag,Mealisval,PP474,PP473,ok,False
+6,357,Muirnag,Creag Riabhach,PP474,PP387,ok,False
+6,357,Point of Stoer,An Cuaidh,PP394,PP373,ok,False
+6,357,Point of Stoer,Clisham,PP394,PP472,ok,False
+6,357,Point of Stoer,Muirnag,PP394,PP474,ok,False
+6,357,Point of Stoer,Creag Riabhach,PP394,PP387,ok,False
+6,357,Point of Stoer,Conival Anteallach,PP394,PP384,ok,True
+6,357,Point of Stoer,Conival Anteallach,PP394,PP389,ok,True
+6,357,Ronas Hill,Fetlar,PP462,PP459,ok,False
+6,357,Ronas Hill,Yell,PP462,PP467,ok,False
+6,357,Ronas Hill,Brassa,PP462,PP456,ok,False
+6,357,Ronas Hill,Foula,PP462,PP461,ok,False
+6,357,Ronas Hill,Saxavord,PP462,PP463,ok,False
+6,357,Saxavord,Yell,PP463,PP467,ok,False
+6,357,Saxavord,Ronas Hill,PP463,PP462,ok,False
+6,357,Saxavord,Balta,PP463,PP455,ok,False
+6,357,Saxavord,Fetlar,PP463,PP459,ok,False
+6,357,Scaraben,Col Bheinn,PP397,PP358,ok,False
+6,357,Scaraben,Ben Klibreck,PP397,PP381,ok,False
+6,357,Scaraben,Bad Mor,PP397,PP376,ok,False
+6,357,Scaraben,Spital Hill,PP397,PP398,ok,False
+6,357,Scaraben,Hill of Yarrows,PP397,PP391,ok,False
+6,357,Sgurr na Ciche,Findlays Seat Meall nan Con,PP371,PP340,ok,True
+6,357,Sgurr na Ciche,Findlays Seat Meall nan Con,PP371,PP393,ok,True
+6,357,Sgurr na Ciche,Askival,PP371,PP374,ok,False
+6,357,Sgurr na Ciche,Beinn na Caillich,PP371,PP375,ok,False
+6,357,Sgurr na Ciche,Beinn Bhan,PP371,PP382,ok,False
+6,357,Sgurr na Ciche,Cam Eige,PP371,PP386,ok,False
+6,357,Sgurr na Ciche,Ben Nevis,PP371,PP323,ok,False
+6,357,Sgurr na Ciche,Creach Bheinn,PP371,PP372,ok,False
+6,357,Sliabh Gaoil,Carra Duagh Beinn Bheula,PP303,PP385,ok,True
+6,357,Sliabh Gaoil,Carra Duagh Beinn Bheula,PP303,PP330,ok,True
+6,357,Sliabh Gaoil,Hill of Stake,PP303,PP319,ok,False
+6,357,Sliabh Gaoil,Goat Fell,PP303,PP309,ok,False
+6,357,Sliabh Gaoil,Cnoc Moy,PP303,PP365,ok,False
+6,357,Sliabh Gaoil,Beinn Tart a' Mhill,PP303,PP383,ok,False
+6,357,Sliabh Gaoil,Jura,PP303,PP392,ok,False
+6,358,South Ronaldsay,Deerness,PP464,PP457,ok,False
+6,358,South Ronaldsay,Warth Hill,PP464,PP399,ok,False
+6,358,South Ronaldsay,Dunnet Head,PP464,PP388,ok,False
+6,358,South Ronaldsay,Ward Hill,PP464,PP466,ok,False
+6,358,Spital Hill,Hill of Yarrows,PP398,PP391,ok,False
+6,358,Spital Hill,Scaraben,PP398,PP397,ok,False
+6,358,Spital Hill,Bad Mor,PP398,PP376,ok,False
+6,358,Spital Hill,Dunnet Head,PP398,PP388,ok,False
+6,358,Spital Hill,Warth Hill,PP398,PP399,ok,False
+6,358,Storr,Beinn na Caillich,PP396,PP375,ok,False
+6,358,Storr,Healaval Beg,PP396,PP390,ok,False
+6,358,Storr,Marrival,PP396,PP477,ok,False
+6,358,Storr,Clisham,PP396,PP472,ok,False
+6,358,Storr,An Cuaidh,PP396,PP373,ok,False
+6,358,Storr,Anteallach,PP396,PP389,ok,False
+6,358,Storr,Beinn Bhan,PP396,PP382,ok,False
+6,358,Stronsay,Deerness,PP465,PP457,ok,False
+6,358,Stronsay,Ward Hill,PP465,PP466,ok,False
+6,358,Stronsay,Fitty Hill,PP465,PP460,ok,False
+6,358,Stronsay,Fair Isle,PP465,PP458,ok,False
+6,358,Ward Hill,South Ronaldsay,PP466,PP464,ok,False
+6,358,Ward Hill,Warth Hill,PP466,PP399,ok,False
+6,358,Ward Hill,Dunnet Head,PP466,PP388,ok,False
+6,358,Ward Hill,Bad Mor,PP466,PP376,ok,False
+6,358,Ward Hill,Ben Hutig,PP466,PP378,ok,False
+6,358,Ward Hill,Fitty Hill,PP466,PP460,ok,False
+6,358,Ward Hill,Stronsay,PP466,PP465,ok,False
+6,358,Ward Hill,Deerness,PP466,PP457,ok,False
+6,358,Warth Hill,Dunnet Head,PP399,PP388,ok,False
+6,358,Warth Hill,Ward Hill,PP399,PP466,ok,False
+6,358,Warth Hill,South Ronaldsay,PP399,PP464,ok,False
+6,358,Warth Hill,Deerness,PP399,PP457,ok,False
+6,358,Warth Hill,Hill of Yarrows,PP399,PP391,ok,False
+6,358,Warth Hill,Spital Hill,PP399,PP398,ok,False
+6,358,Warth Hill,Bad Mor,PP399,PP376,ok,False
+6,358,Yell,Fetlar,PP467,PP459,ok,False
+6,358,Yell,Brassa,PP467,PP456,ok,False
+6,358,Yell,Foula,PP467,PP461,ok,False
+6,358,Yell,Ronas Hill,PP467,PP462,ok,False
+6,358,Yell,Saxavord,PP467,PP463,ok,False
+6,358,Yell,Balta,PP467,PP455,ok,False
+7,361,Aberystwyth,Talsarn,PP108,PP151,ok,False
+7,361,Aberystwyth,Rhiw,PP108,PP110,ok,False
+7,361,Aberystwyth,Cader Idris,PP108,PP105,ok,False
+7,361,Beneraird,Cairn Pat,PP363,PP360,ok,False
+7,361,Beneraird,Brown Carrick,PP363,PP346,ok,False
+7,361,Beneraird,Merrick,PP363,PP301,ok,False
+7,361,Beneraird,Cairnsmore of Fleet,PP363,PP343,ok,False
+7,361,Beneraird,Carleton Fell,PP363,PP362,ok,False
+7,361,Beneraird,Inshanks,PP363,PP361,ok,False
+7,361,Black Combe,Rottington,PP2,PP1,ok,False
+7,361,Black Combe,Skiddaw,PP2,PP3,ok,False
+7,361,Black Combe,Llaneilian,PP2,PP116,ok,False
+7,361,Black Combe,South Barrule,PP2,PP469,ok,False
+7,361,Black Combe,Snaefell,PP2,PP468,ok,False
+7,361,Black Combe,Plynlimon,PP2,PP101,ok,False
+7,361,Cader Idris,Aberystwyth,PP105,PP108,ok,False
+7,361,Cader Idris,Rhiw,PP105,PP110,ok,False
+7,361,Cader Idris,Yr Eifl,PP105,PP109,ok,False
+7,361,Cader Idris,Garnedd Ugain,PP105,PP111,ok,False
+7,361,Cader Idris,Arenig,PP105,PP118,ok,False
+7,361,Cader Idris,Aran Fawddwy,PP105,PP102,ok,False
+7,361,Cairn Pat,Inshanks,PP360,PP361,ok,False
+7,361,Cairn Pat,South Barrule,PP360,PP469,ok,False
+7,361,Cairn Pat,Beneraird,PP360,PP363,ok,False
+7,361,Cairn Pat,Merrick,PP360,PP301,ok,False
+7,361,Cairn Pat,Cairnsmore of Fleet,PP360,PP343,ok,False
+7,361,Cairn Pat,Carleton Fell,PP360,PP362,ok,False
+7,362,Cairn Pat,Carleton Fell,PP360,PP362,ok,False
+7,362,Cairnsmore of Fleet,Cairn Pat,PP343,PP360,ok,False
+7,362,Cairnsmore of Fleet,Beneraird,PP343,PP363,ok,False
+7,362,Cairnsmore of Fleet,Merrick,PP343,PP301,ok,False
+7,362,Cairnsmore of Fleet,Cairnsmore of Deugh,PP343,PP328,ok,False
+7,362,Cairnsmore of Fleet,Criffell,PP343,PP96,ok,False
+7,362,Cairnsmore of Fleet,Rottington,PP343,PP1,ok,False
+7,362,Cairnsmore of Fleet,Talsarn,PP343,PP151,ok,False
+7,362,Capel Cynon,Prescelly,PP114,PP107,ok,False
+7,362,Capel Cynon,Rhiw,PP114,PP110,ok,False
+7,362,Carleton Fell,Inshanks,PP362,PP361,ok,False
+7,362,Carleton Fell,Cairn Pat,PP362,PP360,ok,False
+7,362,Carleton Fell,Cairnsmore of Fleet,PP362,PP343,ok,False
+7,362,Carleton Fell,Rottington,PP362,PP1,ok,False
+7,362,Carleton Fell,Snaefell,PP362,PP468,ok,False
+7,362,Carleton Fell,South Barrule,PP362,PP469,ok,False
+7,362,Criffell,Cairnsmore of Deugh,PP96,PP328,ok,False
+7,362,Criffell,Cairn Table,PP96,PP311,ok,False
+7,362,Criffell,Hart Fell,PP96,PP320,ok,False
+7,362,Criffell,Wisp Hill,PP96,PP317,ok,False
+7,362,Criffell,Whitelyne Common,PP96,PP93,ok,False
+7,362,Criffell,Cold Fell Pike,PP96,PP99,ok,False
+7,362,Criffell,Cross Fell,PP96,PP19,ok,False
+7,362,Criffell,Skiddaw,PP96,PP3,ok,False
+7,362,Criffell,Sea Fell,PP96,PP92,ok,False
+7,362,Criffell,Rottington,PP96,PP1,ok,False
+7,362,Criffell,Cairnsmore of Fleet,PP96,PP343,ok,False
+7,362,Criffell,Merrick,PP96,PP301,ok,False
+7,362,Garnedd Ugain Yr Eifl,Holyhead,PP109,PP117,ok,False
+7,362,Garnedd Ugain Yr Eifl,Llaneilian,PP109,PP116,ok,False
+7,362,Garnedd Ugain Yr Eifl,Moelfre Isaf,PP109,PP163,ok,False
+7,362,Garnedd Ugain Yr Eifl,Moel Fammau,PP109,PP86,ok,False
+7,362,Garnedd Ugain Yr Eifl,Arenig,PP109,PP118,ok,False
+7,362,Garnedd Ugain Yr Eifl,Cader Idris,PP109,PP105,ok,False
+7,362,Garnedd Ugain Yr Eifl,Rhiw,PP109,PP110,ok,False
+7,363,Holyhead,Rhiw,PP117,PP110,ok,False
+7,363,Holyhead,South Barrule,PP117,PP469,ok,False
+7,363,Holyhead,Snaefell,PP117,PP468,ok,False
+7,363,Holyhead,Llaneilian,PP117,PP116,ok,False
+7,363,Holyhead,Garnedd Ugain,PP117,PP111,ok,False
+7,363,Holyhead,Yr Eifl,PP117,PP109,ok,False
+7,363,Holyhead,Cairn Pat,PP117,PP360,ok,False
+7,363,Inshanks,Beneraird,PP361,PP363,ok,False
+7,363,Inshanks,Merrick,PP361,PP301,ok,False
+7,363,Inshanks,Carleton Fell,PP361,PP362,ok,False
+7,363,Inshanks,Snaefell,PP361,PP468,ok,False
+7,363,Inshanks,South Barrule,PP361,PP469,ok,False
+7,363,Inshanks,Holyhead,PP361,PP117,ok,False
+7,363,Llaneilian,South Barrule,PP116,PP469,ok,False
+7,363,Llaneilian,Snaefell,PP116,PP468,ok,False
+7,363,Llaneilian,Black Combe,PP116,PP2,ok,False
+7,363,Llaneilian,Great Ormes Head,PP116,PP115,ok,False
+7,363,Llaneilian,Garnedd Ugain,PP116,PP111,ok,False
+7,363,Llaneilian,Yr Eifl,PP116,PP109,ok,False
+7,363,Merrick,Cairnsmore of Deugh,PP301,PP328,ok,False
+7,363,Merrick,Criffell,PP301,PP96,ok,False
+7,363,Merrick,Cairnsmore of Fleet,PP301,PP343,ok,False
+7,363,Merrick,Carleton Fell,PP301,PP362,ok,False
+7,363,Merrick,Inshanks,PP301,PP361,ok,False
+7,363,Merrick,Cairn Pat,PP301,PP360,ok,False
+7,363,Merrick,Beneraird,PP301,PP363,ok,False
+7,363,Merrick,Cairn Table,PP301,PP311,ok,False
+7,363,Prescelly,Capel Cynon,PP107,PP114,ok,False
+7,363,Prescelly,Garn Fawr,PP107,PP106,ok,False
+7,363,Prescelly,Rhiw,PP107,PP110,ok,False
+7,363,Prescelly,Holyhead,PP107,PP117,ok,False
+7,363,Rhiw,Yr Eifl,PP110,PP109,ok,False
+7,363,Rhiw,Garnedd Ugain,PP110,PP111,ok,False
+7,363,Rhiw,Cader Idris,PP110,PP105,ok,False
+7,363,Rhiw,Aberystwyth,PP110,PP108,ok,False
+7,363,Rhiw,Capel Cynon,PP110,PP114,ok,False
+7,363,Rhiw,Prescelly,PP110,PP107,ok,False
+7,364,Rottington,Criffell,PP1,PP96,ok,False
+7,364,Rottington,Skiddaw,PP1,PP3,ok,False
+7,364,Rottington,Black Combe,PP1,PP2,ok,False
+7,364,Rottington,Snaefell,PP1,PP468,ok,False
+7,364,Rottington,Carleton Fell,PP1,PP362,ok,False
+7,364,Rottington,Cairnsmore of Fleet,PP1,PP343,ok,False
+7,364,Skiddaw,Criffell,PP3,PP96,ok,False
+7,364,Skiddaw,Wisp Hill,PP3,PP317,ok,False
+7,364,Skiddaw,Whitelyne Common,PP3,PP93,ok,False
+7,364,Skiddaw,Cold Fell Pike,PP3,PP99,ok,False
+7,364,Skiddaw,Cross Fell,PP3,PP19,ok,False
+7,364,Skiddaw,High Street,PP3,PP5,ok,False
+7,364,Skiddaw,Sea Fell,PP3,PP92,ok,False
+7,364,Skiddaw,Black Combe,PP3,PP2,ok,False
+7,364,Skiddaw,Rottington,PP3,PP1,ok,False
+7,364,Snaefell,Inshanks,PP468,PP361,ok,False
+7,364,Snaefell,Carleton Fell,PP468,PP362,ok,False
+7,364,Snaefell,Rottington,PP468,PP1,ok,False
+7,364,Snaefell,Black Combe,PP468,PP2,ok,False
+7,364,Snaefell,Llaneilian,PP468,PP116,ok,False
+7,364,Snaefell,Holyhead,PP468,PP117,ok,False
+7,364,Snaefell,South Barrule,PP468,PP469,ok,False
+7,364,South Barrule,Inshanks,PP469,PP361,ok,False
+7,364,South Barrule,Carleton Fell,PP469,PP362,ok,False
+7,364,South Barrule,Snaefell,PP469,PP468,ok,False
+7,364,South Barrule,Black Combe,PP469,PP2,ok,False
+7,364,South Barrule,Llaneilian,PP469,PP116,ok,False
+7,364,South Barrule,Holyhead,PP469,PP117,ok,False
+7,364,South Barrule,Cairn Pat,PP469,PP360,ok,False
+7,364,Yr Eifl,Rhiw,PP109,PP110,ok,False
+7,364,Yr Eifl,Holyhead,PP109,PP117,ok,False
+7,364,Yr Eifl,Llaneilian,PP109,PP116,ok,False
+7,364,Yr Eifl,Garnedd Ugain,PP109,PP111,ok,False
+7,364,Yr Eifl,Arenig,PP109,PP118,ok,False
+7,364,Yr Eifl,Cader Idris,PP109,PP105,ok,False

@@ -1,0 +1,69 @@
+a,b,line_style,notes
+Creag Riabhach,Ben Hutig,solid,
+Creag Riabhach,Point of Stoer,solid,
+Creag Riabhach,Conival,solid,
+Ben Hutig,Conival,solid,
+Ben Hutig,Ben Klibreck,solid,
+Ben Hutig,Bad Mor,solid,
+Ben Hutig,Dunnet Head,solid,
+Bad Mor,Ben Klibreck,solid,
+Bad Mor,Scaraben,solid,
+Bad Mor,Spital Hill,solid,short
+Bad Mor,Hill of Yarrows,solid,
+Bad Mor,Dunnet Head,solid,short
+Spital Hill,Scaraben,solid,
+Spital Hill,Hill of Yarrows,solid,short
+Spital Hill,Dunnet Head,solid,short
+Hill of Yarrows,Scaraben,solid,
+Hill of Yarrows,Dunnet Head,solid,
+Point of Stoer,Conival,solid,
+Point of Stoer,Anteallach,solid,
+Conival,Ben Klibreck,solid,
+Conival,Anteallach,solid,
+Conival,Ben Wyvis,solid,
+Conival,Cnoc an t'Sabhail,solid,
+Ben Klibreck,Scaraben,solid,long
+Ben Klibreck,Col Bheinn,solid,
+Ben Klibreck,Ben Wyvis,solid,
+Ben Klibreck,Cnoc an t'Sabhail,solid,
+Scaraben,Col Bheinn,solid,
+Col Bheinn,Cnoc an t'Sabhail,solid,
+Anteallach,Ben Wyvis,solid,
+Cnoc an t'Sabhail,Ben Wyvis,solid,
+An Cuaidh,Anteallach,solid,
+Anteallach,Beinn Bhan,solid,
+Anteallach,Carn Eige,solid,
+Anteallach,Beinn a' Bha'ach Ard,dashed,
+Ben Wyvis,Beinn a' Bha'ach Ard,solid,
+Ben Wyvis,Carn Eige,solid,
+Ben Wyvis,Beinn Bhreac Mhor,solid,
+Ben Wyvis,Carn nan Tri-tighearnan,solid,
+Cnoc an t'Sabhail,Carn nan Tri-tighearnan,solid,
+Cnoc an t'Sabhail,Findlays Seat,solid,
+Carn nan Tri-tighearnan,Beinn a' Bha'ach Ard,solid,
+Carn nan Tri-tighearnan,Findlays Seat,solid,
+Carn nan Tri-tighearnan,Beinn Bhreac Mhor,solid,
+Carn nan Tri-tighearnan,Ben Macdhui,solid,
+Carn nan Tri-tighearnan,Corryhabbie,solid,
+Beinn Bhan,Carn Eige,solid,
+Beinn Bhan,Sgurr na Ciche,solid,
+Carn Eige,Beinn Bhreac Mhor,solid,
+Carn Eige,Sgurr na Ciche,solid,
+Carn Eige,Ben Nevis,solid,long
+Carn Eige,Ben Alder,solid,long
+Carn Eige,Beinn a' Bha'ach Ard,dashed,
+Beinn Bhreac Mhor,Ben Alder,solid,
+Beinn Bhreac Mhor,Carn an Fhreiceadain,dashed,short
+Beinn Bhreac Mhor,Ben Macdhui,solid,
+Beinn Bhreac Mhor,Corryhabbie,solid,
+Sgurr na Ciche,Ben Nevis,solid,
+Ben Nevis,Ben Alder,solid,
+Ben Alder,Carn Gower,solid,
+Ben Alder,Ben Macdhui,solid,
+Ben Macdhui,Corryhabbie,solid,thick (definitive from earlier figure)
+Ben Macdhui,Carn Gower,solid,
+Ben Macdhui,Glas Maol,dashed,thick
+Carn an Fhreiceadain,Corryhabbie,dashed,
+Carn an Fhreiceadain,Ben Alder,dashed,
+Findlays Seat,Corryhabbie,solid,thick
+Carn Gower,Glas Maol,solid,thick and dashed
