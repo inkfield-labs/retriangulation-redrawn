@@ -1,0 +1,115 @@
+{
+  "url": "http://localhost:8766/",
+  "throttle": {
+    "rtt_ms": 150,
+    "down_mbit_s": 1.6,
+    "up_mbit_s": 0.75
+  },
+  "cache": "cold",
+  "budget_bytes": 3000000,
+  "chromium": "156.0.8078.4",
+  "phone": {
+    "viewport": [
+      390,
+      844
+    ],
+    "requests": 25,
+    "bytes": 1222631,
+    "bytes_by_kind": {
+      "page": 32897,
+      "libraries": 233988,
+      "other": 0,
+      "basemap": 420359,
+      "data": 535387
+    },
+    "bytes_if_site_text_gzipped": 846711,
+    "seconds_to_data_ready": 11.7,
+    "seconds_to_map_idle": 43.7,
+    "largest": [
+      {
+        "url": "http://localhost:8766/data/pillars.json",
+        "bytes": 345185
+      },
+      {
+        "url": "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js",
+        "bytes": 211548
+      },
+      {
+        "url": "http://localhost:8766/data/rays.geojson",
+        "bytes": 172786
+      },
+      {
+        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Bold/256-511.pbf",
+        "bytes": 58765
+      },
+      {
+        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Bold/512-767.pbf",
+        "bytes": 57204
+      },
+      {
+        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/256-511.pbf",
+        "bytes": 56242
+      },
+      {
+        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/512-767.pbf",
+        "bytes": 54205
+      },
+      {
+        "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+        "bytes": 49818
+      }
+    ]
+  },
+  "desktop": {
+    "viewport": [
+      1280,
+      800
+    ],
+    "requests": 27,
+    "bytes": 1280399,
+    "bytes_by_kind": {
+      "page": 32897,
+      "libraries": 234226,
+      "other": 0,
+      "basemap": 371583,
+      "data": 641693
+    },
+    "bytes_if_site_text_gzipped": 904479,
+    "seconds_to_data_ready": 10.4,
+    "seconds_to_map_idle": 29.8,
+    "largest": [
+      {
+        "url": "http://localhost:8766/data/pillars.json",
+        "bytes": 345185
+      },
+      {
+        "url": "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js",
+        "bytes": 211671
+      },
+      {
+        "url": "http://localhost:8766/data/rays.geojson",
+        "bytes": 172786
+      },
+      {
+        "url": "http://localhost:8766/data/lines.pmtiles",
+        "bytes": 64106
+      },
+      {
+        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/256-511.pbf",
+        "bytes": 62657
+      },
+      {
+        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Bold/256-511.pbf",
+        "bytes": 58764
+      },
+      {
+        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/256-511.pbf",
+        "bytes": 56241
+      },
+      {
+        "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
+        "bytes": 49810
+      }
+    ]
+  }
+}

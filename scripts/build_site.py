@@ -3,8 +3,8 @@
 Usage:  TIPPECANOE=/path/to/tippecanoe python -I scripts/build_site.py data/trig/x/CompleteTrigArchive.csv
 Reads:  data/gb_lines.csv and data/gb_lines_long.csv (visible over Terrain 50, <=250 km),
         data/gb_surface.csv (GLO-30 clearance per line), results/rays_then_now.csv
-Writes (gitignored): site/data/pillars.geojson   standing pillars with id, name, height, visible-partner counts
-                                                 (n over the terrain, s also clear on the surface model)
+Writes (gitignored): site/data/pillars.json      standing pillars as [id, name, lon, lat, height, n, s] rows
+                                                 (n partners over the terrain, s also clear on the surface model)
                      site/data/partners/<id>.json  [[partner id, km, surface clear 0/1], ...] nearest first
                      site/data/lines.pmtiles     every visible line at k = 0.13 (properties: km, s)
                      site/data/rays.geojson      the reciprocal 1936-62 rays with their then-and-now state
@@ -52,14 +52,10 @@ def main(trig_csv):
     clear = both[both.s == 1].id.value_counts()
 
     (OUT / "partners").mkdir(parents=True, exist_ok=True)
-    feats = []
-    for r, x, y in zip(p.itertuples(), lon, lat):
-        feats.append({"type": "Feature", "id": len(feats),
-                      "geometry": {"type": "Point", "coordinates": [round(x, 5), round(y, 5)]},
-                      "properties": {"id": r.id, "name": r._1, "h": round(float(r.HEIGHT), 1),
-                                     "n": int(counts.get(r.id, 0)), "s": int(clear.get(r.id, 0))}})
-    (OUT / "pillars.geojson").write_text(json.dumps({"type": "FeatureCollection", "features": feats},
-                                                    separators=(",", ":")))
+    # compact rows rather than GeoJSON: a third of the size; the page rebuilds the features
+    rows = [[r.id, r._1, round(x, 5), round(y, 5), round(float(r.HEIGHT), 1), int(counts.get(r.id, 0)),
+             int(clear.get(r.id, 0))] for r, x, y in zip(p.itertuples(), lon, lat)]
+    (OUT / "pillars.json").write_text(json.dumps(rows, separators=(",", ":"), ensure_ascii=False))
     for i, g in both.sort_values(["id", "km"]).groupby("id"):
         (OUT / "partners" / f"{i}.json").write_text(json.dumps(list(zip(g.other, g.km.round(1), g.s.tolist())),
                                                                separators=(",", ":")))
@@ -101,7 +97,7 @@ def main(trig_csv):
                            zip(top10.a_name, top10.b_name, top10.dist_km, top10.s)],
                "most_partners": {"id": top, "name": p.set_index("id").loc[top, "Trig Name"],
                                  "partners": int(counts.max()), "surface_clear": int(clear.get(top, 0))},
-               "bytes": {f.name: f.stat().st_size for f in (OUT / "lines.pmtiles", OUT / "pillars.geojson",
+               "bytes": {f.name: f.stat().st_size for f in (OUT / "lines.pmtiles", OUT / "pillars.json",
                                                              OUT / "rays.geojson")}}
     (ROOT / "results" / "site_build.json").write_text(json.dumps(summary, indent=2))
     print(json.dumps(summary, indent=2))

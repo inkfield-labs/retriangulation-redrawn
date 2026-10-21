@@ -74,7 +74,7 @@
   },
   "bytes": {
     "lines.pmtiles": 103197822,
-    "pillars.geojson": 1012461,
+    "pillars.json": 344841,
     "rays.geojson": 172453
   }
 }

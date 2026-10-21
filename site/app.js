@@ -1,4 +1,4 @@
-// Static map of trig-pillar sightlines, then and now. Data from scripts/build_site.py: data/pillars.geojson,
+// Static map of trig-pillar sightlines, then and now. Data from scripts/build_site.py: data/pillars.json,
 // data/partners/<id>.json, data/lines.pmtiles and data/rays.geojson. A selection is kept in the URL hash (#<id>).
 const OS = "Contains OS data © Crown copyright and database right 2026";
 const COP = "Contains modified Copernicus DEM data";
@@ -47,13 +47,12 @@ maplibregl.addProtocol("pmtiles", protocol.tile);
 const base = new URL("data/", location.href).href;
 
 const GB = [[-7.6, 49.9], [1.8, 58.7]];
-const map = new maplibregl.Map({
-  container: "map",
-  style: "https://tiles.openfreemap.org/styles/" + (dark ? "dark" : "positron"),
-  bounds: GB,
-  fitBoundsOptions: {padding: 20},
-  attributionControl: false,
-});
+const map = new maplibregl.Map({container: "map", bounds: GB, fitBoundsOptions: {padding: 20}, attributionControl: false});
+// basemap labels in Latin script only: the bilingual labels fetch font ranges for other scripts (about 1 MB on a phone)
+const latin = ["coalesce", ["get", "name:latin"], ["get", "name_en"], ["get", "name"]];
+map.setStyle("https://tiles.openfreemap.org/styles/" + (dark ? "dark" : "positron"), {transformStyle: (_, style) => ({
+  ...style, layers: style.layers.map((l) => (JSON.stringify(l.layout?.["text-field"] ?? "").includes("name:nonlatin")
+    ? {...l, layout: {...l.layout, "text-field": latin}} : l))})});
 map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-right");
 const narrow = innerWidth <= 640;
 const attribution = new maplibregl.AttributionControl({compact: narrow});
@@ -68,8 +67,10 @@ let rays = [];
 const historyBox = document.getElementById("history");
 
 map.on("load", async () => {
-  const [pillars, rayData, longest] = await Promise.all(["pillars.geojson", "rays.geojson", "longest.json"].map(
+  const [rows, rayData, longest] = await Promise.all(["pillars.json", "rays.geojson", "longest.json"].map(
     async (f) => (await fetch(base + f)).json()));
+  const pillars = {type: "FeatureCollection", features: rows.map(([id, name, lon, lat, h, n, s], i) => ({
+    type: "Feature", id: i, geometry: {type: "Point", coordinates: [lon, lat]}, properties: {id, name, h, n, s}}))};
   for (const f of pillars.features) byId.set(f.properties.id, f);
   rays = rayData.features;
   fillSearch(pillars.features);

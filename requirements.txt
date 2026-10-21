@@ -9,3 +9,4 @@ pymupdf
 pillow
 shapely
 boto3
+playwright
