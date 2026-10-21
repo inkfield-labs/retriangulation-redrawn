@@ -4,10 +4,12 @@ Loads the page in headless Chromium at phone and desktop sizes, waits for the pa
 for the map to go idle, and sums the bytes received per request. Throttling is Lighthouse's mobile profile: 150 ms
 round trip, 1.6 Mbit/s down, 750 kbit/s up. The local server (http-server) sends files uncompressed, so for this
 site's own text files the gzip size is also reported: that is what a host such as Cloudflare Pages would send.
+That adjustment is skipped for any other host, which already compresses.
 
-Usage:  python -I scripts/measure_payload.py [url]      (default http://localhost:8766/; serve site/ first)
+Usage:  python -I scripts/measure_payload.py [url [out.json]]
+        defaults: http://localhost:8766/ (serve site/ first) and results/payload.json
 Needs:  pip install playwright && python -m playwright install --only-shell chromium
-Writes: results/payload.json
+Writes: results/payload.json, or the given out.json (e.g. results/payload_preview.json for the preview)
 """
 import gzip
 import json
@@ -30,6 +32,8 @@ def kind(url, site):
         return "data" if u.path.startswith("/data/") else "page"
     if "unpkg.com" in u.netloc:
         return "libraries"
+    if u.netloc.endswith(".r2.dev"):
+        return "tiles"
     if "openfreemap" in u.netloc:
         return "basemap"
     return "other"
@@ -37,7 +41,10 @@ def kind(url, site):
 
 def local_gzip(url):
     """gzip size of a site/ text file, as a compressing host would send it; None if not a local text file."""
-    path = urlparse(url).path
+    u = urlparse(url)
+    if u.hostname not in ("localhost", "127.0.0.1"):
+        return None
+    path = u.path
     path = "/index.html" if path == "/" else path
     f = ROOT / "site" / path.lstrip("/")
     if not path.endswith(TEXT) or not f.is_file():
@@ -73,14 +80,15 @@ def measure(browser, url, size):
             gz_saving += n - g
     total = sum(n for _, n in rows)
     ctx.close()
-    return {"viewport": list(size), "requests": len(rows), "bytes": total, "bytes_by_kind": by_kind,
+    return {"viewport": list(size), "requests": len(rows), "tile_requests": sum(kind(u, site) == "tiles" for u, _ in rows),
+            "bytes": total, "bytes_by_kind": by_kind,
             "bytes_if_site_text_gzipped": total - gz_saving, "seconds_to_data_ready": round(t_ready, 1),
             "seconds_to_map_idle": round(t_idle, 1),
             "largest": [{"url": urlparse(u)._replace(query="").geturl(), "bytes": n}
                         for u, n in sorted(rows, key=lambda r: -r[1])[:8]]}
 
 
-def main(url):
+def main(url, out_path):
     with sync_playwright() as p:
         browser = p.chromium.launch()
         out = {"url": url, "throttle": {"rtt_ms": 150, "down_mbit_s": 1.6, "up_mbit_s": 0.75}, "cache": "cold",
@@ -88,9 +96,10 @@ def main(url):
         for name, size in VIEWPORTS.items():
             out[name] = measure(browser, url, size)
         browser.close()
-    (ROOT / "results" / "payload.json").write_text(json.dumps(out, indent=2))
+    Path(out_path).write_text(json.dumps(out, indent=2))
     print(json.dumps(out, indent=2))
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8766/")
+    main(sys.argv[1] if len(sys.argv) > 1 else "http://localhost:8766/",
+         sys.argv[2] if len(sys.argv) > 2 else ROOT / "results" / "payload.json")

@@ -45,6 +45,8 @@ const NET = {full: ["interpolate", ["linear"], ["zoom"], 4, 0.18, 9, 0.3],
 const protocol = new pmtiles.Protocol();
 maplibregl.addProtocol("pmtiles", protocol.tile);
 const base = new URL("data/", location.href).href;
+// tiles URL: scripts/deploy_preview.sh rewrites this one line to point at R2 (Pages caps files at 25 MiB)
+const TILES = base + "lines.pmtiles";
 
 const GB = [[-7.6, 49.9], [1.8, 58.7]];
 const map = new maplibregl.Map({container: "map", bounds: GB, fitBoundsOptions: {padding: 20}, attributionControl: false});
@@ -78,7 +80,7 @@ map.on("load", async () => {
   fillLongest(longest);
   fillStories();
 
-  map.addSource("lines", {type: "vector", url: "pmtiles://" + base + "lines.pmtiles", attribution: `${OS}. ${COP}`});
+  map.addSource("lines", {type: "vector", url: "pmtiles://" + TILES, attribution: `${OS}. ${COP}`});
   map.addSource("pillars", {type: "geojson", data: pillars});
   map.addSource("rays", {type: "geojson", data: rayData});
   map.addSource("sel-lines", {type: "geojson", data: empty()});
