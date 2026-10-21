@@ -1,0 +1,13 @@
+{
+  "rules": [
+    {
+      "allowed": {
+        "origins": ["https://retriangulation-redrawn.pages.dev", "http://localhost:8766"],
+        "methods": ["GET", "HEAD"],
+        "headers": ["Range"]
+      },
+      "exposeHeaders": ["ETag", "Content-Range", "Content-Length", "Accept-Ranges"],
+      "maxAgeSeconds": 86400
+    }
+  ]
+}

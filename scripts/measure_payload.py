@@ -28,12 +28,12 @@ TEXT = (".html", ".css", ".js", ".json", ".geojson")
 
 def kind(url, site):
     u = urlparse(url)
+    if u.path.endswith(".pmtiles"):
+        return "tiles"
     if u.netloc == site:
         return "data" if u.path.startswith("/data/") else "page"
     if "unpkg.com" in u.netloc:
         return "libraries"
-    if u.netloc.endswith(".r2.dev"):
-        return "tiles"
     if "openfreemap" in u.netloc:
         return "basemap"
     return "other"

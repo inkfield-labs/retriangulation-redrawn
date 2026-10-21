@@ -1,0 +1,28 @@
+{
+  "https://retriangulation-redrawn.pages.dev/": {
+    "tile_requests": 5,
+    "tile_statuses": {
+      "206": 5
+    },
+    "tile_requests_with_content_range": 5,
+    "rendered_line_features": 5250,
+    "console_errors": 0,
+    "console_error_messages": [],
+    "gpu_stall_warnings_filtered": 4,
+    "gpu_stall_filter": "GPU stall due to ReadPixels",
+    "x_robots_tag": "noindex"
+  },
+  "http://localhost:8766/": {
+    "tile_requests": 5,
+    "tile_statuses": {
+      "206": 5
+    },
+    "tile_requests_with_content_range": 5,
+    "rendered_line_features": 5250,
+    "console_errors": 0,
+    "console_error_messages": [],
+    "gpu_stall_warnings_filtered": 0,
+    "gpu_stall_filter": "GPU stall due to ReadPixels",
+    "x_robots_tag": null
+  }
+}
