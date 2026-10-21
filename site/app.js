@@ -32,12 +32,12 @@ const STORIES = [
          "assumes; a miss this small is within the model's error."},
   {title: "The longest line: Merrick to Snowdon", at: [-4.468, 55.139], go: () => showPair("PP301", "SH62-T66"),
    text: "The longest sightline the model finds runs 231.9 km from Merrick in Galloway to Snowdon Summit, clearing " +
-         "the terrain by 7.7 m and clear on the surface model too. It was not one of the observed rays, and it has " +
-         "not been checked against reported sightings."},
+         "the terrain by 7.7 m and clear on the 2010–15 surface model too. It was not one of the observed rays, and " +
+         "it has not been checked against reported sightings."},
   {title: "Sca Fell: 448 pillars in view", at: [-3.212, 54.454], go: () => select("PP92", true),
    text: "From the pillar on Sca Fell the model finds 448 other pillars in view over the terrain, more than from any " +
-         "other pillar, and 433 of them are also clear on the surface model. The farthest is Cader Idris, 200.6 km " +
-         "away."},
+         "other pillar, and 435 of them are also clear on the 2010–15 surface model. The farthest is Cader Idris, " +
+         "200.6 km away."},
 ];
 
 // modern network opacity: full when alone, faint under the historical rays, nearly hidden behind a selection
@@ -241,8 +241,8 @@ function showDetail(f, others) {
   const clearN = others.filter(([, , s]) => s).length;
   document.getElementById("d-meta").textContent =
     `${p.id} · ${p.h > 0 ? p.h + " m" : "height not recorded"} · ` +
-    (others.length ? `${others.length} pillars in view over the terrain, ${clearN} also clear on the surface model; ` +
-                     `farthest ${far[0].properties.name} at ${far[1]} km`
+    (others.length ? `${others.length} pillars in view over the terrain, ` +
+                     `${clearN} also clear on the 2010–15 surface model; farthest ${far[0].properties.name} at ${far[1]} km`
                    : "no other pillar in view over the terrain");
   const mine = rays.filter((r) => r.properties.a === p.id || r.properties.b === p.id);
   const then = document.getElementById("d-then");
@@ -257,7 +257,7 @@ function showDetail(f, others) {
     const name = document.createElement("span");
     const sw = document.createElement("span");
     sw.className = `sw ${s ? "net-clear" : "net-blocked"}`;
-    sw.title = s ? "Clear on the surface model" : "Blocked by trees or buildings in the surface model";
+    sw.title = s ? "Clear on the 2010–15 surface model" : "Blocked by trees or buildings in the 2010–15 surface model";
     name.append(sw, g.properties.name);
     return pick(name, `${km} km`, () => select(g.properties.id, true));
   }));

@@ -1,0 +1,187 @@
+{
+  "land_cells_without_glo30": {
+    "old": 38832,
+    "new": 0
+  },
+  "visible_lines": {
+    "lines": 230499,
+    "surface_clear_old": 200670,
+    "surface_clear_new": 201232,
+    "flag_flips": 3608,
+    "clear_to_blocked": 1523,
+    "blocked_to_clear": 2085,
+    "by_old_abs_clearance": {
+      "0-1m": {
+        "lines": 9935,
+        "clear_to_blocked": 966,
+        "blocked_to_clear": 1320
+      },
+      "1-3m": {
+        "lines": 30886,
+        "clear_to_blocked": 471,
+        "blocked_to_clear": 610
+      },
+      "3-10m": {
+        "lines": 128245,
+        "clear_to_blocked": 86,
+        "blocked_to_clear": 148
+      },
+      ">=10m": {
+        "lines": 61433,
+        "clear_to_blocked": 0,
+        "blocked_to_clear": 7
+      }
+    },
+    "abs_clearance_change_m": {
+      "median": 0.49,
+      "p95": 3.54,
+      "max": 31.27
+    }
+  },
+  "rays_then_now": {
+    "rays": 829,
+    "states_old": {
+      "clear": 608,
+      "surface": 50,
+      "terrain": 35,
+      "unknown": 136
+    },
+    "states_new": {
+      "clear": 608,
+      "surface": 50,
+      "terrain": 35,
+      "unknown": 136
+    },
+    "rays_changing_state": 4,
+    "changes": [
+      {
+        "a": "Little Haldon",
+        "b": "Pilsdon",
+        "from": "clear",
+        "to": "surface",
+        "clear_glo30_old_m": 1.81,
+        "clear_glo30_m": -0.3
+      },
+      {
+        "a": "Bin Down",
+        "b": "Yes Tor",
+        "from": "surface",
+        "to": "clear",
+        "clear_glo30_old_m": -1.07,
+        "clear_glo30_m": 4.82
+      },
+      {
+        "a": "Harrowby",
+        "b": "Loath Hill",
+        "from": "clear",
+        "to": "surface",
+        "clear_glo30_old_m": 0.83,
+        "clear_glo30_m": -0.23
+      },
+      {
+        "a": "Rollright",
+        "b": "Cleeve Hill",
+        "from": "surface",
+        "to": "clear",
+        "clear_glo30_old_m": -0.55,
+        "clear_glo30_m": 0.25
+      }
+    ]
+  },
+  "precision_boxes_vs_precision_grid": {
+    "ben_wyvis": {
+      "old": {
+        "t50_visible": 3537,
+        "surface_clear": 3141,
+        "survival_share": 0.888,
+        "vs_precision_grid": {
+          "lines": 3537,
+          "flag_flips": 104,
+          "clearance_diff_median_m": -0.47,
+          "flipped_abs_clearance_p90_m": 2.81
+        }
+      },
+      "new": {
+        "t50_visible": 3537,
+        "surface_clear": 3175,
+        "survival_share": 0.8977,
+        "vs_precision_grid": {
+          "lines": 3537,
+          "flag_flips": 8,
+          "clearance_diff_median_m": 0.01,
+          "flipped_abs_clearance_p90_m": 0.17
+        }
+      }
+    },
+    "suffolk": {
+      "old": {
+        "t50_visible": 485,
+        "surface_clear": 169,
+        "survival_share": 0.3485,
+        "vs_precision_grid": {
+          "lines": 484,
+          "flag_flips": 19,
+          "clearance_diff_median_m": -0.02,
+          "flipped_abs_clearance_p90_m": 0.96
+        }
+      },
+      "new": {
+        "t50_visible": 485,
+        "surface_clear": 167,
+        "survival_share": 0.3443,
+        "vs_precision_grid": {
+          "lines": 484,
+          "flag_flips": 7,
+          "clearance_diff_median_m": -0.01,
+          "flipped_abs_clearance_p90_m": 0.53
+        }
+      }
+    }
+  },
+  "site": {
+    "surface_clear": {
+      "old": 200670,
+      "new": 201232
+    },
+    "most_partners": {
+      "old": {
+        "id": "PP92",
+        "name": "Sca Fell",
+        "partners": 448,
+        "surface_clear": 433
+      },
+      "new": {
+        "id": "PP92",
+        "name": "Sca Fell",
+        "partners": 448,
+        "surface_clear": 435
+      }
+    },
+    "longest_surface_clear": {
+      "old": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "new": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "terrain50_land_cells": 92012060,
-  "land_cells_without_glo30": 38832,
+  "land_cells_without_glo30": 0,
   "glo30_nodata": -32768,
   "cells_without_tile": [
     "Copernicus_DSM_10_N50_00_W007_00"

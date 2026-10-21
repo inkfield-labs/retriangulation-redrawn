@@ -1,7 +1,7 @@
 {
   "pillars": 6079,
   "lines": 230499,
-  "surface_clear": 200670,
+  "surface_clear": 201232,
   "pillars_with_partners": 6074,
   "rays": 829,
   "longest": [
@@ -70,11 +70,11 @@
     "id": "PP92",
     "name": "Sca Fell",
     "partners": 448,
-    "surface_clear": 433
+    "surface_clear": 435
   },
   "bytes": {
-    "lines.pmtiles": 103197822,
-    "pillars.json": 344841,
+    "lines.pmtiles": 103181442,
+    "pillars.json": 344844,
     "rays.geojson": 172453
   }
 }

@@ -90,18 +90,18 @@ def claims(d):
            d["long"]["k"] == 0.13 and d["long"]["skip_m"] == 100, "gb_long_run.json, gb_full_run.py")
     yield i, "230,499 pairs are clear", fmt(b["lines"]), b["lines"] == 230_499, "site_build.json"
     yield i, "a 30 m model", d["glo"]["grid_cell_m"], d["glo"]["grid_cell_m"] == 30, "glo30_gb.json"
-    yield i, "them in 2010–15: 200,670 are still clear", fmt(b["surface_clear"]), b["surface_clear"] == 200_670, \
+    yield i, "them in 2010–15: 201,232 are still clear", fmt(b["surface_clear"]), b["surface_clear"] == 201_232, \
         "site_build.json; dates: " + HANDBOOK
     yield (i, "finds 612 of the 641 rays", f"{pp['t50_visible']} of {pp['rays']}",
            (pp["t50_visible"], pp["rays"]) == (612, 641), "rays_then_now.json, recall_sweep.csv")
     yield i, "(95.5%)", f"{pp['t50_visible'] / pp['rays']:.1%}", f"{pp['t50_visible'] / pp['rays']:.1%}" == "95.5%", \
         "rays_then_now.json"
     boxes = [v["vs_precision_grid"] for v in d["glo"]["precision_boxes_rerun"].values()]
-    pct = [round(100 * v["flag_flips"] / v["lines"]) for v in boxes]
-    yield (i, "changed the verdict on 3–4% of lines", "; ".join(f"{v['flag_flips']} of {v['lines']}" for v in boxes),
-           sorted(pct) == [3, 4] and len(boxes) == 2, "glo30_gb.json (Ben Wyvis and Suffolk boxes)")
-    yield (i, "mostly ones clearing by less than 3 m", f"p90 {[v['flipped_abs_clearance_p90_m'] for v in boxes]} m",
-           all(v["flipped_abs_clearance_p90_m"] < 3 for v in boxes), "glo30_gb.json")
+    pct = [round(100 * v["flag_flips"] / v["lines"], 1) for v in boxes]
+    yield (i, "changed the verdict on 0.2–1.4% of lines", "; ".join(f"{v['flag_flips']} of {v['lines']}" for v in boxes),
+           sorted(pct) == [0.2, 1.4] and len(boxes) == 2, "glo30_gb.json (Ben Wyvis and Suffolk boxes)")
+    yield (i, "mostly ones clearing by less than 1 m", f"p90 {[v['flipped_abs_clearance_p90_m'] for v in boxes]} m",
+           all(v["flipped_abs_clearance_p90_m"] < 1 for v in boxes), "glo30_gb.json")
     yield (i, "Most of the misses are lowland rays in the eastern counties",
            f"{rays_in_fig5(pp_miss)} of {len(pp_miss)} pillar-to-pillar terrain misses are Figure 5",
            len(pp_miss) == pp["states"]["terrain"] and 2 * rays_in_fig5(pp_miss) > len(pp_miss), "rays_then_now.csv")
@@ -109,7 +109,9 @@ def claims(d):
     for f, snip in ((i, "in 1936–62"), (i, "Between 1936 and 1962"), (i, "Great Britain 1935–1962</i>")):
         yield f, snip, "cited", True, BOOK
     for f, snip in ((i, "in the 2010–15 Copernicus surface model"), (i, "from 2010–15 for trees"),
-                    (i, "The surface model is 2010–15 radar")):
+                    (i, "The surface model is 2010–15 radar"), (i, "but not over the 2010–15 surface model"),
+                    (a, "also clear on the 2010–15 surface model; farthest"), (a, "Clear on the 2010–15 surface model"),
+                    (a, "blocked by trees or buildings in the 2010–15 surface model")):
         yield f, snip, "cited", True, HANDBOOK
     # stories
     yield (a, "Four of the six rays the surveyors observed from Hensbarrow",
@@ -136,15 +138,16 @@ def claims(d):
            (top["a_name"], top["b_name"], round(top["dist_km"], 1)) == ("Merrick", "Snowdon Summit", 231.9),
            "gb_long_run.json")
     yield a, "clearing the terrain by 7.7 m", top["clearance_m"], top["clearance_m"] == 7.7, "gb_long_run.json"
-    yield (a, "clear on the surface model too", b["longest"][0]["surface_clear"], b["longest"][0]["surface_clear"] == 1,
+    yield (a, "clear on the 2010–15 surface model too", b["longest"][0]["surface_clear"], b["longest"][0]["surface_clear"] == 1,
            "site_build.json")
     yield (a, "It was not one of the observed rays", "pair absent", ("PP301", "SH62/T66") not in pairs,
            "primary_rays.csv")
     m = b["most_partners"]
     yield a, "Sca Fell: 448 pillars in view", m["partners"], (m["id"], m["partners"]) == ("PP92", 448), \
         "site_build.json"
-    yield (a, "finds 448 other pillars in view over the terrain, more than from any other pillar, and 433",
-           f"{m['partners']}, {m['surface_clear']}", (m["partners"], m["surface_clear"]) == (448, 433), "site_build.json")
+    yield (a, "finds 448 other pillars in view over the terrain, more than from any other pillar, and 435 of them are "
+              "also clear on the 2010–15 surface model", f"{m['partners']}, {m['surface_clear']}",
+           (m["partners"], m["surface_clear"]) == (448, 435), "site_build.json")
     yield a, "The farthest is Cader Idris, 200.6 km", sca[-1][1], sca[-1][1] == 200.6, "site/data/partners/PP92.json"
 
 

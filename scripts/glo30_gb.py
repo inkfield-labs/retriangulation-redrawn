@@ -5,13 +5,16 @@ A line clear on Terrain 50 but blocked on GLO-30 is probably blocked by trees or
 (EGM2008, about 0.4-0.8 m above ODN in the precision boxes; no offset applied).
 
 Steps:
-    python -I scripts/glo30_gb.py fetch [lines.csv ...]   # tiles crossed by the lines (default data/gb_lines.csv);
+    python -I scripts/glo30_gb.py fetch [lines.csv ...]   # tiles crossed by the lines (default data/gb_lines.csv)
+                                                          # or under Terrain 50 land;
                                                           # needs the CDSE S3 key in AWS_ACCESS_KEY_ID / _SECRET_
     python -I scripts/glo30_gb.py mosaic                  # data/glo30/gb30.npy, int16 decimetres on a 30 m BNG grid
+    python -I scripts/glo30_gb.py align LABEL [gb30.npy]  # mosaic vs source tiles at sampled land cell centres
     python -I scripts/glo30_gb.py landgaps                # Terrain 50 land with no GLO-30 data; run calls it first
     python -I scripts/glo30_gb.py run data/trig/x/CompleteTrigArchive.csv [lines.csv ...]
 Writes: data/glo30/*.tif and gb30.npy (gitignored), data/gb_surface.csv (a, b, clear_glo30, gitignored),
-        results/glo30_gb_tiles.json, results/glo30_gb_landgaps.json, results/glo30_gb.json
+        results/glo30_gb_tiles.json, results/glo30_gb_alignment.json, results/glo30_gb_landgaps.json,
+        results/glo30_gb.json
 Horizontal transform WGS84 -> OSGB36 is PROJ's default (no OSTN15 grid installed; metre-level error).
 """
 import json
@@ -58,6 +61,21 @@ def needed_tiles(files):
     return cells
 
 
+def land_tiles():
+    """1-degree cells under any Terrain 50 land cell (> 0 m): landgaps() checks all land, not only the lines."""
+    from pyproj import Transformer
+
+    tr = Transformer.from_crs(27700, 4326, always_xy=True)
+    t50 = np.load(ROOT / "data" / "terrain50" / "gb50.npy", mmap_mode="r")
+    m = json.loads((ROOT / "data" / "terrain50" / "gb50.json").read_text())
+    cells = set()
+    for r0 in range(0, t50.shape[0], 500):
+        rows, cols = np.nonzero(np.asarray(t50[r0:r0 + 500]) > 0)
+        lon, lat = tr.transform((cols + 0.5) * m["cell"] + m["x0"], m["y1"] - (rows + r0 + 0.5) * m["cell"])
+        cells |= set(zip(np.floor(lat).astype(int).tolist(), np.floor(lon).astype(int).tolist()))
+    return cells
+
+
 def grid_name(lat, lon):
     return (f"Copernicus_DSM_10_{'N' if lat >= 0 else 'S'}{abs(lat):02d}_00_"
             f"{'E' if lon >= 0 else 'W'}{abs(lon):03d}_00")
@@ -67,7 +85,8 @@ def fetch(args):
     import boto3
     import requests
 
-    cells = needed_tiles(line_files(args))
+    crossed, land = needed_tiles(line_files(args)), land_tiles()
+    cells = crossed | land
     lats, lons = [c[0] for c in cells], [c[1] for c in cells]
     w, s, e, n = min(lons) + 0.5, min(lats) + 0.5, max(lons) + 0.5, max(lats) + 0.5
     poly = f"POLYGON(({w} {s},{e} {s},{e} {n},{w} {n},{w} {s}))"
@@ -94,7 +113,8 @@ def fetch(args):
             s3.download_file("eodata", t["key"], str(dest))
         t["bytes"] = dest.stat().st_size
         print(f"{i + 1}/{len(tiles)} {t['file']}", flush=True)
-    out = {"dataset": DATASET, "cells_crossed": len(cells), "tiles": len(tiles),
+    out = {"dataset": DATASET, "cells_crossed": len(crossed), "cells_under_land": len(land),
+           "cells_under_land_not_crossed": [grid_name(*c) for c in sorted(land - crossed)], "tiles": len(tiles),
            "cells_without_tile": sorted(want - found.keys()),  # all-sea cells have no GLO-30 tile
            "bytes": sum(t["bytes"] for t in tiles.values()), "tile_list": tiles}
     (ROOT / "results" / "glo30_gb_tiles.json").write_text(json.dumps(out, indent=2))
@@ -112,10 +132,12 @@ def mosaic():
     nx, ny = (X1 - X0) // CELL, (Y1 - Y0) // CELL
     out = np.lib.format.open_memmap(TILES / "gb30.npy", mode="w+", dtype=np.int16, shape=(ny, nx))
     out[:] = NODATA
-    t0, filled = time.time(), 0
-    for by in range(Y0, Y1, BLOCK):
-        for bx in range(X0, X1, BLOCK):
-            bx1, by1 = min(bx + BLOCK, X1), min(by + BLOCK, Y1)
+    t0, filled, step = time.time(), 0, BLOCK // CELL
+    # blocks are whole grid cells (100 km is not), so each block lands on the grid load_glo30() assumes, no seams
+    for r0 in range(0, ny, step):
+        for c0 in range(0, nx, step):
+            r1, c1 = min(r0 + step, ny), min(c0 + step, nx)
+            bx, bx1, by, by1 = X0 + c0 * CELL, X0 + c1 * CELL, Y1 - r1 * CELL, Y1 - r0 * CELL
             w, s, e, n = transform_bounds("EPSG:27700", "EPSG:4326", bx, by, bx1, by1)
             m = 0.01  # margin so bilinear sampling at the block edge has neighbours
             hit = [r for r in srcs if r.bounds.left < e + m and r.bounds.right > w - m and
@@ -130,8 +152,7 @@ def mosaic():
                     x0 + np.ceil((e + m - x0) / rx) * rx, y1 - np.floor((y1 - n - m) / ry) * ry)
             src, tf = merge(hit, bounds=snap, res=(rx, ry), nodata=np.nan, dtype="float32",
                             resampling=Resampling.bilinear)
-            c0, r0 = (bx - X0) // CELL, (Y1 - by1) // CELL
-            z = np.full(((by1 - by) // CELL, (bx1 - bx) // CELL), np.nan, dtype=np.float32)
+            z = np.full((r1 - r0, c1 - c0), np.nan, dtype=np.float32)
             reproject(src[0], z, src_transform=tf, src_crs=hit[0].crs, src_nodata=np.nan,
                       dst_transform=from_origin(bx, by1, CELL, CELL), dst_crs="EPSG:27700", dst_nodata=np.nan,
                       resampling=Resampling.bilinear)
@@ -145,6 +166,101 @@ def mosaic():
             "dataset": DATASET, "tiles": len(srcs), "filled_cells": filled}
     (TILES / "gb30.json").write_text(json.dumps(meta))
     print(json.dumps(meta))
+
+
+def align(label, npy=None):
+    """Mosaic value vs the source tile sampled bilinearly at the same 30 m cell centre (BNG -> WGS84 by PROJ), for a
+    fixed-seed sample of land cells: 25 at random in every 100 km block, and 25 within 2 cells of each block edge line,
+    both the 100 km edges (the blocks before the fix) and the whole-cell edges of mosaic(). Grouped by the x/y offset
+    of the 100 km block origin from the 30 m grid (0, 10 or 20 m), each with the source shift (dx, dy in m, of
+    -20..20) that best matches the mosaic: a misregistered block matches best away from (0, 0).
+    Writes results/glo30_gb_alignment.json[label] (run with LABEL before and after a mosaic fix)."""
+    import rasterio
+    from pyproj import Transformer
+
+    npy = Path(npy) if npy else TILES / "gb30.npy"
+    glo = np.load(npy, mmap_mode="r")
+    t50 = DEM()
+    rng = np.random.default_rng(16)
+    nx, ny, step = glo.shape[1], glo.shape[0], BLOCK // CELL
+    # block edge lines in cells: 100 km blocks walked from (X0, Y0) before the fix, whole-cell blocks after it
+    col_edges = sorted({(bx - X0) // CELL for bx in range(X0 + BLOCK, X1, BLOCK)} | set(range(step, nx, step)))
+    row_edges = sorted({(Y1 - by) // CELL for by in range(Y0 + BLOCK, Y1, BLOCK)} | set(range(step, ny, step)))
+    draws = []  # (rows, cols) candidates, the first 25 on land kept from each
+    for by in range(Y0, Y1, BLOCK):
+        for bx in range(X0, X1, BLOCK):
+            bx1, by1 = min(bx + BLOCK, X1), min(by + BLOCK, Y1)
+            draws.append((rng.integers((Y1 - by1) // CELL, (Y1 - by) // CELL, 2000),
+                          rng.integers((bx - X0) // CELL, (bx1 - X0) // CELL, 2000)))
+    for c in col_edges:
+        draws.append((rng.integers(0, ny, 2000), c + rng.integers(-2, 2, 2000)))
+    for r in row_edges:
+        draws.append((r + rng.integers(-2, 2, 2000), rng.integers(0, nx, 2000)))
+    rows, cols = [], []
+    for r, c in draws:
+        land = t50.sample(X0 + (c + 0.5) * CELL, Y1 - (r + 0.5) * CELL) > 0
+        k = np.nonzero(land)[0][:25]
+        rows += r[k].tolist()
+        cols += c[k].tolist()
+    del t50
+    r, c = np.array(rows), np.array(cols)
+    e, n = X0 + (c + 0.5) * CELL, Y1 - (r + 0.5) * CELL
+    dist = lambda i, edges: np.abs(i[:, None] - np.array(edges)[None, :] + 0.5).min(axis=1)  # noqa: E731
+    edge = (dist(c, col_edges) < 2) | (dist(r, row_edges) < 2)
+    v = glo[r, c].astype(float)
+    ok = v != NODATA
+    mos = v / 10
+
+    tr = Transformer.from_crs(27700, 4326, always_xy=True)
+    tiles = json.loads((ROOT / "results" / "glo30_gb_tiles.json").read_text())["tile_list"]
+    shifts = [(dx, dy) for dx in range(-20, 21, 10) for dy in range(-20, 21, 10)]
+    src = np.full((len(shifts), len(e)), np.nan)
+    lon0, lat0 = tr.transform(e, n)
+    tile = np.array([grid_name(a, b) for a, b in zip(np.floor(lat0).astype(int), np.floor(lon0).astype(int))])
+    for g in np.unique(tile):
+        m = tile == g
+        if g not in tiles:
+            continue
+        with rasterio.open(TILES / tiles[g]["file"]) as ds:
+            z, inv = ds.read(1).astype(float), ~ds.transform
+        for i, (dx, dy) in enumerate(shifts):
+            lon, lat = tr.transform(e[m] + dx, n[m] + dy)
+            col, row = inv * (lon, lat)
+            col, row = col - 0.5, row - 0.5  # pixel centres
+            c0, r0 = np.floor(col).astype(int), np.floor(row).astype(int)
+            inside = (c0 >= 0) & (r0 >= 0) & (c0 < z.shape[1] - 1) & (r0 < z.shape[0] - 1)
+            c0, r0 = np.where(inside, c0, 0), np.where(inside, r0, 0)
+            fc, fr = col - c0, row - r0
+            b = ((z[r0, c0] * (1 - fc) + z[r0, c0 + 1] * fc) * (1 - fr) +
+                 (z[r0 + 1, c0] * (1 - fc) + z[r0 + 1, c0 + 1] * fc) * fr)
+            src[i, np.nonzero(m)[0]] = np.where(inside, b, np.nan)
+    use = ok & ~np.isnan(src).any(axis=0)
+    diff = mos - src  # mosaic minus source, per shift
+    zero = shifts.index((0, 0))
+
+    def stats(m):
+        d = diff[zero, m]
+        med = [float(np.median(np.abs(diff[i, m]))) for i in range(len(shifts))]
+        return {"n": int(m.sum()), "median_abs_diff_m": round(float(np.median(np.abs(d))), 3),
+                "p95_abs_diff_m": round(float(np.quantile(np.abs(d), 0.95)), 3),
+                "median_signed_diff_m": round(float(np.median(d)), 3),
+                "best_source_shift_m": list(shifts[int(np.argmin(med))]),
+                "best_shift_median_abs_diff_m": round(min(med), 3)}
+
+    ox = (e // BLOCK * BLOCK - X0) % CELL
+    oy = (Y1 - np.minimum((n - Y0) // BLOCK * BLOCK + Y0 + BLOCK, Y1)) % CELL
+    cls = np.array([f"x{a:.0f}_y{b:.0f}" for a, b in zip(ox, oy)])
+    out = {"mosaic": str(npy.resolve().relative_to(ROOT)), "sampled_land_cells": len(e),
+           "mosaic_nodata": int((~ok).sum()), "without_source_neighbours": int((ok & ~use).sum()),
+           "all": stats(use), "near_block_edge": stats(use & edge), "away_from_edge": stats(use & ~edge),
+           "by_100km_block_offset_class": {k: stats(use & (cls == k)) for k in sorted(set(cls[use]))}}
+    path = ROOT / "results" / "glo30_gb_alignment.json"
+    res = json.loads(path.read_text()) if path.exists() else {
+        "method": "scripts/glo30_gb.py align() docstring", "dataset": DATASET, "seed": 16,
+        "difference": "mosaic minus source, m", "shift": "source sampled at (e + dx, n + dy)"}
+    res[label] = out
+    path.write_text(json.dumps(res, indent=2))
+    print(json.dumps(out, indent=2))
 
 
 def landgaps():
@@ -240,6 +356,8 @@ if __name__ == "__main__":
         fetch(sys.argv[2:])
     elif step == "mosaic":
         mosaic()
+    elif step == "align":
+        align(*sys.argv[2:4])
     elif step == "landgaps":
         sys.exit(1 if landgaps() else 0)
     else:

@@ -19,11 +19,11 @@ found by its exact wording in `site/` and recomputed from the named output.
 | index.html | refraction coefficient of 0.13 and ignoring 100 m at each end | 0.13, 100.0 | yes | gb_long_run.json, gb_full_run.py |
 | index.html | 230,499 pairs are clear | 230,499 | yes | site_build.json |
 | index.html | a 30 m model | 30 | yes | glo30_gb.json |
-| index.html | them in 2010–15: 200,670 are still clear | 200,670 | yes | site_build.json; dates: Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
+| index.html | them in 2010–15: 201,232 are still clear | 201,232 | yes | site_build.json; dates: Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | finds 612 of the 641 rays | 612 of 641 | yes | rays_then_now.json, recall_sweep.csv |
 | index.html | (95.5%) | 95.5% | yes | rays_then_now.json |
-| index.html | changed the verdict on 3–4% of lines | 104 of 3537; 19 of 484 | yes | glo30_gb.json (Ben Wyvis and Suffolk boxes) |
-| index.html | mostly ones clearing by less than 3 m | p90 [2.81, 0.96] m | yes | glo30_gb.json |
+| index.html | changed the verdict on 0.2–1.4% of lines | 8 of 3537; 7 of 484 | yes | glo30_gb.json (Ben Wyvis and Suffolk boxes) |
+| index.html | mostly ones clearing by less than 1 m | p90 [0.17, 0.53] m | yes | glo30_gb.json |
 | index.html | Most of the misses are lowland rays in the eastern counties | 23 of 29 pillar-to-pillar terrain misses are Figure 5 | yes | rays_then_now.csv |
 | index.html | says it misses by 1.7 m | -1.72 | yes | rays_then_now.csv |
 | index.html | in 1936–62 | cited | yes | History of the Retriangulation of Great Britain 1935-1962 (OS 1967) |
@@ -32,6 +32,10 @@ found by its exact wording in `site/` and recomputed from the named output.
 | index.html | in the 2010–15 Copernicus surface model | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | from 2010–15 for trees | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | The surface model is 2010–15 radar | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
+| index.html | but not over the 2010–15 surface model | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
+| app.js | also clear on the 2010–15 surface model; farthest | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
+| app.js | Clear on the 2010–15 surface model | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
+| app.js | blocked by trees or buildings in the 2010–15 surface model | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | app.js | Four of the six rays the surveyors observed from Hensbarrow | 4 of 6 | yes | rays_then_now.csv |
 | app.js | ground up to 45 m above the sight line | 44.8 | yes | misses_diagnosis.csv |
 | app.js | 0.2 to 2 km from the pillar | 0.24-1.97 km | yes | misses_diagnosis.csv |
@@ -44,10 +48,10 @@ found by its exact wording in `site/` and recomputed from the named output.
 | app.js | the model says the line misses by 1.7 m | -1.72 | yes | rays_then_now.csv |
 | app.js | runs 231.9 km from Merrick | Merrick - Snowdon Summit 231.89 | yes | gb_long_run.json |
 | app.js | clearing the terrain by 7.7 m | 7.7 | yes | gb_long_run.json |
-| app.js | clear on the surface model too | 1 | yes | site_build.json |
+| app.js | clear on the 2010–15 surface model too | 1 | yes | site_build.json |
 | app.js | It was not one of the observed rays | pair absent | yes | primary_rays.csv |
 | app.js | Sca Fell: 448 pillars in view | 448 | yes | site_build.json |
-| app.js | finds 448 other pillars in view over the terrain, more than from any other pillar, and 433 | 448, 433 | yes | site_build.json |
+| app.js | finds 448 other pillars in view over the terrain, more than from any other pillar, and 435 of them are also clear on the 2010–15 surface model | 448, 435 | yes | site_build.json |
 | app.js | The farthest is Cader Idris, 200.6 km | 200.6 | yes | site/data/partners/PP92.json |
 
 ## Numbers the page computes from `site/data/`
@@ -55,6 +59,6 @@ found by its exact wording in `site/` and recomputed from the named output.
 | Check | Value | OK | Source |
 |---|---|---|---|
 | legend: ray states | {'clear': 608, 'unknown': 136, 'surface': 50, 'terrain': 35} | yes | rays_then_now.json |
-| legend: lines, surface-clear | (230499.0, 200670.0) | yes | site_build.json |
-| legend: surface-blocked | 29829.0 | yes | glo30_gb.json |
+| legend: lines, surface-clear | (230499.0, 201232.0) | yes | site_build.json |
+| legend: surface-blocked | 29267.0 | yes | glo30_gb.json |
 | longest.json: ids (as names), km, order | 10 lines, first ('Merrick', 'Snowdon Summit', 231.9) | yes | gb_long_run.json |
