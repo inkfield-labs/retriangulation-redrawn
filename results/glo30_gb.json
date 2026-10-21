@@ -1,0 +1,270 @@
+{
+  "dataset": "COP-DEM_GLO-30-DGED/2024_1",
+  "k": 0.13,
+  "skip_m": 100.0,
+  "grid_cell_m": 30,
+  "line_files": [
+    "data/gb_lines.csv",
+    "data/gb_lines_long.csv"
+  ],
+  "lines": 230499,
+  "surface_clear": 200670,
+  "surface_clear_share": 0.8706,
+  "los_seconds": 93.5,
+  "by_distance": {
+    "0-20km": {
+      "lines": 54111,
+      "surface_clear_share": 0.868
+    },
+    "20-50km": {
+      "lines": 92376,
+      "surface_clear_share": 0.8541
+    },
+    "50-100km": {
+      "lines": 67868,
+      "surface_clear_share": 0.8815
+    },
+    "100-150km": {
+      "lines": 14976,
+      "surface_clear_share": 0.9269
+    },
+    "150-250km": {
+      "lines": 1168,
+      "surface_clear_share": 0.9366
+    }
+  },
+  "precision_boxes_rerun": {
+    "ben_wyvis": {
+      "t50_visible": 3537,
+      "surface_clear": 3141,
+      "survival_share": 0.888,
+      "vs_precision_grid": {
+        "lines": 3537,
+        "flag_flips": 104,
+        "clearance_diff_median_m": -0.47,
+        "flipped_abs_clearance_p90_m": 2.81
+      }
+    },
+    "suffolk": {
+      "t50_visible": 485,
+      "surface_clear": 169,
+      "survival_share": 0.3485,
+      "vs_precision_grid": {
+        "lines": 484,
+        "flag_flips": 19,
+        "clearance_diff_median_m": -0.02,
+        "flipped_abs_clearance_p90_m": 0.96
+      }
+    }
+  },
+  "by_100km_square_of_midpoint": {
+    "0_700": {
+      "lines": 177,
+      "surface_clear_share": 1.0
+    },
+    "0_800": {
+      "lines": 884,
+      "surface_clear_share": 1.0
+    },
+    "0_900": {
+      "lines": 23,
+      "surface_clear_share": 1.0
+    },
+    "100_0": {
+      "lines": 491,
+      "surface_clear_share": 0.943
+    },
+    "100_100": {
+      "lines": 4,
+      "surface_clear_share": 1.0
+    },
+    "100_200": {
+      "lines": 496,
+      "surface_clear_share": 0.9839
+    },
+    "100_500": {
+      "lines": 154,
+      "surface_clear_share": 1.0
+    },
+    "100_600": {
+      "lines": 4744,
+      "surface_clear_share": 0.9749
+    },
+    "100_700": {
+      "lines": 5769,
+      "surface_clear_share": 0.9908
+    },
+    "100_800": {
+      "lines": 5976,
+      "surface_clear_share": 0.9958
+    },
+    "100_900": {
+      "lines": 821,
+      "surface_clear_share": 0.9976
+    },
+    "200_0": {
+      "lines": 3867,
+      "surface_clear_share": 0.9294
+    },
+    "200_100": {
+      "lines": 7128,
+      "surface_clear_share": 0.8866
+    },
+    "200_1000": {
+      "lines": 5,
+      "surface_clear_share": 1.0
+    },
+    "200_200": {
+      "lines": 10526,
+      "surface_clear_share": 0.8938
+    },
+    "200_300": {
+      "lines": 2814,
+      "surface_clear_share": 0.9719
+    },
+    "200_400": {
+      "lines": 1393,
+      "surface_clear_share": 0.8579
+    },
+    "200_500": {
+      "lines": 7217,
+      "surface_clear_share": 0.9081
+    },
+    "200_600": {
+      "lines": 20242,
+      "surface_clear_share": 0.9456
+    },
+    "200_700": {
+      "lines": 4077,
+      "surface_clear_share": 0.9588
+    },
+    "200_800": {
+      "lines": 6243,
+      "surface_clear_share": 0.8839
+    },
+    "200_900": {
+      "lines": 1783,
+      "surface_clear_share": 0.9815
+    },
+    "300_0": {
+      "lines": 1701,
+      "surface_clear_share": 0.8477
+    },
+    "300_100": {
+      "lines": 10085,
+      "surface_clear_share": 0.7813
+    },
+    "300_1000": {
+      "lines": 837,
+      "surface_clear_share": 1.0
+    },
+    "300_200": {
+      "lines": 12864,
+      "surface_clear_share": 0.8407
+    },
+    "300_300": {
+      "lines": 14420,
+      "surface_clear_share": 0.8665
+    },
+    "300_400": {
+      "lines": 11573,
+      "surface_clear_share": 0.9555
+    },
+    "300_500": {
+      "lines": 16677,
+      "surface_clear_share": 0.9334
+    },
+    "300_600": {
+      "lines": 14511,
+      "surface_clear_share": 0.9116
+    },
+    "300_700": {
+      "lines": 8922,
+      "surface_clear_share": 0.8934
+    },
+    "300_800": {
+      "lines": 6982,
+      "surface_clear_share": 0.8409
+    },
+    "300_900": {
+      "lines": 1641,
+      "surface_clear_share": 0.9159
+    },
+    "400_0": {
+      "lines": 1363,
+      "surface_clear_share": 0.6728
+    },
+    "400_100": {
+      "lines": 7988,
+      "surface_clear_share": 0.5473
+    },
+    "400_1000": {
+      "lines": 5,
+      "surface_clear_share": 1.0
+    },
+    "400_1100": {
+      "lines": 976,
+      "surface_clear_share": 0.9928
+    },
+    "400_1200": {
+      "lines": 62,
+      "surface_clear_share": 1.0
+    },
+    "400_200": {
+      "lines": 4473,
+      "surface_clear_share": 0.6159
+    },
+    "400_300": {
+      "lines": 8640,
+      "surface_clear_share": 0.7796
+    },
+    "400_400": {
+      "lines": 10190,
+      "surface_clear_share": 0.8224
+    },
+    "400_500": {
+      "lines": 4439,
+      "surface_clear_share": 0.9092
+    },
+    "400_600": {
+      "lines": 550,
+      "surface_clear_share": 0.9091
+    },
+    "400_800": {
+      "lines": 86,
+      "surface_clear_share": 0.7791
+    },
+    "500_0": {
+      "lines": 36,
+      "surface_clear_share": 1.0
+    },
+    "500_100": {
+      "lines": 3355,
+      "surface_clear_share": 0.5523
+    },
+    "500_200": {
+      "lines": 1119,
+      "surface_clear_share": 0.4227
+    },
+    "500_300": {
+      "lines": 1024,
+      "surface_clear_share": 0.6445
+    },
+    "500_400": {
+      "lines": 888,
+      "surface_clear_share": 0.6993
+    },
+    "600_100": {
+      "lines": 117,
+      "surface_clear_share": 0.7778
+    },
+    "600_200": {
+      "lines": 101,
+      "surface_clear_share": 0.3069
+    },
+    "600_300": {
+      "lines": 40,
+      "surface_clear_share": 0.2
+    }
+  }
+}
