@@ -59,7 +59,8 @@ map.setStyle("https://tiles.openfreemap.org/styles/" + (dark ? "dark" : "positro
     ? {...l, layout: {...l.layout, "text-field": latin}} : l))})});
 map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-right");
 const narrow = innerWidth <= 640;
-const attribution = new maplibregl.AttributionControl({compact: narrow});
+// the tile credits are also given up front, so the credits are full when the opening view is framed below them
+const attribution = new maplibregl.AttributionControl({compact: narrow, customAttribution: `${OS}. ${COP}`});
 // on phones the bottom sheet is below and the zoom buttons top-right, so the credits go top-left
 map.addControl(attribution, narrow ? "top-left" : "bottom-right");
 
@@ -196,10 +197,12 @@ async function select(id, fly) {
 function clear() {
   selected = null;
   history.replaceState(null, "", location.pathname + location.search);
-  map.getSource("sel-lines").setData(empty());
-  map.getSource("sel-pts").setData(empty());
-  map.getSource("pair").setData(empty());
-  restyle();
+  if (map.getSource("sel-lines")) {  // absent after a failed first load, when × only dismisses the error
+    map.getSource("sel-lines").setData(empty());
+    map.getSource("sel-pts").setData(empty());
+    map.getSource("pair").setData(empty());
+    restyle();
+  }
   document.getElementById("detail").hidden = true;
   document.getElementById("panel").classList.remove("has-detail");
 }
@@ -330,7 +333,9 @@ function fillLongest(longest) {
 
 function framePadding() {
   const panel = document.getElementById("panel").getBoundingClientRect();
-  return innerWidth <= 640 ? {top: 40, left: 30, right: 30, bottom: panel.height + 20}
+  // phones: frame below the credits (top-left, open until the map is dragged), which would hide story marker 3
+  const credits = document.querySelector(".maplibregl-ctrl-top-left").getBoundingClientRect().bottom;
+  return innerWidth <= 640 ? {top: credits + 40, left: 30, right: 30, bottom: panel.height + 20}
                            : {top: 40, right: 60, bottom: 40, left: panel.right + 30};
 }
 
@@ -340,17 +345,28 @@ function fillSearch(features) {
   for (const f of features) labels.set(`${f.properties.name} (${f.properties.id})`, f.properties.id);
   list.replaceChildren(...[...labels.keys()].sort().map((l) => Object.assign(document.createElement("option"), {value: l})));
   const input = document.getElementById("search");
-  // Enter on a name that is not a full label picks the first pillar starting with the text, else containing it
-  const guess = (t) => (features.find((f) => f.properties.name.toLowerCase().startsWith(t)) ??
-                        features.find((f) => f.properties.name.toLowerCase().includes(t)))?.properties.id;
+  // Enter on a name that is not a full label picks a pillar starting with the text, else containing it: an exact
+  // name first, then the one with the most partners ("Snowdon" is Snowdon Summit)
+  const rank = (f, t) => (f.properties.name.toLowerCase() === t ? 1e6 : 0) + f.properties.n;
+  const guess = (t) => {
+    for (const hit of [(name) => name.startsWith(t), (name) => name.includes(t)]) {
+      const m = features.filter((f) => hit(f.properties.name.toLowerCase()));
+      if (m.length) return m.reduce((a, f) => (rank(f, t) > rank(a, t) ? f : a)).properties.id;
+    }
+    return null;
+  };
   let enter = false;
   input.addEventListener("keydown", (e) => { enter = e.key === "Enter"; });
-  input.addEventListener("change", () => {
+  // the value is cleared once used, so a "change" and a "search" from the same Enter select only once
+  const commit = (fallback) => {
     const text = input.value.trim().toLowerCase();
-    const id = labels.get(input.value) ?? (enter && text ? guess(text) : null);
+    const id = labels.get(input.value) ?? (fallback && text ? guess(text) : null);
     enter = false;
     if (id) { select(id, true); input.value = ""; input.blur(); }
-  });
+  };
+  input.addEventListener("change", () => commit(enter));
+  // a search box fires "search" on Enter, also where keydown reports "Unidentified" (Android keyboards)
+  input.addEventListener("search", () => commit(true));
 }
 
 // a keyboard activation (no pointer click count) returns focus to the search box; a tap must not raise a phone keyboard
