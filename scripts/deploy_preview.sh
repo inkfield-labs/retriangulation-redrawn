@@ -15,9 +15,14 @@
 # Pages project (once): npx wrangler pages project create retriangulation-redrawn --production-branch main
 #
 # Usage:  scripts/deploy_preview.sh           (needs: npx wrangler logged in; site/data built by scripts/build_site.py)
-# Writes: nothing in the repo; builds a temporary folder under .wrangler/ and deploys it
+# Writes: results/number_audit.md (the number audit runs first; a failed claim stops the deploy); builds a temporary
+#         folder under .wrangler/ and deploys it
 set -euo pipefail
 cd "$(dirname "$0")/.."
+
+# every number on the page must trace to a saved output before it goes live
+.venv/bin/python -I scripts/audit_numbers.py > /dev/null \
+  || { echo "number audit failed: see results/number_audit.md; fix the page or rebuild before deploying" >&2; exit 1; }
 
 PROJECT=retriangulation-redrawn
 BUCKET=retriangulation-redrawn-tiles
