@@ -8,3 +8,4 @@ rasterio
 pymupdf
 pillow
 shapely
+boto3

@@ -182,3 +182,51 @@ This is an **agent recommendation**, not an owner decision. The disposition stay
   stated k.
 - **Steel-tower stations.** 23 of the 29 rays the model rejects are in Figure 5, the steel-tower region.
 - **Surveyors' sightlines per pillar.** The observed directions, with the observation year from Appendix 13's diary.
+
+## Addendum, 2026-10-21: precision check on GLO-30 (first build task)
+
+The owner decided CONDITIONAL_GO on 2026-10-20, with this check as the first task. Script:
+[`scripts/glo30_precision.py`](scripts/glo30_precision.py). Outputs:
+[`results/glo30_precision.json`](results/glo30_precision.json), [`results/glo30_lines.csv`](results/glo30_lines.csv),
+[`results/glo30_tiles.json`](results/glo30_tiles.json).
+
+**Data.** Copernicus DEM GLO-30, release 2024_1: 10 one-degree tiles, downloaded over S3 from the Copernicus Data Space
+Ecosystem. Since 25 August 2026, access needs the account registered as a Copernicus Contributing Missions user. The
+"Public (in general)" category may download this collection
+([user categories](https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/ccm-user-categories)).
+The licence shipped with the product (COP-DEM-GLO-30-F, "Full, Free & Open") grants reproduction, distribution and
+modification, free of charge and worldwide. Derived products must carry: "produced using Copernicus WorldDEM-30 © DLR
+e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA;
+all rights reserved".
+
+**Method.** The tiles were reprojected to a 30 m British National Grid, bilinear, using PROJ's default datum transform
+without the OSTN15 grid, so there is metre-level horizontal error. Every pillar pair in two 100 km boxes was rerun
+with the same station heights, k = 0.13 and 100 m end skip, on both Terrain 50 and GLO-30. GLO-30 minus Terrain 50 on
+land has a median of −0.83 m (Ben Wyvis) and −0.40 m (Suffolk). A run with that offset removed is reported as a
+sensitivity.
+
+| Box | Terrain 50 lines ≤100 km | Survive on GLO-30 | Offset-corrected | Lost lines: median km from nearer pillar | Lost within 0.5 km of a pillar |
+|---|---|---|---|---|---|
+| Ben Wyvis (upland) | 3,537 | **89.8%** (3,175) | 88.4% | 0.24 | 72% |
+| Suffolk (lowland) | 484 | **34.9%** (169) | 31.8% | 1.75 | 30% |
+
+By distance, lines of 0 to 20 km survive at 87.8% in Ben Wyvis and 40.2% in Suffolk; lines of 20 to 50 km survive at
+89.2% and 21.1%. Only 20 lines (Ben Wyvis) and 14 (Suffolk) are visible on GLO-30 but not on Terrain 50. All 10
+observed primary rays in the Ben Wyvis box survive. In the Suffolk box, 9 of the 25 observed rays are visible on
+Terrain 50 at pillar height, and 1 on GLO-30. Those rays were observed from steel towers.
+
+![GLO-30 precision check](results/glo30_precision.png)
+
+**Reading.** In Suffolk about two thirds of the bare-earth lines vanish on the surface model. The blocking point is
+usually well away from either pillar, with a median of 1.75 km, which fits woods, hedgerows and buildings along the
+path. The CONDITIONAL_GO trigger ("more than about half of lowland lines vanish") has therefore fired. The MVP should
+show the terrain-only network alongside a "probably blocked today" layer, rather than claim visibility.
+
+In Ben Wyvis about 10% vanish. Most are blocked within 0.5 km of a pillar. That could be trees near low pillars, or
+GLO-30's sharper 30 m shoulders around summits that Terrain 50 smooths. This check cannot separate the two.
+
+**Limits.**
+- GLO-30 is a radar surface from 2011 to 2014, not today. Radar returns sit inside the canopy, not on top of it.
+- A 30 m cell cannot represent a gap in a hedge, and a person can sometimes see through or over thin vegetation.
+- "Blocked on GLO-30" therefore means *probably* blocked, not proven blocked.
+- Precision against what people actually see is still unmeasured; the visit-log spot check in section 6 remains open.

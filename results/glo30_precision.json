@@ -1,0 +1,98 @@
+{
+  "dataset": "COP-DEM_GLO-30-DGED/2024_1",
+  "k": 0.13,
+  "skip_m": 100.0,
+  "max_km": 100,
+  "boxes": {
+    "ben_wyvis": {
+      "national_grid_bounds": [
+        196296,
+        296296,
+        818378,
+        918378
+      ],
+      "pillars": 144,
+      "pairs_le_max_km": 10133,
+      "glo30_nodata_cells": 0,
+      "glo30_minus_t50_land_m": {
+        "median": -0.83,
+        "p10": -1.97,
+        "p90": 3.73,
+        "cells": 100357
+      },
+      "t50_visible": 3537,
+      "glo30_visible": 3195,
+      "t50_visible_also_glo30": 3175,
+      "survival_share": 0.8977,
+      "survival_share_offset_corrected": 0.8838,
+      "glo30_only_visible": 20,
+      "survival_by_distance": {
+        "0-20km": {
+          "t50_visible": 1005,
+          "survive_glo30": 0.8776
+        },
+        "20-50km": {
+          "t50_visible": 1809,
+          "survive_glo30": 0.8922
+        },
+        "50-100km": {
+          "t50_visible": 723,
+          "survive_glo30": 0.9391
+        }
+      },
+      "lost_lines_block_km_from_nearer_end": {
+        "median": 0.24,
+        "share_within_0_5km": 0.7182,
+        "share_within_2km": 0.8287
+      },
+      "observed_primary_rays_in_box": 10,
+      "observed_rays_visible_t50": 10,
+      "observed_rays_visible_glo30": 10
+    },
+    "suffolk": {
+      "national_grid_bounds": [
+        540000,
+        640000,
+        220000,
+        320000
+      ],
+      "pillars": 127,
+      "pairs_le_max_km": 7901,
+      "glo30_nodata_cells": 0,
+      "glo30_minus_t50_land_m": {
+        "median": -0.4,
+        "p10": -1.19,
+        "p90": 2.83,
+        "cells": 102540
+      },
+      "t50_visible": 484,
+      "glo30_visible": 183,
+      "t50_visible_also_glo30": 169,
+      "survival_share": 0.3492,
+      "survival_share_offset_corrected": 0.3182,
+      "glo30_only_visible": 14,
+      "survival_by_distance": {
+        "0-20km": {
+          "t50_visible": 351,
+          "survive_glo30": 0.4017
+        },
+        "20-50km": {
+          "t50_visible": 133,
+          "survive_glo30": 0.2105
+        },
+        "50-100km": {
+          "t50_visible": 0,
+          "survive_glo30": 0.0
+        }
+      },
+      "lost_lines_block_km_from_nearer_end": {
+        "median": 1.75,
+        "share_within_0_5km": 0.3048,
+        "share_within_2km": 0.527
+      },
+      "observed_primary_rays_in_box": 25,
+      "observed_rays_visible_t50": 9,
+      "observed_rays_visible_glo30": 1
+    }
+  }
+}
