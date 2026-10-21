@@ -2,8 +2,13 @@
 // data/partners/<id>.json, data/lines.pmtiles and data/rays.geojson. A selection is kept in the URL hash (#<id>).
 const OS = "Contains OS data © Crown copyright and database right 2026";
 const COP = "Contains modified Copernicus DEM data";
-const LINE = "#c2410c";
-const RAY = {clear: "#1d4ed8", surface: "#7c3aed", terrain: "#be123c", unknown: "#9ca3af"};
+const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+document.documentElement.dataset.scheme = dark ? "dark" : "light";
+const palette = getComputedStyle(document.documentElement);
+const color = (name) => palette.getPropertyValue(`--${name}`).trim();
+const INK = color("ink"), PAPER = color("paper"), LINE = color("line");
+const RAY = {clear: color("ray-clear"), surface: color("ray-surface"),
+             terrain: color("ray-terrain"), unknown: color("ray-unknown")};
 const RAY_TEXT = {clear: "still clear", surface: "blocked by trees or buildings",
                   terrain: "blocked by the terrain", unknown: "station height not recorded"};
 // Five fixed stories. Every number traces to a script output; see the number audit (issue #13).
@@ -44,7 +49,7 @@ const base = new URL("data/", location.href).href;
 const GB = [[-7.6, 49.9], [1.8, 58.7]];
 const map = new maplibregl.Map({
   container: "map",
-  style: "https://tiles.openfreemap.org/styles/positron",
+  style: "https://tiles.openfreemap.org/styles/" + (dark ? "dark" : "positron"),
   bounds: GB,
   fitBoundsOptions: {padding: 20},
   attributionControl: false,
@@ -96,14 +101,14 @@ map.on("load", async () => {
   map.addLayer({id: "sel-lines-blocked", type: "line", source: "sel-lines", filter: ["==", ["get", "s"], 0],
     paint: {"line-color": LINE, "line-width": 1.4, "line-opacity": 0.6, "line-dasharray": [2, 2]}});
   map.addLayer({id: "pair", type: "line", source: "pair", layout: {"line-cap": "round"},
-    paint: {"line-color": "#1f2937", "line-width": 4}});
+    paint: {"line-color": INK, "line-width": 4}});
   map.addLayer({id: "pillars", type: "circle", source: "pillars",
     paint: {"circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 0.8, 7, 1.6, 10, 4.5],
-            "circle-color": "#1f2937", "circle-opacity": ["interpolate", ["linear"], ["zoom"], 4, 0.5, 8, 1], "circle-stroke-color": "#fff",
+            "circle-color": INK, "circle-opacity": ["interpolate", ["linear"], ["zoom"], 4, 0.5, 8, 1], "circle-stroke-color": PAPER,
             "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 4, 0, 9, 1]}});
   map.addLayer({id: "sel-pts", type: "circle", source: "sel-pts",
-    paint: {"circle-radius": ["case", ["get", "self"], 8, 5], "circle-color": ["case", ["get", "self"], "#fff", LINE],
-            "circle-stroke-color": ["case", ["get", "self"], "#1f2937", "#fff"],
+    paint: {"circle-radius": ["case", ["get", "self"], 8, 5], "circle-color": ["case", ["get", "self"], PAPER, LINE],
+            "circle-stroke-color": ["case", ["get", "self"], INK, PAPER],
             "circle-stroke-width": ["case", ["get", "self"], 3, 1.5]}});
 
   map.on("click", (e) => {
@@ -222,18 +227,12 @@ function showDetail(f, others) {
   }
   const list = document.getElementById("d-list");
   list.replaceChildren(...others.map(([g, km, s]) => {
-    const li = document.createElement("li");
     const name = document.createElement("span");
     const sw = document.createElement("span");
     sw.className = `sw ${s ? "net-clear" : "net-blocked"}`;
     sw.title = s ? "Clear on the surface model" : "Blocked by trees or buildings in the surface model";
     name.append(sw, g.properties.name);
-    const d = document.createElement("span");
-    d.className = "km";
-    d.textContent = `${km} km`;
-    li.append(name, d);
-    li.addEventListener("click", () => select(g.properties.id, true));
-    return li;
+    return pick(name, `${km} km`, () => select(g.properties.id, true));
   }));
   document.getElementById("detail").hidden = false;
   document.getElementById("detail").scrollTop = 0;
@@ -315,4 +314,6 @@ function fillSearch(features) {
 
 document.getElementById("clear").addEventListener("click", clear);
 document.getElementById("about-open").addEventListener("click", () => document.getElementById("about").showModal());
-document.addEventListener("keydown", (e) => { if (e.key === "Escape" && selected) clear(); });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !document.getElementById("about").open && selected) clear();
+});
