@@ -2,8 +2,9 @@
 
 Each claim is a snippet that must appear in the page (whitespace collapsed) and a recomputation from results/ (or
 from site/data/, built by scripts/build_site.py). Dates and figures taken from documents are listed as citations.
-The page's legend, panel counts and longest-lines list are computed in the browser from site/data/, so the audit
-checks those files instead.
+The page's legend and panel counts are computed in the browser from site/data/, so the audit checks pillars.json and
+rays.geojson against results/, and the longest-lines list (longest.json) against results/gb_long_run.json (ids,
+distances and order). It checks only the listed snippets: a new number added to the copy is not found by it.
 
 Usage:  python -I scripts/audit_numbers.py      (after build_site.py; exits non-zero if any claim fails)
 Writes: results/number_audit.md
@@ -47,6 +48,10 @@ def fmt(n):
     return f"{n:,}"
 
 
+def rays_in_fig5(rows):
+    return int(rows.figures.str.contains("5").sum())
+
+
 def claims(d):
     """(file, snippet, recomputed text, ok, source) for every number on the page."""
     st, pp, f5 = d["rays"]["states"], d["rays"]["pillar_to_pillar"], d["rays"]["figure_5_eastern_counties"]
@@ -59,6 +64,11 @@ def claims(d):
     df = rr[(rr.a_name == "Deerness") & (rr.b_name == "Fair Isle")].iloc[0]
     ned = rr[(rr.a == "PP240") | (rr.b == "PP240")].state.nunique()
     top, flips = d["long"]["longest_overall"][0], d["glo"]["precision_boxes_rerun"]["ben_wyvis"]["vs_precision_grid"]
+    fig5 = rr.figures.str.contains("5")
+    pp_miss = rr[rr.both_pillars & (rr.state == "terrain")]
+    unk5 = rr[fig5 & (rr.state == "unknown")]
+    tower = unk5.apply(lambda r: any(re.search(r"\b(twr|tower)\b", str(n), re.I) for n, t in
+                                     ((r.a_name, r.a_type), (r.b_name, r.b_type)) if t != "PILLAR"), axis=1)
     sca = json.loads((d["site"] / "partners" / "PP92.json").read_text())
     pairs = set(zip(d["primary"].a, d["primary"].b)) | set(zip(d["primary"].b, d["primary"].a))
     i, a = "index.html", "app.js"
@@ -66,7 +76,7 @@ def claims(d):
     yield i, "Still clear</strong> (608)", st["clear"], st["clear"] == 608, "rays_then_now.json"
     yield i, "(50): clear over the terrain", st["surface"], st["surface"] == 50, "rays_then_now.json"
     yield i, "(35): not clear even over bare ground", st["terrain"], st["terrain"] == 35, "rays_then_now.json"
-    yield i, "(136): one end is a bolt", st["unknown"], st["unknown"] == 136, "rays_then_now.json"
+    yield i, "(136): one end is usually a bolt", st["unknown"], st["unknown"] == 136, "rays_then_now.json"
     yield (i, "Most are in the eastern lowlands", f"{f5['states']['terrain']} of {st['terrain']} are Figure 5",
            f5["states"]["terrain"] > st["terrain"] / 2, "rays_then_now.json")
     yield i, "the 6,079 standing pillars", fmt(b["pillars"]), b["pillars"] == 6079, "site_build.json"
@@ -86,10 +96,15 @@ def claims(d):
            (pp["t50_visible"], pp["rays"]) == (612, 641), "rays_then_now.json, recall_sweep.csv")
     yield i, "(95.5%)", f"{pp['t50_visible'] / pp['rays']:.1%}", f"{pp['t50_visible'] / pp['rays']:.1%}" == "95.5%", \
         "rays_then_now.json"
-    yield (i, "changed the verdict on 3% of lines", f"{flips['flag_flips']} of {flips['lines']}",
-           round(100 * flips["flag_flips"] / flips["lines"]) == 3, "glo30_gb.json (Ben Wyvis box)")
-    yield (i, "mostly ones clearing by less than 3 m", f"p90 {flips['flipped_abs_clearance_p90_m']} m",
-           flips["flipped_abs_clearance_p90_m"] < 3, "glo30_gb.json")
+    boxes = [v["vs_precision_grid"] for v in d["glo"]["precision_boxes_rerun"].values()]
+    pct = [round(100 * v["flag_flips"] / v["lines"]) for v in boxes]
+    yield (i, "changed the verdict on 3–4% of lines", "; ".join(f"{v['flag_flips']} of {v['lines']}" for v in boxes),
+           sorted(pct) == [3, 4] and len(boxes) == 2, "glo30_gb.json (Ben Wyvis and Suffolk boxes)")
+    yield (i, "mostly ones clearing by less than 3 m", f"p90 {[v['flipped_abs_clearance_p90_m'] for v in boxes]} m",
+           all(v["flipped_abs_clearance_p90_m"] < 3 for v in boxes), "glo30_gb.json")
+    yield (i, "Most of the misses are lowland rays in the eastern counties",
+           f"{rays_in_fig5(pp_miss)} of {len(pp_miss)} pillar-to-pillar terrain misses are Figure 5",
+           len(pp_miss) == pp["states"]["terrain"] and 2 * rays_in_fig5(pp_miss) > len(pp_miss), "rays_then_now.csv")
     yield i, "says it misses by 1.7 m", df.clear_t50, round(-df.clear_t50, 1) == 1.7, "rays_then_now.csv"
     for f, snip in ((i, "in 1936–62"), (i, "Between 1936 and 1962"), (i, "Great Britain 1935–1962</i>")):
         yield f, snip, "cited", True, BOOK
@@ -106,10 +121,12 @@ def claims(d):
            round(min(hkm), 1) == 0.2 and round(max(hkm)) == 2, "misses_diagnosis.csv")
     yield a, "steel towers at no fewer than 34 of its primary stations", "cited", True, BOOK + ", p. 51, §2.130"
     s5 = f5["states"]
-    yield (a, "Of its 226 observed rays, 63 are still clear, 32 are blocked by trees or buildings, 29 by the terrain, "
-              "and 102", f"{f5['rays']}: {s5['clear']}/{s5['surface']}/{s5['terrain']}/{s5['unknown']}",
+    yield (a, "Of its 226 observed rays, 63 are still clear in the 2010–15 surface model, 32 are blocked by trees or "
+              "buildings, 29 by the terrain, and 102", f"{f5['rays']}: {s5['clear']}/{s5['surface']}/{s5['terrain']}/{s5['unknown']}",
            (f5["rays"], s5["clear"], s5["surface"], s5["terrain"], s5["unknown"]) == (226, 63, 32, 29, 102),
            "rays_then_now.json")
+    yield (a, "on a station whose height was not recorded, mostly a tower", f"{tower.sum()} of {len(unk5)} on a tower",
+           2 * tower.sum() > len(unk5) and len(unk5) == s5["unknown"], "rays_then_now.csv (station names)")
     yield a, "Nedging Tye, shown here, has all four", f"{ned} states", ned == 4, "rays_then_now.csv"
     yield a, "Deerness to Fair Isle: 92 km of sea", df.dist_km, round(df.dist_km) == 92, "rays_then_now.csv"
     yield a, "92 km apart across open sea", df.dist_km, round(df.dist_km) == 92, "rays_then_now.csv"
@@ -141,6 +158,10 @@ def data_checks(d):
     yield "legend: lines, surface-clear", (n, s), (n, s) == (d["build"]["lines"], d["build"]["surface_clear"]), \
         "site_build.json"
     yield "legend: surface-blocked", n - s, n - s == d["glo"]["lines"] - d["glo"]["surface_clear"], "glo30_gb.json"
+    names = {r[0]: r[1] for r in rows}
+    page = [(names[a], names[b], km) for a, b, km, _ in json.loads((d["site"] / "longest.json").read_text())]
+    run = [(x["a_name"], x["b_name"], round(x["dist_km"], 1)) for x in d["long"]["longest_overall"]]
+    yield "longest.json: ids (as names), km, order", f"{len(page)} lines, first {page[0]}", page == run, "gb_long_run.json"
 
 
 def main():

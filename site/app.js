@@ -9,25 +9,27 @@ const color = (name) => palette.getPropertyValue(`--${name}`).trim();
 const INK = color("ink"), PAPER = color("paper"), LINE = color("line");
 const RAY = {clear: color("ray-clear"), surface: color("ray-surface"),
              terrain: color("ray-terrain"), unknown: color("ray-unknown")};
-const RAY_TEXT = {clear: "still clear", surface: "blocked by trees or buildings",
+const RAY_TEXT = {clear: "clear in the 2010–15 surface model",
+                  surface: "blocked by trees or buildings in the 2010–15 surface model",
                   terrain: "blocked by the terrain", unknown: "station height not recorded"};
 // Five fixed stories. Every number traces to a script output; see the number audit (issue #13).
 const STORIES = [
   {title: "Hensbarrow: lost to the clay tips?", at: [-4.819, 50.384], go: () => select("PP174", true),
-   text: "Four of the six rays the surveyors observed from Hensbarrow, near St Austell, now fail over the terrain " +
+   text: "Four of the six rays the surveyors observed from Hensbarrow, near St Austell, fail over the terrain " +
          "model: ground up to 45 m above the sight line, 0.2 to 2 km from the pillar, blocks them. The pillar stands " +
          "in the china-clay country around Hensbarrow Beacon, so spoil tips may have risen across those lines since. " +
          "That is inferred from location, not confirmed."},
   {title: "East Anglia: surveying from towers", at: [0.948, 52.109], go: () => select("PP240", true),
    text: "On the low ground of eastern England, sight lines from pillar height graze the fields. The 1967 history " +
-         "records that this chain needed steel towers at no fewer than 34 of its primary stations, and most of its " +
+         "records that this chain needed steel towers at no fewer than 34 of its primary stations, and many of its " +
          "other stations were bolts on church towers, water towers and cathedrals. Of its 226 observed rays, 63 are " +
-         "still clear, 32 are blocked by trees or buildings, 29 by the terrain, and 102 end on a tower whose height " +
-         "was not recorded. Nedging Tye, shown here, has all four."},
+         "still clear in the 2010–15 surface model, 32 are blocked by trees or buildings, 29 by the terrain, and 102 end " +
+         "on a station whose height was not recorded, mostly a tower. Nedging Tye, shown here, has all four."},
   {title: "Deerness to Fair Isle: 92 km of sea", at: [-2.19, 59.25], go: () => showPair("PP457", "PP458"),
    text: "The surveyors observed between Deerness in Orkney and Fair Isle, 92 km apart across open sea. With the " +
-         "standard refraction used here (k = 0.13) the model says the line misses by 1.7 m, so when they observed it " +
-         "the air over the sea must have bent the light more than the model allows."},
+         "standard refraction used here (k = 0.13) the model says the line misses by 1.7 m, yet they observed it. On " +
+         "the day the light may have bent more than the model allows, or the sea stood below the 0 m the model " +
+         "assumes; a miss this small is within the model's error."},
   {title: "The longest line: Merrick to Snowdon", at: [-4.468, 55.139], go: () => showPair("PP301", "SH62-T66"),
    text: "The longest sightline the model finds runs 231.9 km from Merrick in Galloway to Snowdon Summit, clearing " +
          "the terrain by 7.7 m and clear on the surface model too. It was not one of the observed rays, and it has " +
@@ -58,10 +60,8 @@ map.setStyle("https://tiles.openfreemap.org/styles/" + (dark ? "dark" : "positro
 map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-right");
 const narrow = innerWidth <= 640;
 const attribution = new maplibregl.AttributionControl({compact: narrow});
-map.addControl(attribution, "bottom-right");
-// on phones start collapsed to the (i) button; the full credits are also in the About dialog
-if (narrow) map.once("load", () =>
-  document.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show"));
+// on phones the bottom sheet is below and the zoom buttons top-right, so the credits go top-left
+map.addControl(attribution, narrow ? "top-left" : "bottom-right");
 
 const byId = new Map();
 let selected = null;
@@ -69,8 +69,11 @@ let rays = [];
 const historyBox = document.getElementById("history");
 
 map.on("load", async () => {
-  const [rows, rayData, longest] = await Promise.all(["pillars.json", "rays.geojson", "longest.json"].map(
-    async (f) => (await fetch(base + f)).json()));
+  let rows, rayData, longest;
+  try {
+    [rows, rayData, longest] = await Promise.all(["pillars.json", "rays.geojson", "longest.json"].map(
+      async (f) => (await fetch(base + f)).json()));
+  } catch { return showError(); }
   const pillars = {type: "FeatureCollection", features: rows.map(([id, name, lon, lat, h, n, s], i) => ({
     type: "Feature", id: i, geometry: {type: "Point", coordinates: [lon, lat]}, properties: {id, name, h, n, s}}))};
   for (const f of pillars.features) byId.set(f.properties.id, f);
@@ -140,16 +143,36 @@ function fromHash() {
   else if (!id && selected) clear();
 }
 
+const LOAD_ERROR = "Could not load the data. Reload to try again.";
+
+// One line in the detail panel, reusing the pillar heading; no pillar is selected afterwards.
+function showError() {
+  document.getElementById("d-name").textContent = LOAD_ERROR;
+  for (const el of ["d-story", "d-then"]) document.getElementById(el).hidden = true;
+  for (const el of ["d-meta", "d-list"]) document.getElementById(el).replaceChildren();
+  document.getElementById("detail").hidden = false;
+  document.getElementById("panel").classList.add("has-detail");
+}
+
+// Resolves to whether this selection is still the current one (a newer one may have won the race).
 async function select(id, fly) {
   const f = byId.get(id);
-  if (!f) return;
+  if (!f) return false;
   selected = id;
   map.getSource("pair").setData(empty());
   for (const d of document.querySelectorAll("#explore details")) d.open = false;
   document.getElementById("d-story").hidden = true;
   if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + encodeURIComponent(id));
-  const partners = f.properties.n ? await (await fetch(`${base}partners/${encodeURIComponent(id)}.json`)).json() : [];
-  if (selected !== id) return;  // a newer selection won the race
+  let partners = [];
+  try {
+    if (f.properties.n) partners = await (await fetch(`${base}partners/${encodeURIComponent(id)}.json`)).json();
+  } catch {
+    if (selected !== id) return false;
+    clear();
+    showError();
+    return false;
+  }
+  if (selected !== id) return false;
   const from = f.geometry.coordinates;
   const others = partners.map(([pid, km, s]) => [byId.get(pid), km, s]).filter(([g]) => g);
   map.getSource("sel-lines").setData({type: "FeatureCollection", features: others.map(([g, , s]) => ({
@@ -167,6 +190,7 @@ async function select(id, fly) {
     }
     map.fitBounds(b, {padding: framePadding(), maxZoom: 11, duration: 800});
   }
+  return true;
 }
 
 function clear() {
@@ -244,10 +268,16 @@ function showDetail(f, others) {
 
 // Select one end of a line and frame the whole line.
 async function showPair(a, b) {
-  await select(a, false);
+  if (!(await select(a, false))) return false;
   const A = byId.get(a).geometry.coordinates, B = byId.get(b).geometry.coordinates;
   map.getSource("pair").setData({type: "Feature", properties: {}, geometry: {type: "LineString", coordinates: [A, B]}});
   map.fitBounds(new maplibregl.LngLatBounds(A, A).extend(B), {padding: framePadding(), maxZoom: 10, duration: 800});
+  return true;
+}
+
+// After a pick, move focus to the pillar heading so the new panel is announced.
+async function reveal(done) {
+  if (await done) document.getElementById("d-name").focus();
 }
 
 function pick(text, km, onClick, swatch) {
@@ -263,18 +293,19 @@ function pick(text, km, onClick, swatch) {
     btn.append(sw);
   }
   btn.append(text, k);
-  btn.addEventListener("click", onClick);
+  btn.addEventListener("click", () => reveal(onClick()));
   li.append(btn);
   return li;
 }
 
 async function story(i) {
   const s = STORIES[i];
-  await s.go();
+  if (!(await s.go())) return false;
   const box = document.getElementById("d-story");
   box.querySelector("h3").textContent = `${i + 1}. ${s.title}`;
   box.querySelector("p").textContent = s.text;
   box.hidden = false;
+  return true;
 }
 
 function fillStories() {
@@ -284,7 +315,7 @@ function fillStories() {
     el.type = "button";
     el.className = "story-marker";
     el.textContent = i + 1;
-    el.addEventListener("click", (e) => { e.stopPropagation(); story(i); });  // not also a map click
+    el.addEventListener("click", (e) => { e.stopPropagation(); reveal(story(i)); });  // not also a map click
     new maplibregl.Marker({element: el}).setLngLat(s.at).addTo(map);
     el.title = `Story ${i + 1}: ${s.title}`;
     el.setAttribute("aria-label", el.title);  // after Marker(), which sets its own generic label
@@ -309,13 +340,24 @@ function fillSearch(features) {
   for (const f of features) labels.set(`${f.properties.name} (${f.properties.id})`, f.properties.id);
   list.replaceChildren(...[...labels.keys()].sort().map((l) => Object.assign(document.createElement("option"), {value: l})));
   const input = document.getElementById("search");
+  // Enter on a name that is not a full label picks the first pillar starting with the text, else containing it
+  const guess = (t) => (features.find((f) => f.properties.name.toLowerCase().startsWith(t)) ??
+                        features.find((f) => f.properties.name.toLowerCase().includes(t)))?.properties.id;
+  let enter = false;
+  input.addEventListener("keydown", (e) => { enter = e.key === "Enter"; });
   input.addEventListener("change", () => {
-    const id = labels.get(input.value);
+    const text = input.value.trim().toLowerCase();
+    const id = labels.get(input.value) ?? (enter && text ? guess(text) : null);
+    enter = false;
     if (id) { select(id, true); input.value = ""; input.blur(); }
   });
 }
 
-document.getElementById("clear").addEventListener("click", clear);
+// a keyboard activation (no pointer click count) returns focus to the search box; a tap must not raise a phone keyboard
+document.getElementById("clear").addEventListener("click", (e) => {
+  clear();
+  if (e.detail === 0) document.getElementById("search").focus();
+});
 document.getElementById("about-open").addEventListener("click", () => document.getElementById("about").showModal());
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !document.getElementById("about").open && selected) clear();

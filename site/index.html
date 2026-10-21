@@ -24,7 +24,7 @@
   <section id="legend" aria-label="Key">
     <label class="key-head"><input type="checkbox" id="history" checked> Rays observed 1936–62 <span id="n-rays"></span></label>
     <ul class="key" id="key-rays">
-      <li><span class="sw ray-clear"></span>Still clear<span class="n" data-st="clear"></span></li>
+      <li><span class="sw ray-clear"></span>Still clear*<span class="n" data-st="clear"></span></li>
       <li><span class="sw ray-surface"></span>Blocked by trees or buildings*<span class="n" data-st="surface"></span></li>
       <li><span class="sw ray-terrain"></span>Blocked by the terrain at station height<span class="n" data-st="terrain"></span></li>
       <li><span class="sw ray-unknown"></span>Station height not recorded<span class="n" data-st="unknown"></span></li>
@@ -49,7 +49,7 @@
   </section>
   <section id="detail" hidden>
     <div class="detail-head">
-      <h2 id="d-name"></h2>
+      <h2 id="d-name" tabindex="-1"></h2>
       <button id="clear" type="button" aria-label="Clear selection">×</button>
     </div>
     <div id="d-story" hidden><h3></h3><p></p></div>
@@ -69,12 +69,12 @@
     1967 history lists the directions observed at each primary station. The bold lines are the 829 rays observed from
     both ends, and each is re-tested against modern elevation models:</p>
   <ul>
-    <li><strong>Still clear</strong> (608): clear over the terrain and over the surface model.</li>
+    <li><strong>Still clear</strong> (608): clear over the terrain and over the 2010–15 surface model.</li>
     <li><strong>Blocked by trees or buildings</strong> (50): clear over the terrain but not over the surface model.</li>
     <li><strong>Blocked by the terrain</strong> (35): not clear even over bare ground from station height. Most are in
       the eastern lowlands, where the surveyors raised their instruments on steel towers.</li>
-    <li><strong>Station height not recorded</strong> (136): one end is a bolt on a church, water tower or similar,
-      with no recorded height, so the ray cannot be tested.</li>
+    <li><strong>Station height not recorded</strong> (136): one end is usually a bolt on a church or water
+      tower, with no recorded height, so the ray cannot be tested.</li>
   </ul>
   <h3>Now: every pillar pair in view</h3>
   <p>The faint web joins the 6,079 standing pillars in the OS trig archive. Sight height is the archive height of the
@@ -84,14 +84,15 @@
     curvature and a refraction coefficient of 0.13 and ignoring 100 m at each end: 230,499 pairs are clear. Each was
     then re-tested on the Copernicus GLO-30 surface model, a 30 m model that includes trees and buildings as radar saw
     them in 2010–15: 200,670 are still clear. The rest are drawn dashed.</p>
-  <p>As a check, the model finds 612 of the 641 rays observed between two pillars (95.5%). Most of the misses are
-    lowland rays in the eastern counties, where towers were used.</p>
+  <p>As a check, the model finds 612 of the 641 rays observed between two pillars (95.5%). This checks that real
+    sightlines are found, not that every modelled line is real. Most of the misses are lowland rays in the eastern
+    counties, where towers were used.</p>
   <h3>Limits</h3>
   <ul>
-    <li>These are models, not observations. None of these lines has been checked on the ground.</li>
+    <li>These are models, not observations. None of the modern verdicts has been checked on the ground.</li>
     <li>The surface model is 2010–15 radar. It misses hedgerows and thin cover, and cover may have changed since.</li>
-    <li>Lines that clear by a metre or two could go either way. In a mountain test area, resampling the surface model
-      differently changed the verdict on 3% of lines, mostly ones clearing by less than 3 m.</li>
+    <li>Lines that clear by a metre or two could go either way. In two test areas, resampling the surface model
+      differently changed the verdict on 3–4% of lines, mostly ones clearing by less than 3 m.</li>
     <li>Refraction varies with the weather. Deerness to Fair Isle was observed although the model, at 0.13, says it
       misses by 1.7 m.</li>
     <li>Positions are converted without the OSTN15 grid, so they can be out by a metre or so.</li>
