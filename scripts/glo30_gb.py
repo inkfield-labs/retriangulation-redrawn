@@ -8,9 +8,10 @@ Steps:
     python -I scripts/glo30_gb.py fetch [lines.csv ...]   # tiles crossed by the lines (default data/gb_lines.csv);
                                                           # needs the CDSE S3 key in AWS_ACCESS_KEY_ID / _SECRET_
     python -I scripts/glo30_gb.py mosaic                  # data/glo30/gb30.npy, int16 decimetres on a 30 m BNG grid
+    python -I scripts/glo30_gb.py landgaps                # Terrain 50 land with no GLO-30 data; run calls it first
     python -I scripts/glo30_gb.py run data/trig/x/CompleteTrigArchive.csv [lines.csv ...]
 Writes: data/glo30/*.tif and gb30.npy (gitignored), data/gb_surface.csv (a, b, clear_glo30, gitignored),
-        results/glo30_gb_tiles.json, results/glo30_gb.json
+        results/glo30_gb_tiles.json, results/glo30_gb_landgaps.json, results/glo30_gb.json
 Horizontal transform WGS84 -> OSGB36 is PROJ's default (no OSTN15 grid installed; metre-level error).
 """
 import json
@@ -146,6 +147,29 @@ def mosaic():
     print(json.dumps(meta))
 
 
+def landgaps():
+    """Count Terrain 50 land cells (> 0 m) whose 30 m GLO-30 cell has no data. load_glo30 reads no data as sea (0 m), so a
+    land gap (a tile that was not fetched) would put the surface below the terrain and turn lines surface-clear."""
+    meta = json.loads((TILES / "gb30.json").read_text())
+    t50 = np.load(ROOT / "data" / "terrain50" / "gb50.npy", mmap_mode="r")
+    t50_meta = json.loads((ROOT / "data" / "terrain50" / "gb50.json").read_text())
+    glo = np.load(TILES / "gb30.npy", mmap_mode="r")
+    land = gaps = 0
+    for r0 in range(0, t50.shape[0], 500):
+        rows, cols = np.nonzero(np.asarray(t50[r0:r0 + 500]) > 0)  # nodata is -32768, so > 0 is land
+        e = (cols + 0.5) * t50_meta["cell"] + t50_meta["x0"]
+        n = t50_meta["y1"] - (rows + r0 + 0.5) * t50_meta["cell"]
+        gr = ((meta["y1"] - n) // meta["cell"]).astype(int)
+        gc = ((e - meta["x0"]) // meta["cell"]).astype(int)
+        land += rows.size
+        gaps += int((glo[gr, gc] == meta["nodata"]).sum())
+    out = {"terrain50_land_cells": land, "land_cells_without_glo30": gaps, "glo30_nodata": meta["nodata"],
+           "cells_without_tile": json.loads((ROOT / "results" / "glo30_gb_tiles.json").read_text())["cells_without_tile"]}
+    (ROOT / "results" / "glo30_gb_landgaps.json").write_text(json.dumps(out, indent=2))
+    print(json.dumps(out))
+    return gaps
+
+
 def load_glo30():
     meta = json.loads((TILES / "gb30.json").read_text())
     z = np.load(TILES / "gb30.npy")
@@ -156,6 +180,8 @@ def load_glo30():
 
 
 def run(trig_csv, args):
+    if landgaps():
+        sys.exit("GLO-30 has no data under Terrain 50 land: fetch the missing tiles and rerun mosaic")
     p = pillars(trig_csv)
     t50 = DEM()
     z = dict(zip(p["STATION NAME"], station_heights(p.HEIGHT.values, p.COMMENTS.values,
@@ -214,5 +240,7 @@ if __name__ == "__main__":
         fetch(sys.argv[2:])
     elif step == "mosaic":
         mosaic()
+    elif step == "landgaps":
+        sys.exit(1 if landgaps() else 0)
     else:
         run(sys.argv[2], sys.argv[3:])
