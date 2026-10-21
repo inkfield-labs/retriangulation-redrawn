@@ -6,6 +6,33 @@ const LINE = "#c2410c";
 const RAY = {clear: "#1d4ed8", surface: "#7c3aed", terrain: "#be123c", unknown: "#9ca3af"};
 const RAY_TEXT = {clear: "still clear", surface: "blocked by trees or buildings",
                   terrain: "blocked by the terrain", unknown: "station height not recorded"};
+// Five fixed stories. Every number traces to a script output; see the number audit (issue #13).
+const STORIES = [
+  {title: "Hensbarrow: lost to the clay tips?", at: [-4.819, 50.384], go: () => select("PP174", true),
+   text: "Four of the six rays the surveyors observed from Hensbarrow, near St Austell, now fail over the terrain " +
+         "model: ground up to 45 m above the sight line, 0.2 to 2 km from the pillar, blocks them. The pillar stands " +
+         "in the china-clay country around Hensbarrow Beacon, so spoil tips may have risen across those lines since. " +
+         "That is inferred from location, not confirmed."},
+  {title: "East Anglia: surveying from towers", at: [0.948, 52.109], go: () => select("PP240", true),
+   text: "On the low ground of eastern England, sight lines from pillar height graze the fields. The 1967 history " +
+         "records that this chain needed steel towers at no fewer than 34 of its primary stations, and most of its " +
+         "other stations were bolts on church towers, water towers and cathedrals. Of its 226 observed rays, 63 are " +
+         "still clear, 32 are blocked by trees or buildings, 29 by the terrain, and 102 end on a tower whose height " +
+         "was not recorded. Nedging Tye, shown here, has all four."},
+  {title: "Deerness to Fair Isle: 92 km of sea", at: [-2.19, 59.25], go: () => showPair("PP457", "PP458"),
+   text: "The surveyors observed between Deerness in Orkney and Fair Isle, 92 km apart across open sea. With the " +
+         "standard refraction used here (k = 0.13) the model says the line misses by 1.7 m, so when they observed it " +
+         "the air over the sea must have bent the light more than the model allows."},
+  {title: "The longest line: Merrick to Snowdon", at: [-4.468, 55.139], go: () => showPair("PP301", "SH62-T66"),
+   text: "The longest sightline the model finds runs 231.9 km from Merrick in Galloway to Snowdon Summit, clearing " +
+         "the terrain by 7.7 m and clear on the surface model too. It was not one of the observed rays, and it has " +
+         "not been checked against reported sightings."},
+  {title: "Sca Fell: 448 pillars in view", at: [-3.212, 54.454], go: () => select("PP92", true),
+   text: "From the pillar on Sca Fell the model finds 448 other pillars in view over the terrain, more than from any " +
+         "other pillar, and 433 of them are also clear on the surface model. The farthest is Cader Idris, 200.6 km " +
+         "away."},
+];
+
 // modern network opacity: full when alone, faint under the historical rays, nearly hidden behind a selection
 const NET = {full: ["interpolate", ["linear"], ["zoom"], 4, 0.18, 9, 0.3],
              faint: ["interpolate", ["linear"], ["zoom"], 4, 0.07, 9, 0.14], selected: 0.04};
@@ -43,6 +70,7 @@ map.on("load", async () => {
   fillSearch(pillars.features);
   fillLegend(pillars.features);
   fillLongest(longest);
+  fillStories();
 
   map.addSource("lines", {type: "vector", url: "pmtiles://" + base + "lines.pmtiles", attribution: `${OS}. ${COP}`});
   map.addSource("pillars", {type: "geojson", data: pillars});
@@ -110,6 +138,7 @@ async function select(id, fly) {
   selected = id;
   map.getSource("pair").setData(empty());
   for (const d of document.querySelectorAll("#explore details")) d.open = false;
+  document.getElementById("d-story").hidden = true;
   if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + encodeURIComponent(id));
   const partners = f.properties.n ? await (await fetch(`${base}partners/${encodeURIComponent(id)}.json`)).json() : [];
   if (selected !== id) return;  // a newer selection won the race
@@ -206,8 +235,8 @@ function showDetail(f, others) {
     li.addEventListener("click", () => select(g.properties.id, true));
     return li;
   }));
-  list.scrollTop = 0;
   document.getElementById("detail").hidden = false;
+  document.getElementById("detail").scrollTop = 0;
   document.getElementById("panel").classList.add("has-detail");
 }
 
@@ -235,6 +264,29 @@ function pick(text, km, onClick, swatch) {
   btn.addEventListener("click", onClick);
   li.append(btn);
   return li;
+}
+
+async function story(i) {
+  const s = STORIES[i];
+  await s.go();
+  const box = document.getElementById("d-story");
+  box.querySelector("h3").textContent = `${i + 1}. ${s.title}`;
+  box.querySelector("p").textContent = s.text;
+  box.hidden = false;
+}
+
+function fillStories() {
+  document.getElementById("story-list").replaceChildren(...STORIES.map((s, i) => pick(s.title, "", () => story(i))));
+  STORIES.forEach((s, i) => {
+    const el = document.createElement("button");
+    el.type = "button";
+    el.className = "story-marker";
+    el.textContent = i + 1;
+    el.addEventListener("click", (e) => { e.stopPropagation(); story(i); });  // not also a map click
+    new maplibregl.Marker({element: el}).setLngLat(s.at).addTo(map);
+    el.title = `Story ${i + 1}: ${s.title}`;
+    el.setAttribute("aria-label", el.title);  // after Marker(), which sets its own generic label
+  });
 }
 
 function fillLongest(longest) {
