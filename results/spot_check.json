@@ -1,0 +1,125 @@
+{
+  "parameters": {
+    "seed": 12,
+    "quotas": {
+      "upland_clear": 8,
+      "upland_blocked": 8,
+      "lowland_clear": 7,
+      "lowland_blocked": 7
+    },
+    "upland_min_height_m": 300,
+    "lowland_max_height_m": 100,
+    "preferred_min_logs_per_pillar": 10,
+    "max_candidates_per_stratum": 30,
+    "max_logs_read_per_pillar": 1000,
+    "match_radius_m": 50,
+    "match_name_similarity": 0.75,
+    "source": "api.trigpointing.uk v1: trigs/export (positions, names) and trigs/{id}/logs",
+    "rate_limit": "1 request per second, identifying User-Agent"
+  },
+  "requests": {
+    "cap": 600,
+    "total": 87,
+    "before_script": 12
+  },
+  "pool": {
+    "upland_clear": {
+      "candidate_lines": 60203,
+      "examined": 8,
+      "dropped_unmatched_pillar": 0,
+      "both_pillars_min_logs": 8,
+      "filled_with_fewer_logs": 0
+    },
+    "upland_blocked": {
+      "candidate_lines": 2902,
+      "examined": 8,
+      "dropped_unmatched_pillar": 0,
+      "both_pillars_min_logs": 8,
+      "filled_with_fewer_logs": 0
+    },
+    "lowland_clear": {
+      "candidate_lines": 4972,
+      "examined": 7,
+      "dropped_unmatched_pillar": 0,
+      "both_pillars_min_logs": 7,
+      "filled_with_fewer_logs": 0
+    },
+    "lowland_blocked": {
+      "candidate_lines": 2031,
+      "examined": 7,
+      "dropped_unmatched_pillar": 0,
+      "both_pillars_min_logs": 7,
+      "filled_with_fewer_logs": 0
+    }
+  },
+  "matching": {
+    "matched": 6022,
+    "no trig within 50 m": 55,
+    "name differs": 2,
+    "pillars_total": 6079,
+    "examined_pillars_matched": 60,
+    "examined_pillars_total": 60
+  },
+  "strata": {
+    "upland_clear": {
+      "lines": 8,
+      "SEEN": 1,
+      "NOT_SEEN": 0,
+      "AMBIGUOUS": 0,
+      "NO_EVIDENCE": 7,
+      "agreement": {
+        "agree": 1,
+        "evaluable": 1,
+        "rate": 1.0
+      }
+    },
+    "upland_blocked": {
+      "lines": 8,
+      "SEEN": 0,
+      "NOT_SEEN": 0,
+      "AMBIGUOUS": 0,
+      "NO_EVIDENCE": 8,
+      "agreement": {
+        "agree": 0,
+        "evaluable": 0,
+        "rate": null
+      }
+    },
+    "lowland_clear": {
+      "lines": 7,
+      "SEEN": 0,
+      "NOT_SEEN": 0,
+      "AMBIGUOUS": 0,
+      "NO_EVIDENCE": 7,
+      "agreement": {
+        "agree": 0,
+        "evaluable": 0,
+        "rate": null
+      }
+    },
+    "lowland_blocked": {
+      "lines": 7,
+      "SEEN": 0,
+      "NOT_SEEN": 0,
+      "AMBIGUOUS": 0,
+      "NO_EVIDENCE": 7,
+      "agreement": {
+        "agree": 0,
+        "evaluable": 0,
+        "rate": null
+      }
+    }
+  },
+  "overall": {
+    "lines": 30,
+    "SEEN": 1,
+    "NOT_SEEN": 0,
+    "AMBIGUOUS": 0,
+    "NO_EVIDENCE": 29,
+    "agreement": {
+      "agree": 1,
+      "evaluable": 1,
+      "rate": 1.0
+    }
+  }
+}
