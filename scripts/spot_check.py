@@ -9,6 +9,8 @@ Terms: the site's Terms Of Use (wiki, sections "Accuracy of information", "Dange
 at most MAX_REQUESTS in total, identifying User-Agent. Every response is cached, so a rerun makes no requests.
 Downloaded responses are untrusted data: they are parsed as JSON and never executed.
 
+Rules note: the SEEN cues for panorama lists were added after the first run; the one SEEN line depends on them.
+
 Usage:  python -I scripts/spot_check.py fetch    (sample, then download what is not cached yet; network)
         python -I scripts/spot_check.py run      (same sample from the cache only, classify, write results; offline)
 Reads:  data/gb_lines.csv, data/gb_lines_long.csv, data/gb_surface.csv, site/data/pillars.json
@@ -18,6 +20,7 @@ Writes: data/spotcheck/raw/*.json (responses), data/spotcheck/evidence.json (exc
 import html
 import json
 import math
+import os
 import random
 import re
 import sys
@@ -37,7 +40,10 @@ API = "https://api.trigpointing.uk/v1/"
 USER_AGENT = "retriangulation-redrawn spot check (private research)"
 MIN_INTERVAL_S = 1.05
 MAX_REQUESTS = 600
-PRIOR_REQUESTS = 12     # hand-made GETs while reading the terms and the API description, before this script existed
+MIN_EVALUABLE_FOR_RATE = 10   # below this many SEEN/NOT_SEEN lines no agreement rate is reported, only counts
+# 12 hand-made GETs before this script: robots.txt, API root, 5 site/API page probes, site terms page, one JS bundle,
+# the wiki terms page, one trigs export, one 2-log sample (no log URLs recorded)
+PRIOR_REQUESTS = 12
 SEED = 12
 STRATA = [  # name, quota, upland?, surface clear?
     ("upland_clear", 8, True, True), ("upland_blocked", 8, True, False),
@@ -101,7 +107,9 @@ class Getter:
         if r.status_code != 200:
             raise SystemExit(f"unreachable or refused: HTTP {r.status_code} for {path}")
         data = r.json()
-        f.write_text(json.dumps(data))
+        tmp = f.with_name(f.name + ".tmp")
+        tmp.write_text(json.dumps(data))
+        os.replace(tmp, f)
         return data
 
 
@@ -165,6 +173,7 @@ class Matcher:
 
 def load_lines():
     lines = pd.concat([pd.read_csv(ROOT / "data" / n) for n in ("gb_lines.csv", "gb_lines_long.csv")])
+    assert not lines.duplicated(["a", "b"]).any(), "a line is listed in both gb_lines.csv and gb_lines_long.csv"
     lines = lines.merge(pd.read_csv(ROOT / "data" / "gb_surface.csv"), on=["a", "b"])
     pillars = {p[0]: p for p in json.loads((ROOT / "site" / "data" / "pillars.json").read_text())}
     lines["ha"] = lines.a.str.replace("/", "-").map({k: v[4] for k, v in pillars.items()})
@@ -236,7 +245,7 @@ def match_summary(matcher, pillars, trig_of):
 # --- evidence ---------------------------------------------------------------------------------------------------
 
 def name_variants(*names):
-    """Lower-case search strings for a pillar: each name without brackets, and without a common suffix if distinctive."""
+    """Lower-case search strings: each name without brackets, and without a common suffix if distinctive"""
     out = set()
     for name in names:
         base = re.sub(r"\s+", " ", re.sub(r"\(.*?\)", " ", name.lower().replace("’", "'"))).strip()
@@ -261,7 +270,8 @@ def classify_sentence(sentence):
 
 def mentions(logs, variants, side):
     found = []
-    pattern = re.compile(r"(?<![a-z0-9])(" + "|".join(re.escape(v) for v in sorted(variants, key=len, reverse=True)) + r")(?![a-z0-9])")
+    alternatives = "|".join(re.escape(v) for v in sorted(variants, key=len, reverse=True))
+    pattern = re.compile(r"(?<![a-z0-9])(" + alternatives + r")(?![a-z0-9])")
     for log in logs:
         text = clean(log["comment"])
         for sentence in re.split(r"(?<=[.!?])\s+|\n+", text):
@@ -306,7 +316,7 @@ def tally(rows):
                 for r in rows)
     evaluable = out["SEEN"] + out["NOT_SEEN"]
     out["agreement"] = {"agree": agree, "evaluable": evaluable,
-                        "rate": round(agree / evaluable, 3) if evaluable else None}
+                        "rate": round(agree / evaluable, 3) if evaluable >= MIN_EVALUABLE_FOR_RATE else None}
     return out
 
 
@@ -321,6 +331,10 @@ def write_results(evidence, stats, matching):
             "match_radius_m": MATCH_M, "match_name_similarity": NAME_SIMILARITY,
             "source": "api.trigpointing.uk v1: trigs/export (positions, names) and trigs/{id}/logs",
             "rate_limit": "1 request per second, identifying User-Agent",
+            "min_evaluable_lines_for_agreement_rate": MIN_EVALUABLE_FOR_RATE,
+            "rules_tuned_after_first_run": True,
+            "rules_tuning_note": "SEEN cues for panorama lists added after the first run; "
+                                 "the one SEEN line depends on them",
         },
         "requests": {"cap": MAX_REQUESTS, "total": requests_so_far(), "before_script": PRIOR_REQUESTS},
         "pool": stats, "matching": matching, "strata": per, "overall": per_total,
@@ -342,7 +356,10 @@ def main():
     evidence = gather(g, chosen, trig_of)
     results = write_results(evidence, stats, match_summary(matcher, pillars, trig_of))
     print(f"{sys.argv[1]}: {g.made} requests made this run, {requests_so_far()} counted in total (cap {MAX_REQUESTS})")
-    print(json.dumps(results["overall"], indent=2))
+    overall = json.loads(json.dumps(results["overall"]))
+    if overall["agreement"]["rate"] is None:
+        del overall["agreement"]["rate"]
+    print(json.dumps(overall, indent=2))
 
 
 if __name__ == "__main__":

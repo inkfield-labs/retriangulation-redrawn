@@ -15,7 +15,10 @@
     "match_radius_m": 50,
     "match_name_similarity": 0.75,
     "source": "api.trigpointing.uk v1: trigs/export (positions, names) and trigs/{id}/logs",
-    "rate_limit": "1 request per second, identifying User-Agent"
+    "rate_limit": "1 request per second, identifying User-Agent",
+    "min_evaluable_lines_for_agreement_rate": 10,
+    "rules_tuned_after_first_run": true,
+    "rules_tuning_note": "SEEN cues for panorama lists added after the first run; the one SEEN line depends on them"
   },
   "requests": {
     "cap": 600,
@@ -70,7 +73,7 @@
       "agreement": {
         "agree": 1,
         "evaluable": 1,
-        "rate": 1.0
+        "rate": null
       }
     },
     "upland_blocked": {
@@ -119,7 +122,7 @@
     "agreement": {
       "agree": 1,
       "evaluable": 1,
-      "rate": 1.0
+      "rate": null
     }
   }
 }
