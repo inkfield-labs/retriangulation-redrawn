@@ -11,7 +11,7 @@ html, body { margin: 0; height: 100%; background: #f2efe9; color: var(--ink);
 
 #panel { position: absolute; top: 12px; left: 12px; width: 340px; max-height: calc(100% - 24px);
   display: flex; flex-direction: column; background: var(--paper); border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, .18); overflow: hidden; }
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .18); overflow-y: auto; }
 #panel header { padding: 14px 16px 12px; border-bottom: 1px solid var(--rule); }
 h1 { margin: 0 0 4px; font-size: 17px; }
 .lede { margin: 0 0 10px; color: var(--muted); }
@@ -34,10 +34,18 @@ h1 { margin: 0 0 4px; font-size: 17px; }
 .net-blocked { border-color: var(--line); border-top-width: 2px; border-top-style: dashed; opacity: .5; }
 #d-list .sw { width: 14px; margin-right: 8px; }
 
+#explore { padding: 4px 16px; border-bottom: 1px solid var(--rule); font-size: 12.5px; }
+#explore summary { cursor: pointer; padding: 4px 0; font-weight: 600; }
+.picks { margin: 0 0 4px; padding: 0 0 0 20px; }
+.picks button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 3px 0; border: 0;
+  background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.picks button:hover { color: var(--line); }
+.picks .km { margin-left: auto; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
 /* with a pillar selected, give its list the room: drop the intro and the caveat prose (the About link stays) */
 #panel.has-detail .lede, #panel.has-detail .caveat-text { display: none; }
 
-#detail { display: flex; flex-direction: column; min-height: 0; flex: 1; padding: 12px 16px 0; }
+#detail { display: flex; flex-direction: column; min-height: 160px; flex: 1; padding: 12px 16px 0; }
 #detail[hidden] { display: none; }
 .detail-head { display: flex; align-items: start; justify-content: space-between; gap: 8px; }
 h2 { margin: 0; font-size: 16px; }
@@ -67,6 +75,6 @@ dialog a { color: var(--line); }
   #panel { top: auto; bottom: 0; left: 0; right: 0; width: auto; max-height: 55%; border-radius: 12px 12px 0 0; }
   #panel header { padding: 12px 16px 10px; }
   .lede { display: none; }
-  #panel.has-detail #legend { display: none; }
+  #panel.has-detail #legend, #panel.has-detail #explore { display: none; }
   .maplibregl-ctrl-bottom-right { bottom: auto; top: 0; }
 }

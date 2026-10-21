@@ -4,6 +4,68 @@
   "surface_clear": 200670,
   "pillars_with_partners": 6074,
   "rays": 829,
+  "longest": [
+    {
+      "a": "Merrick",
+      "b": "Snowdon Summit",
+      "km": 231.89,
+      "surface_clear": 1
+    },
+    {
+      "a": "Garnedd Ugain",
+      "b": "Merrick",
+      "km": 231.12,
+      "surface_clear": 1
+    },
+    {
+      "a": "Meikle Millyea",
+      "b": "Snowdon Summit",
+      "km": 228.69,
+      "surface_clear": 1
+    },
+    {
+      "a": "Garnedd Ugain",
+      "b": "Meikle Millyea",
+      "km": 227.91,
+      "surface_clear": 1
+    },
+    {
+      "a": "Millfore",
+      "b": "Snowdon Summit",
+      "km": 221.48,
+      "surface_clear": 1
+    },
+    {
+      "a": "Garnedd Ugain",
+      "b": "Millfore",
+      "km": 220.7,
+      "surface_clear": 1
+    },
+    {
+      "a": "Foel Fras",
+      "b": "Merrick",
+      "km": 219.03,
+      "surface_clear": 1
+    },
+    {
+      "a": "Foel Fras",
+      "b": "Meikle Millyea",
+      "km": 215.45,
+      "surface_clear": 1
+    },
+    {
+      "a": "Arenig",
+      "b": "Cross Fell",
+      "km": 215.31,
+      "surface_clear": 1
+    },
+    {
+      "a": "Cairnsmore Of Fleet",
+      "b": "Snowdon Summit",
+      "km": 212.98,
+      "surface_clear": 1
+    }
+  ],
   "most_partners": {
     "id": "PP92",
     "name": "Sca Fell",

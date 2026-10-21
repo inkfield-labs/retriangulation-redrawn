@@ -8,6 +8,7 @@ Writes (gitignored): site/data/pillars.geojson   standing pillars with id, name,
                      site/data/partners/<id>.json  [[partner id, km, surface clear 0/1], ...] nearest first
                      site/data/lines.pmtiles     every visible line at k = 0.13 (properties: km, s)
                      site/data/rays.geojson      the reciprocal 1936-62 rays with their then-and-now state
+                     site/data/longest.json      the 10 longest visible lines: [[id a, id b, km, surface clear], ...]
                      results/site_build.json     the counts above and file sizes (committed)
 Pillar id = OS station name with "/" replaced by "-" (e.g. SW63-T16), unique and stable across rebuilds.
 """
@@ -77,6 +78,11 @@ def main(trig_csv):
                     "-l", "sightlines", "-Z4", "-z12", "--drop-densest-as-needed",
                     "--extend-zooms-if-still-dropping", "-q", str(src)], check=True)
 
+    top10 = lines.nlargest(10, "dist_km")
+    (OUT / "longest.json").write_text(json.dumps(
+        [[a, b, km, int(sc)] for a, b, km, sc in zip(top10.ia, top10.ib, top10.dist_km.round(1), top10.s)],
+        separators=(",", ":")))
+
     # historical rays; their ends may be non-pillar marks, so each feature carries its own coordinates
     rays = pd.read_csv(ROOT / "results" / "rays_then_now.csv")
     ra = tr.transform(rays.a_e.values, rays.a_n.values)
@@ -91,6 +97,8 @@ def main(trig_csv):
     top = counts.idxmax()
     summary = {"pillars": len(p), "lines": len(lines), "surface_clear": int(lines.s.sum()),
                "pillars_with_partners": int(counts.size), "rays": len(rays),
+               "longest": [{"a": a, "b": b, "km": km, "surface_clear": int(sc)} for a, b, km, sc in
+                           zip(top10.a_name, top10.b_name, top10.dist_km, top10.s)],
                "most_partners": {"id": top, "name": p.set_index("id").loc[top, "Trig Name"],
                                  "partners": int(counts.max()), "surface_clear": int(clear.get(top, 0))},
                "bytes": {f.name: f.stat().st_size for f in (OUT / "lines.pmtiles", OUT / "pillars.geojson",

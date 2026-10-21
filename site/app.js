@@ -36,18 +36,20 @@ let rays = [];
 const historyBox = document.getElementById("history");
 
 map.on("load", async () => {
-  const [pillars, rayData] = await Promise.all(["pillars.geojson", "rays.geojson"].map(
+  const [pillars, rayData, longest] = await Promise.all(["pillars.geojson", "rays.geojson", "longest.json"].map(
     async (f) => (await fetch(base + f)).json()));
   for (const f of pillars.features) byId.set(f.properties.id, f);
   rays = rayData.features;
   fillSearch(pillars.features);
   fillLegend(pillars.features);
+  fillLongest(longest);
 
   map.addSource("lines", {type: "vector", url: "pmtiles://" + base + "lines.pmtiles", attribution: `${OS}. ${COP}`});
   map.addSource("pillars", {type: "geojson", data: pillars});
   map.addSource("rays", {type: "geojson", data: rayData});
   map.addSource("sel-lines", {type: "geojson", data: empty()});
   map.addSource("sel-pts", {type: "geojson", data: empty()});
+  map.addSource("pair", {type: "geojson", data: empty()});
 
   // surface-blocked lines (s = 0) get their own dashed layer: line-dasharray cannot be data-driven
   const width = ["interpolate", ["linear"], ["zoom"], 4, 0.3, 10, 0.8];
@@ -65,6 +67,8 @@ map.on("load", async () => {
     paint: {"line-color": LINE, "line-width": 1.8, "line-opacity": 0.85}});
   map.addLayer({id: "sel-lines-blocked", type: "line", source: "sel-lines", filter: ["==", ["get", "s"], 0],
     paint: {"line-color": LINE, "line-width": 1.4, "line-opacity": 0.6, "line-dasharray": [2, 2]}});
+  map.addLayer({id: "pair", type: "line", source: "pair", layout: {"line-cap": "round"},
+    paint: {"line-color": "#1f2937", "line-width": 4}});
   map.addLayer({id: "pillars", type: "circle", source: "pillars",
     paint: {"circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 0.8, 7, 1.6, 10, 4.5],
             "circle-color": "#1f2937", "circle-opacity": ["interpolate", ["linear"], ["zoom"], 4, 0.5, 8, 1], "circle-stroke-color": "#fff",
@@ -104,6 +108,8 @@ async function select(id, fly) {
   const f = byId.get(id);
   if (!f) return;
   selected = id;
+  map.getSource("pair").setData(empty());
+  for (const d of document.querySelectorAll("#explore details")) d.open = false;
   if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + encodeURIComponent(id));
   const partners = f.properties.n ? await (await fetch(`${base}partners/${encodeURIComponent(id)}.json`)).json() : [];
   if (selected !== id) return;  // a newer selection won the race
@@ -131,6 +137,7 @@ function clear() {
   history.replaceState(null, "", location.pathname + location.search);
   map.getSource("sel-lines").setData(empty());
   map.getSource("sel-pts").setData(empty());
+  map.getSource("pair").setData(empty());
   restyle();
   document.getElementById("detail").hidden = true;
   document.getElementById("panel").classList.remove("has-detail");
@@ -202,6 +209,38 @@ function showDetail(f, others) {
   list.scrollTop = 0;
   document.getElementById("detail").hidden = false;
   document.getElementById("panel").classList.add("has-detail");
+}
+
+// Select one end of a line and frame the whole line.
+async function showPair(a, b) {
+  await select(a, false);
+  const A = byId.get(a).geometry.coordinates, B = byId.get(b).geometry.coordinates;
+  map.getSource("pair").setData({type: "Feature", properties: {}, geometry: {type: "LineString", coordinates: [A, B]}});
+  map.fitBounds(new maplibregl.LngLatBounds(A, A).extend(B), {padding: framePadding(), maxZoom: 10, duration: 800});
+}
+
+function pick(text, km, onClick, swatch) {
+  const li = document.createElement("li");
+  const btn = document.createElement("button");
+  btn.type = "button";
+  const k = document.createElement("span");
+  k.className = "km";
+  k.textContent = km;
+  if (swatch) {
+    const sw = document.createElement("span");
+    sw.className = `sw ${swatch}`;
+    btn.append(sw);
+  }
+  btn.append(text, k);
+  btn.addEventListener("click", onClick);
+  li.append(btn);
+  return li;
+}
+
+function fillLongest(longest) {
+  document.getElementById("longest-list").replaceChildren(...longest.map(([a, b, km, s]) =>
+    pick(`${byId.get(a).properties.name} – ${byId.get(b).properties.name}`, `${km} km`, () => showPair(a, b),
+         s ? "net-clear" : "net-blocked")));
 }
 
 function framePadding() {
