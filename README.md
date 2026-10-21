@@ -10,5 +10,9 @@ product.
 - `results/`: saved outputs (CSV, JSON, PNG) that the report cites
 - `INVESTIGATION.md`: the verdict and report
 - `data/` (gitignored): downloaded trig and terrain data
+- `site/`: the static map page (MVP build, not published). `site/data/` is built by `scripts/build_site.py`
+  from `data/gb_lines.csv` (from `scripts/gb_full_run.py`) and needs [tippecanoe](https://github.com/felt/tippecanoe)
+  (set `TIPPECANOE` if it is not on `PATH`). Serve `site/` with a server that supports Range requests, e.g.
+  `npx http-server@14.1.1 site -c-1`
 
 Setup: `uv venv .venv && uv pip install --python .venv/bin/python -r requirements.txt`

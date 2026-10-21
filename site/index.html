@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retriangulation Redrawn</title>
+<meta name="description" content="Which Ordnance Survey trig pillars in Great Britain can see each other over the terrain.">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:,">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
+</head>
+<body>
+<div id="map"></div>
+<aside id="panel">
+  <header>
+    <h1>Retriangulation Redrawn</h1>
+    <p class="lede">Every pair of standing OS trig pillars in Great Britain with a clear line of sight over the terrain.</p>
+    <input id="search" type="search" list="names" placeholder="Find a pillar by name" autocomplete="off">
+    <datalist id="names"></datalist>
+  </header>
+  <section id="detail" hidden>
+    <div class="detail-head">
+      <h2 id="d-name"></h2>
+      <button id="clear" type="button" aria-label="Clear selection">×</button>
+    </div>
+    <p id="d-meta"></p>
+    <ol id="d-list"></ol>
+  </section>
+  <p class="caveat"><strong>Terrain only.</strong> Lines clear the bare ground with standard refraction. Trees and
+    buildings are not modelled, and in lowland England most of these lines are probably blocked today.
+    <button id="about-open" type="button" class="link">How this was made</button></p>
+</aside>
+<dialog id="about">
+  <h2>How this was made</h2>
+  <p>Pillars are the 6,079 standing pillars in the OS Complete Trig Archive. Sight height is the archive height of the
+    flush bracket, raised to the pillar top (1.22 m above ground) plus 0.25 m for an instrument.</p>
+  <p>Each pair up to 150 km apart was tested against OS Terrain 50, a 50 m bare-earth model. The test allows for
+    Earth curvature and a refraction coefficient of 0.13, ignoring 100 m at each end. 229,330 pairs are clear.</p>
+  <p>Checked against the 641 pillar-to-pillar rays the surveyors actually observed between 1936 and 1962, the model
+    finds 95.5% of them.</p>
+  <p class="small">Contains OS data © Crown copyright and database right 2026, licensed under the
+    <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence
+    v3.0</a>. Basemap © <a href="https://openfreemap.org">OpenFreeMap</a>,
+    © <a href="https://www.openmaptiles.org/">OpenMapTiles</a>, data from
+    <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.</p>
+  <form method="dialog"><button type="submit">Close</button></form>
+</dialog>
+<script src="app.js"></script>
+</body>
+</html>

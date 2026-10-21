@@ -1,0 +1,51 @@
+:root {
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --line: #c2410c;
+  --paper: #ffffff;
+  --rule: #e5e7eb;
+}
+html, body { margin: 0; height: 100%; background: #f2efe9; color: var(--ink);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+#map { position: absolute; inset: 0; }
+
+#panel { position: absolute; top: 12px; left: 12px; width: 340px; max-height: calc(100% - 24px);
+  display: flex; flex-direction: column; background: var(--paper); border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .18); overflow: hidden; }
+#panel header { padding: 14px 16px 12px; border-bottom: 1px solid var(--rule); }
+h1 { margin: 0 0 4px; font-size: 17px; }
+.lede { margin: 0 0 10px; color: var(--muted); }
+#search { width: 100%; box-sizing: border-box; padding: 8px 10px; font: inherit; border: 1px solid #d1d5db;
+  border-radius: 6px; }
+
+#detail { display: flex; flex-direction: column; min-height: 0; flex: 1; padding: 12px 16px 0; }
+#detail[hidden] { display: none; }
+.detail-head { display: flex; align-items: start; justify-content: space-between; gap: 8px; }
+h2 { margin: 0; font-size: 16px; }
+#clear { border: 0; background: none; font-size: 22px; line-height: 1; cursor: pointer; color: var(--muted);
+  padding: 0 4px; }
+#d-meta { margin: 4px 0 8px; color: var(--muted); }
+#d-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; min-height: 0; flex: 1;
+  border-top: 1px solid var(--rule); }
+#d-list li { display: flex; justify-content: space-between; gap: 8px; padding: 5px 0;
+  border-bottom: 1px solid var(--rule); cursor: pointer; }
+#d-list li:hover { color: var(--line); }
+#d-list .km { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.caveat { margin: 0; padding: 10px 16px 12px; font-size: 12.5px; color: var(--muted);
+  border-top: 1px solid var(--rule); }
+button.link { border: 0; background: none; padding: 0; font: inherit; color: var(--line); cursor: pointer;
+  text-decoration: underline; }
+
+dialog { max-width: 520px; border: 0; border-radius: 8px; padding: 20px 22px; box-shadow: 0 4px 24px rgba(0,0,0,.25); }
+dialog::backdrop { background: rgba(0, 0, 0, .3); }
+dialog h2 { margin-bottom: 8px; }
+dialog .small { font-size: 12px; color: var(--muted); }
+dialog a { color: var(--line); }
+
+@media (max-width: 640px) {
+  #panel { top: auto; bottom: 0; left: 0; right: 0; width: auto; max-height: 55%; border-radius: 12px 12px 0 0; }
+  #panel header { padding: 12px 16px 10px; }
+  .lede { display: none; }
+  .maplibregl-ctrl-bottom-right { bottom: auto; top: 0; }
+}
