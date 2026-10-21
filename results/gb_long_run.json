@@ -1,0 +1,87 @@
+{
+  "pillars": 6079,
+  "k": 0.13,
+  "skip_m": 100.0,
+  "range_km": [
+    150.0,
+    250.0
+  ],
+  "hmin_m": -135.9,
+  "candidate_pairs": 3770249,
+  "pruned": 3456065,
+  "tested": 314184,
+  "visible": 1169,
+  "visible_le_km": {
+    "200": 1148,
+    "250": 1169
+  },
+  "los_seconds": 273.2,
+  "total_seconds": 354.7,
+  "prune_check": {
+    "sample": 20000,
+    "max_clearance_m": -136.7,
+    "visible": 0
+  },
+  "longest_overall": [
+    {
+      "a_name": "Merrick",
+      "b_name": "Snowdon Summit",
+      "dist_km": 231.89,
+      "clearance_m": 7.7
+    },
+    {
+      "a_name": "Garnedd Ugain",
+      "b_name": "Merrick",
+      "dist_km": 231.12,
+      "clearance_m": 7.7
+    },
+    {
+      "a_name": "Meikle Millyea",
+      "b_name": "Snowdon Summit",
+      "dist_km": 228.69,
+      "clearance_m": 2.7
+    },
+    {
+      "a_name": "Garnedd Ugain",
+      "b_name": "Meikle Millyea",
+      "dist_km": 227.91,
+      "clearance_m": 2.7
+    },
+    {
+      "a_name": "Millfore",
+      "b_name": "Snowdon Summit",
+      "dist_km": 221.48,
+      "clearance_m": 21.1
+    },
+    {
+      "a_name": "Garnedd Ugain",
+      "b_name": "Millfore",
+      "dist_km": 220.7,
+      "clearance_m": 18.1
+    },
+    {
+      "a_name": "Foel Fras",
+      "b_name": "Merrick",
+      "dist_km": 219.03,
+      "clearance_m": 7.3
+    },
+    {
+      "a_name": "Foel Fras",
+      "b_name": "Meikle Millyea",
+      "dist_km": 215.45,
+      "clearance_m": 3.0
+    },
+    {
+      "a_name": "Arenig",
+      "b_name": "Cross Fell",
+      "dist_km": 215.31,
+      "clearance_m": 12.4
+    },
+    {
+      "a_name": "Cairnsmore Of Fleet",
+      "b_name": "Snowdon Summit",
+      "dist_km": 212.98,
+      "clearance_m": 6.5
+    }
+  ]
+}
