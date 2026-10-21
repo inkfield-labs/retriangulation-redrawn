@@ -1,0 +1,41 @@
+{
+  "rays": 829,
+  "k": 0.13,
+  "skip_m": 100.0,
+  "instrument_on_non_pillar_mark_m": 1.5,
+  "states": {
+    "clear": 608,
+    "surface": 50,
+    "terrain": 35,
+    "unknown": 136
+  },
+  "pillar_to_pillar": {
+    "rays": 641,
+    "states": {
+      "clear": 569,
+      "surface": 43,
+      "terrain": 29,
+      "unknown": 0
+    },
+    "t50_visible": 612
+  },
+  "with_non_pillar_end": {
+    "rays": 188,
+    "states": {
+      "clear": 39,
+      "surface": 7,
+      "terrain": 6,
+      "unknown": 136
+    }
+  },
+  "figure_5_eastern_counties": {
+    "rays": 226,
+    "states": {
+      "clear": 63,
+      "surface": 32,
+      "terrain": 29,
+      "unknown": 102
+    }
+  },
+  "rays_with_a_destroyed_station": 105
+}
