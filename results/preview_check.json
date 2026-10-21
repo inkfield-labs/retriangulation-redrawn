@@ -5,7 +5,7 @@
       "206": 5
     },
     "tile_requests_with_content_range": 5,
-    "rendered_line_features": 5250,
+    "rendered_line_features": 5282,
     "console_errors": 0,
     "console_error_messages": [],
     "gpu_stall_warnings_filtered": 4,
@@ -18,7 +18,7 @@
       "206": 5
     },
     "tile_requests_with_content_range": 5,
-    "rendered_line_features": 5250,
+    "rendered_line_features": 5282,
     "console_errors": 0,
     "console_error_messages": [],
     "gpu_stall_warnings_filtered": 0,
