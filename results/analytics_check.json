@@ -1,0 +1,19 @@
+{
+  "check": "Cloudflare Web Analytics records a visit to the private preview (#14)",
+  "site_created_utc": "2026-10-22",
+  "redeployed_utc": "2026-10-22",
+  "beacon": {
+    "page_has_beacon_script": true,
+    "page_token_matches_site_token": true,
+    "test_visit": "headless Chromium via Playwright, 2026-10-22",
+    "beacon_js_status": 200,
+    "rum_post_status": 204
+  },
+  "query": "GraphQL rumPageloadEventsAdaptiveGroups, filter {siteTag, datetime_geq: 2026-10-22}, dimensions datetimeMinute deviceType userAgentBrowser userAgentOS",
+  "queried_utc": "2026-10-22",
+  "rows": [
+    {"count": 1, "datetimeMinute": "2026-10-22", "deviceType": "desktop", "userAgentBrowser": "ChromeHeadless", "userAgentOS": "Linux"}
+  ],
+  "ingest_delay_minutes_observed": "about 8",
+  "note": "The owner's phone reload, a minute after the test visit, was not yet listed when queried."
+}
