@@ -6,10 +6,22 @@
       "width": 412,
       "height": 839
     },
+    "intro_on_first_visit": true,
     "sideways_scroll": false,
     "search_font_px": 16,
+    "tour": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "tour_last_button": "Explore the map",
+    "tour_ends_on_map": true,
     "story_tap_opens": "Hensbarrow",
     "search_snowdon_selects": "Snowdon Summit",
+    "intro_after_reload": false,
+    "intro_on_pillar_link": false,
     "console_errors": []
   },
   "chromium / Pixel 7 / dark": {
@@ -17,10 +29,22 @@
       "width": 412,
       "height": 839
     },
+    "intro_on_first_visit": true,
     "sideways_scroll": false,
     "search_font_px": 16,
+    "tour": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "tour_last_button": "Explore the map",
+    "tour_ends_on_map": true,
     "story_tap_opens": "Hensbarrow",
     "search_snowdon_selects": "Snowdon Summit",
+    "intro_after_reload": false,
+    "intro_on_pillar_link": false,
     "console_errors": []
   },
   "webkit / iPhone 15 / light": {
@@ -28,10 +52,22 @@
       "width": 393,
       "height": 659
     },
+    "intro_on_first_visit": true,
     "sideways_scroll": false,
     "search_font_px": 16,
+    "tour": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "tour_last_button": "Explore the map",
+    "tour_ends_on_map": true,
     "story_tap_opens": "Hensbarrow",
     "search_snowdon_selects": "Snowdon Summit",
+    "intro_after_reload": false,
+    "intro_on_pillar_link": false,
     "console_errors": []
   },
   "webkit / iPhone 15 / dark": {
@@ -39,10 +75,22 @@
       "width": 393,
       "height": 659
     },
+    "intro_on_first_visit": true,
     "sideways_scroll": false,
     "search_font_px": 16,
+    "tour": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "tour_last_button": "Explore the map",
+    "tour_ends_on_map": true,
     "story_tap_opens": "Hensbarrow",
     "search_snowdon_selects": "Snowdon Summit",
+    "intro_after_reload": false,
+    "intro_on_pillar_link": false,
     "console_errors": []
   },
   "webkit / iPhone SE / light": {
@@ -50,10 +98,22 @@
       "width": 320,
       "height": 568
     },
+    "intro_on_first_visit": true,
     "sideways_scroll": false,
     "search_font_px": 16,
+    "tour": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "tour_last_button": "Explore the map",
+    "tour_ends_on_map": true,
     "story_tap_opens": "Hensbarrow",
     "search_snowdon_selects": "Snowdon Summit",
+    "intro_after_reload": false,
+    "intro_on_pillar_link": false,
     "console_errors": []
   },
   "webkit / iPhone SE / dark": {
@@ -61,10 +121,22 @@
       "width": 320,
       "height": 568
     },
+    "intro_on_first_visit": true,
     "sideways_scroll": false,
     "search_font_px": 16,
+    "tour": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "tour_last_button": "Explore the map",
+    "tour_ends_on_map": true,
     "story_tap_opens": "Hensbarrow",
     "search_snowdon_selects": "Snowdon Summit",
+    "intro_after_reload": false,
+    "intro_on_pillar_link": false,
     "console_errors": []
   },
   "all_pass": true
