@@ -1,5 +1,5 @@
 {
-  "url": "http://localhost:8766/",
+  "url": "https://retriangulation-redrawn.pages.dev/",
   "note": "emulation, not real devices; pixel density 1; SwiftShader rendering in Chromium",
   "chromium / Pixel 7 / light": {
     "viewport": {

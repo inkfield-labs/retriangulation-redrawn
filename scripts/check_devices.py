@@ -43,7 +43,7 @@ def check(browser, profile, scheme, url, name):
            "sideways_scroll": page.evaluate("document.documentElement.scrollWidth > innerWidth"),
            "search_font_px": page.evaluate("parseFloat(getComputedStyle(document.getElementById('search')).fontSize)")}
     page.locator(".story-marker").first.tap()
-    page.wait_for_function("location.hash === '#PP174'", timeout=10_000)
+    page.wait_for_function("document.getElementById('d-name').textContent.startsWith('Hensbarrow')", timeout=10_000)
     out["story_tap_opens"] = page.locator("#d-name").inner_text()
     page.evaluate(IDLE)
     page.screenshot(path=SHOTS / f"{name}-{scheme}-story.png")
