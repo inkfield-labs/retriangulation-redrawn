@@ -19,6 +19,8 @@ found by its exact wording in `site/` and recomputed from the named output.
 | index.html | a 50 m bare-earth model | 50 | yes | data/terrain50/gb50.json |
 | index.html | refraction coefficient of 0.13 and ignoring 100 m at each end | 0.13, 100.0 | yes | gb_long_run.json, gb_full_run.py |
 | index.html | 230,499 pairs are clear | 230,499 | yes | site_build.json |
+| README.md | It shows the 829 rays | 829 | yes | rays_then_now.json |
+| README.md | over the 230,499 pairs | 230,499 | yes | site_build.json |
 | index.html | a 30 m model | 30 | yes | glo30_gb.json |
 | index.html | them in 2010–15: 201,232 are still clear | 201,232 | yes | site_build.json; dates: Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | finds 612 of the 641 rays | 612 of 641 | yes | rays_then_now.json, recall_sweep.csv |
@@ -30,9 +32,11 @@ found by its exact wording in `site/` and recomputed from the named output.
 | index.html | in 1936–62 | cited | yes | History of the Retriangulation of Great Britain 1935-1962 (OS 1967) |
 | index.html | Between 1936 and 1962 | cited | yes | History of the Retriangulation of Great Britain 1935-1962 (OS 1967) |
 | index.html | Great Britain 1935–1962</i> | cited | yes | History of the Retriangulation of Great Britain 1935-1962 (OS 1967) |
+| README.md | Between 1936 and 1962 | cited | yes | History of the Retriangulation of Great Britain 1935-1962 (OS 1967) |
 | index.html | in the 2010–15 Copernicus surface model | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | from 2010–15 for trees | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | a 2010–15 model of trees and buildings | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
+| README.md | a 2010–15 model of trees and buildings | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | The surface model is 2010–15 radar | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | but not over the 2010–15 surface model | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | app.js | also clear on the 2010–15 surface model; farthest | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
@@ -54,7 +58,7 @@ found by its exact wording in `site/` and recomputed from the named output.
 | app.js | It was not one of the observed rays | pair absent | yes | primary_rays.csv |
 | app.js | Sca Fell: 448 pillars in view | 448 | yes | site_build.json |
 | app.js | finds 448 other pillars in view over the terrain, more than from any other pillar, and 435 of them are also clear on the 2010–15 surface model | 448, 435 | yes | site_build.json |
-| app.js | The farthest is Cader Idris, 200.6 km | 200.6 | yes | site/data/partners/PP92.json |
+| app.js | The farthest is Cader Idris, 200.6 km | 200.6 | yes | site/data/partners/ (PP92) |
 
 ## Numbers the page computes from `site/data/`
 

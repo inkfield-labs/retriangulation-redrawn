@@ -1,5 +1,5 @@
 // Static map of trig-pillar sightlines, then and now. Data from scripts/build_site.py: data/pillars.json,
-// data/partners/<id>.json, data/lines.pmtiles and data/rays.geojson. A selection is kept in the URL hash (#<id>).
+// data/partners/<k>.json, data/tiles/ and data/rays.geojson. A selection is kept in the URL hash (#<id>).
 const OS = "Contains OS data © Crown copyright and database right 2026";
 const COP = "Contains modified Copernicus DEM data";
 const dark = matchMedia("(prefers-color-scheme: dark)").matches;
@@ -44,11 +44,9 @@ const STORIES = [
 const NET = {full: ["interpolate", ["linear"], ["zoom"], 4, 0.18, 9, 0.3],
              faint: ["interpolate", ["linear"], ["zoom"], 4, 0.07, 9, 0.14], selected: 0.04};
 
-const protocol = new pmtiles.Protocol();
-maplibregl.addProtocol("pmtiles", protocol.tile);
 const base = new URL("data/", location.href).href;
-// tiles URL: scripts/deploy_preview.sh rewrites this one line to point at R2 (Pages caps files at 25 MiB)
-const TILES = base + "lines.pmtiles";
+// partner lists come in bundles of the pillars at rows 6k to 6k+5 of pillars.json (PER_FILE in scripts/build_site.py)
+const PER_FILE = 6;
 
 const GB = [[-7.6, 49.9], [1.8, 58.7]];
 const map = new maplibregl.Map({container: "map", bounds: GB, fitBoundsOptions: {padding: 20}, attributionControl: false});
@@ -97,7 +95,9 @@ map.on("load", async () => {
   fillLongest(longest);
   fillStories();
 
-  map.addSource("lines", {type: "vector", url: "pmtiles://" + TILES, attribution: `${OS}. ${COP}`});
+  // sea and empty tiles have no file: MapLibre takes a 404 as an empty tile
+  map.addSource("lines", {type: "vector", tiles: [base + "tiles/{z}/{x}/{y}.pbf"], minzoom: 4, maxzoom: 12,
+    attribution: `${OS}. ${COP}`});
   map.addSource("pillars", {type: "geojson", data: pillars});
   map.addSource("rays", {type: "geojson", data: rayData});
   map.addSource("sel-lines", {type: "geojson", data: empty()});
@@ -185,7 +185,7 @@ async function select(id, fly) {
   if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + encodeURIComponent(id));
   let partners = [];
   try {
-    if (f.properties.n) partners = await (await fetch(`${base}partners/${encodeURIComponent(id)}.json`)).json();
+    if (f.properties.n) partners = (await (await fetch(`${base}partners/${Math.floor(f.id / PER_FILE)}.json`)).json())[id];
   } catch {
     if (selected !== id) return false;
     clear();

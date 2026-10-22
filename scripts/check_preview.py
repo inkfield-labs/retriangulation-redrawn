@@ -1,7 +1,7 @@
 """Preview check: one cold load of each URL in headless Chromium, recording what the tile server and page did.
 
-Waits for window.mapReady and the map's idle event, then counts the tile (.pmtiles) requests with their statuses and
-whether each carried Content-Range, the line features rendered, the console errors and the X-Robots-Tag of the page.
+Waits for window.mapReady and the map's idle event, then counts the line-tile requests (data/tiles/) with their
+statuses (404 is an empty tile) and the Content-Encoding each arrived with, the line features rendered, the console errors and the X-Robots-Tag of the page.
 Headless Chromium's "GPU stall due to ReadPixels" driver warnings (caused by the feature query below) are not counted
 as errors; their number is recorded separately as gpu_stall_warnings_filtered.
 
@@ -32,8 +32,8 @@ def check(browser, url):
             errors.append(m.text)
 
     def on_response(r):
-        if urlparse(r.url).path.endswith(".pmtiles"):
-            tiles.append({"status": r.status, "content_range": r.headers.get("content-range") is not None})
+        if "/data/tiles/" in urlparse(r.url).path:
+            tiles.append({"status": r.status, "encoding": r.headers.get("content-encoding", "none")})
         if r.url == url:
             robots["x_robots_tag"] = r.headers.get("x-robots-tag")
 
@@ -46,11 +46,11 @@ def check(browser, url):
     page.evaluate("new Promise((r) => { map.once('idle', r); map.triggerRepaint(); })")
     lines = page.evaluate("map.queryRenderedFeatures({layers: ['lines']}).length")
     page.close()
-    statuses = {}
+    statuses, encodings = {}, {}
     for t in tiles:
         statuses[str(t["status"])] = statuses.get(str(t["status"]), 0) + 1
-    return {"tile_requests": len(tiles), "tile_statuses": statuses,
-            "tile_requests_with_content_range": sum(t["content_range"] for t in tiles),
+        encodings[t["encoding"]] = encodings.get(t["encoding"], 0) + 1
+    return {"tile_requests": len(tiles), "tile_statuses": statuses, "tile_encodings": encodings,
             "rendered_line_features": lines, "console_errors": len(errors), "console_error_messages": errors,
             "gpu_stall_warnings_filtered": filtered, "gpu_stall_filter": GPU_STALL,
             "x_robots_tag": robots.get("x_robots_tag")}

@@ -73,8 +73,12 @@
     "surface_clear": 435
   },
   "bytes": {
-    "lines.pmtiles": 103181442,
     "pillars.json": 344844,
     "rays.geojson": 172453
-  }
+  },
+  "tiles": {
+    "files": 14130,
+    "bytes": 220633035
+  },
+  "partner_files": 1014
 }

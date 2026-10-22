@@ -1,7 +1,8 @@
 """Payload budget: bytes a first visit downloads before the first tap, on throttled 4G with a cold cache.
 
 Loads the page in headless Chromium at phone and desktop sizes, waits for the page's data (window.mapReady) and then
-for the map to go idle, and sums the bytes received per request. Throttling is Lighthouse's mobile profile: 150 ms
+for the map to go idle, and sums the bytes received per request (body as sent plus headers, from Playwright, which
+also sees the map's worker requests for line tiles; DevTools on the page does not). Throttling is Lighthouse's mobile profile: 150 ms
 round trip, 1.6 Mbit/s down, 750 kbit/s up. The local server (http-server) sends files uncompressed, so for this
 site's own text files the gzip size is also reported: that is what a host such as Cloudflare Pages would send.
 That adjustment is skipped for any other host, which already compresses.
@@ -28,7 +29,7 @@ TEXT = (".html", ".css", ".js", ".json", ".geojson")
 
 def kind(url, site):
     u = urlparse(url)
-    if u.path.endswith(".pmtiles"):
+    if "/data/tiles/" in u.path:
         return "tiles"
     if u.netloc == site:
         return "data" if u.path.startswith("/data/") else "page"
@@ -59,9 +60,8 @@ def measure(browser, url, size):
     cdp.send("Network.enable")
     cdp.send("Network.setCacheDisabled", {"cacheDisabled": True})
     cdp.send("Network.emulateNetworkConditions", THROTTLE)
-    urls, done = {}, {}
-    cdp.on("Network.requestWillBeSent", lambda e: urls.__setitem__(e["requestId"], e["request"]["url"]))
-    cdp.on("Network.loadingFinished", lambda e: done.__setitem__(e["requestId"], e["encodedDataLength"]))
+    finished = []
+    page.on("requestfinished", lambda r: finished.append(r))
     t0 = time.time()
     page.goto(url)
     page.wait_for_function("window.mapReady === true", timeout=120_000)
@@ -70,7 +70,7 @@ def measure(browser, url, size):
     page.evaluate("new Promise((r) => { map.once('idle', r); map.triggerRepaint(); })")
     t_idle = time.time() - t0
     site = urlparse(url).netloc
-    rows = [(urls.get(i, "?"), n) for i, n in done.items()]
+    rows = [(r.url, sum(r.sizes()[k] for k in ("responseBodySize", "responseHeadersSize"))) for r in finished]
     by_kind, gz_saving = {}, 0
     for u, n in rows:
         k = kind(u, site)

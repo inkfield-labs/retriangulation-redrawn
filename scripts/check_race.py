@@ -1,15 +1,21 @@
 """Selection race check: a story whose partners fetch is slow must not draw over a newer selection.
 
-Holds the partners/PP301.json request for 1.5 s, starts story 4 (Merrick to Snowdon), selects Sca Fell (PP92) 200 ms
+Holds the partners bundle holding PP301 for 1.5 s, starts story 4 (Merrick to Snowdon), selects Sca Fell (PP92) 200 ms
 later, releases the request, then expects Sca Fell's panel with no story box and no pair line.
 
 Usage:  python -I scripts/check_race.py [URL]      (default http://localhost:8766/; exits non-zero on failure)
 Needs:  pip install playwright && python -m playwright install --only-shell chromium
 Writes: nothing
 """
+import json
 import sys
+from pathlib import Path
 
 from playwright.sync_api import sync_playwright
+
+IDS = [r[0] for r in json.loads((Path(__file__).resolve().parent.parent / "site/data/pillars.json").read_text())]
+shard = IDS.index("PP301") // 6  # PER_FILE in scripts/build_site.py
+assert IDS.index("PP92") // 6 != shard, "Sca Fell shares the held bundle"
 
 
 def main(url):
@@ -18,7 +24,7 @@ def main(url):
         page = browser.new_page(viewport={"width": 1280, "height": 800})
 
         held = []
-        page.route("**/partners/PP301.json", lambda route: held.append(route))
+        page.route(f"**/partners/{shard}.json", lambda route: held.append(route))
         page.goto(url)
         page.wait_for_function("window.mapReady === true", timeout=120_000)
         page.evaluate("() => { story(3); }")  # not awaited: evaluate would wait for the held fetch

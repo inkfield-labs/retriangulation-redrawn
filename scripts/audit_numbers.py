@@ -1,4 +1,4 @@
-"""Number audit: every number the map page states, checked against the script output it comes from.
+"""Number audit: every number the map page (and the README) states, checked against the script output it comes from.
 
 Each claim is a snippet that must appear in the page (whitespace collapsed) and a recomputation from results/ (or
 from site/data/, built by scripts/build_site.py). Dates and figures taken from documents are listed as citations.
@@ -30,6 +30,7 @@ BOOK = "History of the Retriangulation of Great Britain 1935-1962 (OS 1967)"
 def page_text():
     """Page files with whitespace collapsed and JS string joins ("..." + "...") removed."""
     text = {f: " ".join((ROOT / "site" / f).read_text().split()) for f in ("index.html", "app.js")}
+    text["README.md"] = " ".join((ROOT / "README.md").read_text().split())
     text["app.js"] = re.sub(r'"\s*\+\s*"', "", text["app.js"])
     return text
 
@@ -69,7 +70,8 @@ def claims(d):
     unk5 = rr[fig5 & (rr.state == "unknown")]
     tower = unk5.apply(lambda r: any(re.search(r"\b(twr|tower)\b", str(n), re.I) for n, t in
                                      ((r.a_name, r.a_type), (r.b_name, r.b_type)) if t != "PILLAR"), axis=1)
-    sca = json.loads((d["site"] / "partners" / "PP92.json").read_text())
+    ids = [r[0] for r in json.loads((d["site"] / "pillars.json").read_text())]
+    sca = json.loads((d["site"] / "partners" / f"{ids.index('PP92') // 6}.json").read_text())["PP92"]
     pairs = set(zip(d["primary"].a, d["primary"].b)) | set(zip(d["primary"].b, d["primary"].a))
     i, a = "index.html", "app.js"
     yield i, "the 829 rays observed from both ends", d["rays"]["rays"], d["rays"]["rays"] == 829, "rays_then_now.json"
@@ -90,6 +92,8 @@ def claims(d):
     yield (i, "refraction coefficient of 0.13 and ignoring 100 m at each end", f"{d['long']['k']}, {d['long']['skip_m']}",
            d["long"]["k"] == 0.13 and d["long"]["skip_m"] == 100, "gb_long_run.json, gb_full_run.py")
     yield i, "230,499 pairs are clear", fmt(b["lines"]), b["lines"] == 230_499, "site_build.json"
+    yield "README.md", "It shows the 829 rays", d["rays"]["rays"], d["rays"]["rays"] == 829, "rays_then_now.json"
+    yield "README.md", "over the 230,499 pairs", fmt(b["lines"]), b["lines"] == 230_499, "site_build.json"
     yield i, "a 30 m model", d["glo"]["grid_cell_m"], d["glo"]["grid_cell_m"] == 30, "glo30_gb.json"
     yield i, "them in 2010–15: 201,232 are still clear", fmt(b["surface_clear"]), b["surface_clear"] == 201_232, \
         "site_build.json; dates: " + HANDBOOK
@@ -107,10 +111,12 @@ def claims(d):
            f"{rays_in_fig5(pp_miss)} of {len(pp_miss)} pillar-to-pillar terrain misses are Figure 5",
            len(pp_miss) == pp["states"]["terrain"] and 2 * rays_in_fig5(pp_miss) > len(pp_miss), "rays_then_now.csv")
     yield i, "says it misses by 1.7 m", df.clear_t50, round(-df.clear_t50, 1) == 1.7, "rays_then_now.csv"
-    for f, snip in ((i, "in 1936–62"), (i, "Between 1936 and 1962"), (i, "Great Britain 1935–1962</i>")):
+    for f, snip in ((i, "in 1936–62"), (i, "Between 1936 and 1962"), (i, "Great Britain 1935–1962</i>"),
+                      ("README.md", "Between 1936 and 1962")):
         yield f, snip, "cited", True, BOOK
     for f, snip in ((i, "in the 2010–15 Copernicus surface model"), (i, "from 2010–15 for trees"),
                     (i, "a 2010–15 model of trees and buildings"),
+                    ("README.md", "a 2010–15 model of trees and buildings"),
                     (i, "The surface model is 2010–15 radar"), (i, "but not over the 2010–15 surface model"),
                     (a, "also clear on the 2010–15 surface model; farthest"), (a, "Clear on the 2010–15 surface model"),
                     (a, "blocked by trees or buildings in the 2010–15 surface model")):
@@ -150,7 +156,7 @@ def claims(d):
     yield (a, "finds 448 other pillars in view over the terrain, more than from any other pillar, and 435 of them are "
               "also clear on the 2010–15 surface model", f"{m['partners']}, {m['surface_clear']}",
            (m["partners"], m["surface_clear"]) == (448, 435), "site_build.json")
-    yield a, "The farthest is Cader Idris, 200.6 km", sca[-1][1], sca[-1][1] == 200.6, "site/data/partners/PP92.json"
+    yield a, "The farthest is Cader Idris, 200.6 km", sca[-1][1], sca[-1][1] == 200.6, "site/data/partners/ (PP92)"
 
 
 def data_checks(d):
