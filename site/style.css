@@ -45,6 +45,8 @@ html, body { margin: 0; height: 100%; background: var(--ground); color: var(--in
   box-shadow: var(--panel-shadow); overflow-y: auto; }
 #panel header { padding: 14px 16px 12px; border-bottom: 1px solid var(--rule); }
 h1 { margin: 0 0 4px; font-size: 17px; }
+.title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+#intro-open { flex: none; font-size: 12.5px; }
 .lede { margin: 0 0 10px; color: var(--muted); }
 #search { width: 100%; box-sizing: border-box; padding: 8px 10px; font: inherit; border: 1px solid var(--input-border);
   border-radius: 6px; }
@@ -77,6 +79,7 @@ h1 { margin: 0 0 4px; font-size: 17px; }
 #d-story { margin: 8px 0; padding: 8px 10px; background: var(--inset); border-radius: 6px; }
 #d-story h3 { margin: 0 0 4px; font-size: 13.5px; }
 #d-story p { margin: 0; }
+#next-story { margin-top: 6px; }
 .story-marker { width: 24px; height: 24px; padding: 0; border: 2px solid var(--paper); border-radius: 50%; background: var(--ink);
   color: var(--paper); font: 600 12px/20px system-ui, sans-serif; cursor: pointer; box-shadow: var(--marker-shadow); }
 .story-marker:hover { background: var(--line); }
@@ -114,6 +117,25 @@ dialog p, dialog li { margin: 0 0 6px; }
 dialog ul { margin: 0 0 6px; padding-left: 18px; }
 dialog .small { font-size: 12px; color: var(--muted); }
 dialog a { color: var(--link); }
+/* the intro card: padding sits on the form, so a tap on the dialog element itself is a tap outside the card */
+#intro { width: calc(100% - 32px); max-width: 420px; box-sizing: border-box; padding: 0; }
+.intro-body { position: relative; padding: 20px 22px; }
+#intro h2 { margin-right: 28px; }
+.intro-x { position: absolute; top: 12px; right: 12px; border: 0; background: none; padding: 0 4px; font-size: 22px;
+  line-height: 1; color: var(--muted); cursor: pointer; }
+.intro-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.intro-actions button { padding: 8px 14px; border: 1px solid var(--input-border); border-radius: 6px;
+  background: var(--paper); color: var(--ink); font: inherit; cursor: pointer; }
+.intro-actions .primary { background: var(--ray-clear); border-color: var(--ray-clear); color: var(--paper);
+  font-weight: 600; }
+/* short phones (iPhone SE): the whole card, buttons included, fits without scrolling */
+@media (max-height: 640px) {
+  .intro-body { padding: 14px 16px; font-size: 13px; }
+  #intro h2 { font-size: 15px; }
+  #intro p { margin-bottom: 4px; }
+  .intro-actions { margin-top: 10px; }
+  .intro-actions button { padding: 7px 10px; }
+}
 
 /* MapLibre's own controls ship light-only */
 :root[data-scheme="dark"] .maplibregl-ctrl-group, :root[data-scheme="dark"] .maplibregl-ctrl-attrib {

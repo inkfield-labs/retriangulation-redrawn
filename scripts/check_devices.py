@@ -1,9 +1,11 @@
 """Device check: the page on emulated phones, Chromium for Android and WebKit (Safari's engine) for iPhone, light and dark.
 
-For each device profile and colour scheme: load the page, wait for window.mapReady and the map's idle event, then
-check there is no sideways scroll, the search field is at least 16px on phones (below that iOS Safari zooms in on
-focus), tapping story marker 1 opens Hensbarrow, and searching "Snowdon" + Enter selects Snowdon Summit. Console
-errors are recorded. Emulation is not a real device: WebKit here is Playwright's Linux build, which shares Safari's
+For each device profile and colour scheme, from a fresh browser: the intro card opens on the first visit, "Show me a
+story" opens Hensbarrow and "Next story" walks stories 2-5, the last handing over to the map ("Explore the map");
+there is no sideways scroll, the search field is at least 16px on phones (below that iOS Safari zooms in on focus),
+tapping story marker 1 opens Hensbarrow, and searching "Snowdon" + Enter selects Snowdon Summit. After a reload the
+card stays closed (remembered); with storage cleared, a link naming a pillar (#PP92) skips it. Console errors are
+recorded. Emulation is not a real device: WebKit here is Playwright's Linux build, which shares Safari's
 engine but not iOS itself (no on-screen keyboard, toolbars or the focus zoom), so this narrows what a device test must
 cover rather than replacing it.
 
@@ -26,6 +28,7 @@ SHOTS = ROOT / "data" / "devicecheck"
 DEVICES = {"chromium": ["Pixel 7"], "webkit": ["iPhone 15", "iPhone SE"]}
 LAUNCH = {"chromium": {"args": ["--use-angle=swiftshader", "--enable-unsafe-swiftshader"]}, "webkit": {}}
 GPU_STALL = "GPU stall due to ReadPixels"
+INTRO_OPEN = "document.getElementById('intro').open"
 IDLE = "new Promise((r) => { map.once('idle', r); map.triggerRepaint(); })"
 
 
@@ -38,10 +41,22 @@ def check(browser, profile, scheme, url, name):
     page.goto(url)
     page.wait_for_function("window.mapReady === true", timeout=120_000)
     page.evaluate(IDLE)
-    page.screenshot(path=SHOTS / f"{name}-{scheme}-start.png")
-    out = {"viewport": page.viewport_size,
+    page.screenshot(path=SHOTS / f"{name}-{scheme}-intro.png")
+    out = {"viewport": page.viewport_size, "intro_on_first_visit": page.evaluate(INTRO_OPEN),
            "sideways_scroll": page.evaluate("document.documentElement.scrollWidth > innerWidth"),
            "search_font_px": page.evaluate("parseFloat(getComputedStyle(document.getElementById('search')).fontSize)")}
+    page.get_by_role("button", name="Show me a story").tap()
+    page.wait_for_function("document.getElementById('d-name').textContent.startsWith('Hensbarrow')", timeout=10_000)
+    tour = [page.locator("#d-story h3").inner_text()]
+    for k in range(2, 6):
+        page.locator("#next-story").tap()
+        page.wait_for_function(f"document.querySelector('#d-story h3').textContent.startsWith('{k}.')", timeout=10_000)
+        tour.append(page.locator("#d-story h3").inner_text())
+    out["tour"] = [t.split(".")[0] for t in tour]
+    out["tour_last_button"] = page.locator("#next-story").inner_text()
+    page.locator("#next-story").tap()
+    page.wait_for_function("document.getElementById('detail').hidden && location.hash === ''", timeout=10_000)
+    out["tour_ends_on_map"] = True
     page.locator(".story-marker").first.tap()
     page.wait_for_function("document.getElementById('d-name').textContent.startsWith('Hensbarrow')", timeout=10_000)
     out["story_tap_opens"] = page.locator("#d-name").inner_text()
@@ -56,6 +71,14 @@ def check(browser, profile, scheme, url, name):
         out["search_snowdon_selects"] = page.locator("#d-name").inner_text()
     except TimeoutError:
         out["search_snowdon_selects"] = "nothing selected"
+    page.goto(url)
+    page.wait_for_function("window.mapReady === true", timeout=120_000)
+    out["intro_after_reload"] = page.evaluate(INTRO_OPEN)
+    page.evaluate("localStorage.clear()")
+    page.goto("about:blank")  # otherwise adding only a hash is a same-page jump, not a fresh load
+    page.goto(url + "#PP92")
+    page.wait_for_function("window.mapReady === true", timeout=120_000)
+    out["intro_on_pillar_link"] = page.evaluate(INTRO_OPEN)
     out["console_errors"] = errors
     ctx.close()
     return out
@@ -74,7 +97,9 @@ def main(url):
                     print(key, results[key], flush=True)
             browser.close()
     rows = [v for k, v in results.items() if " / " in k]
-    results["all_pass"] = all(not r["sideways_scroll"] and r["search_font_px"] >= 16 and not r["console_errors"]
+    results["all_pass"] = all(r["intro_on_first_visit"] and not r["intro_after_reload"] and not r["intro_on_pillar_link"]
+                              and r["tour"] == ["1", "2", "3", "4", "5"] and r["tour_last_button"] == "Explore the map"
+                              and not r["sideways_scroll"] and r["search_font_px"] >= 16 and not r["console_errors"]
                               and r["story_tap_opens"].startswith("Hensbarrow")
                               and r["search_snowdon_selects"].startswith("Snowdon") for r in rows)
     (ROOT / "results" / "device_check.json").write_text(json.dumps(results, indent=2) + "\n")

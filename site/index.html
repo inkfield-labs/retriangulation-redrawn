@@ -15,7 +15,8 @@
 <div id="map"></div>
 <aside id="panel">
   <header>
-    <h1>Retriangulation Redrawn</h1>
+    <div class="title-row"><h1>Retriangulation Redrawn</h1>
+      <button id="intro-open" type="button" class="link">What is this?</button></div>
     <p class="lede">Bold lines are the rays the Ordnance Survey observed between its trig stations in 1936–62. The faint
       web is every pair of standing pillars with a clear line of sight over the terrain.</p>
     <input id="search" type="search" list="names" placeholder="Find a pillar by name" autocomplete="off">
@@ -52,7 +53,7 @@
       <h2 id="d-name" tabindex="-1"></h2>
       <button id="clear" type="button" aria-label="Clear selection">×</button>
     </div>
-    <div id="d-story" hidden><h3></h3><p></p></div>
+    <div id="d-story" hidden><h3></h3><p></p><button id="next-story" type="button" class="link"></button></div>
     <p id="d-meta"></p>
     <p id="d-then" hidden></p>
     <ol class="picks" id="d-list"></ol>
@@ -62,6 +63,23 @@
     recent growth are missed.</span>
     <button id="about-open" type="button" class="link">How this was made</button></p>
 </aside>
+<dialog id="intro" aria-labelledby="intro-title">
+  <form method="dialog" class="intro-body">
+    <button class="intro-x" value="" aria-label="Close">×</button>
+    <h2 id="intro-title">Can the surveyors' sightlines still be seen?</h2>
+    <p>Between 1936 and 1962 the Ordnance Survey remeasured Great Britain by sighting angles between concrete trig
+      pillars, so each pillar had to be visible from its neighbours.</p>
+    <p>This map redraws those sightlines over a terrain model and a 2010–15 model of trees and buildings. Which views
+      still clear, and which are now blocked?</p>
+    <p>Bold coloured lines are 829 views the surveyors observed. The faint orange web is every pair of pillars the
+      model says could see each other over the terrain.</p>
+    <p>Tap any pillar to see what it could see.</p>
+    <div class="intro-actions">
+      <button value="story" class="primary" autofocus>Show me a story</button>
+      <button value="">Explore the map</button>
+    </div>
+  </form>
+</dialog>
 <dialog id="about" aria-labelledby="about-title">
   <h2 id="about-title" tabindex="-1" autofocus>How this was made</h2>
   <h3>Then: the rays the surveyors observed</h3>

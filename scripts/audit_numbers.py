@@ -73,6 +73,7 @@ def claims(d):
     pairs = set(zip(d["primary"].a, d["primary"].b)) | set(zip(d["primary"].b, d["primary"].a))
     i, a = "index.html", "app.js"
     yield i, "the 829 rays observed from both ends", d["rays"]["rays"], d["rays"]["rays"] == 829, "rays_then_now.json"
+    yield i, "Bold coloured lines are 829 views", d["rays"]["rays"], d["rays"]["rays"] == 829, "rays_then_now.json"
     yield i, "Still clear</strong> (608)", st["clear"], st["clear"] == 608, "rays_then_now.json"
     yield i, "(50): clear over the terrain", st["surface"], st["surface"] == 50, "rays_then_now.json"
     yield i, "(35): not clear even over bare ground", st["terrain"], st["terrain"] == 35, "rays_then_now.json"
@@ -109,6 +110,7 @@ def claims(d):
     for f, snip in ((i, "in 1936–62"), (i, "Between 1936 and 1962"), (i, "Great Britain 1935–1962</i>")):
         yield f, snip, "cited", True, BOOK
     for f, snip in ((i, "in the 2010–15 Copernicus surface model"), (i, "from 2010–15 for trees"),
+                    (i, "a 2010–15 model of trees and buildings"),
                     (i, "The surface model is 2010–15 radar"), (i, "but not over the 2010–15 surface model"),
                     (a, "also clear on the 2010–15 surface model; farthest"), (a, "Clear on the 2010–15 surface model"),
                     (a, "blocked by trees or buildings in the 2010–15 surface model")):

@@ -76,6 +76,10 @@ map.addControl(attribution, narrow ? "top-left" : "bottom-right");
 const byId = new Map();
 let selected = null;
 let rays = [];
+let storyAt = 0;
+// resolves once the data is loaded, so the intro card's story button can be pressed before then
+let markReady;
+const ready = new Promise((r) => (markReady = r));
 const historyBox = document.getElementById("history");
 
 map.on("load", async () => {
@@ -148,6 +152,7 @@ map.on("load", async () => {
   window.addEventListener("hashchange", fromHash);
   fromHash();
   window.mapReady = true;
+  markReady();
 });
 
 function empty() { return {type: "FeatureCollection", features: []}; }
@@ -321,6 +326,8 @@ async function story(i) {
   const box = document.getElementById("d-story");
   box.querySelector("h3").textContent = `${i + 1}. ${s.title}`;
   box.querySelector("p").textContent = s.text;
+  document.getElementById("next-story").textContent = i < STORIES.length - 1 ? "Next story →" : "Explore the map";
+  storyAt = i;
   box.hidden = false;
   return true;
 }
@@ -393,7 +400,27 @@ document.getElementById("clear").addEventListener("click", (e) => {
   clear();
   if (e.detail === 0) document.getElementById("search").focus();
 });
+// the stories as a tour; the last one hands over to the whole map
+document.getElementById("next-story").addEventListener("click", (e) => {
+  if (storyAt < STORIES.length - 1) return reveal(story(storyAt + 1));
+  clear();
+  map.fitBounds(GB, {padding: framePadding(), duration: 800});
+  if (e.detail === 0) document.getElementById("search").focus();
+});
 document.getElementById("about-open").addEventListener("click", () => document.getElementById("about").showModal());
+
+// the intro card: on a first visit (remembered in this browser), unless the link already names a pillar
+const intro = document.getElementById("intro");
+let seen = false;
+try { seen = localStorage.getItem("intro-seen") === "1"; } catch { /* storage blocked: show it each time */ }
+if (!seen && !location.hash) intro.showModal();
+intro.addEventListener("click", (e) => { if (e.target === intro) intro.close(); });  // a tap outside the card
+intro.addEventListener("close", () => {
+  try { localStorage.setItem("intro-seen", "1"); } catch { /* not remembered */ }
+  if (intro.returnValue === "story") ready.then(() => reveal(story(0)));
+  intro.returnValue = "";
+});
+document.getElementById("intro-open").addEventListener("click", () => intro.showModal());
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !document.getElementById("about").open && selected) clear();
+  if (e.key === "Escape" && !document.getElementById("about").open && !intro.open && selected) clear();
 });

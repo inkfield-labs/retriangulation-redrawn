@@ -6,6 +6,7 @@ found by its exact wording in `site/` and recomputed from the named output.
 | File | Wording on the page | Recomputed | OK | Source |
 |---|---|---|---|---|
 | index.html | the 829 rays observed from both ends | 829 | yes | rays_then_now.json |
+| index.html | Bold coloured lines are 829 views | 829 | yes | rays_then_now.json |
 | index.html | Still clear</strong> (608) | 608 | yes | rays_then_now.json |
 | index.html | (50): clear over the terrain | 50 | yes | rays_then_now.json |
 | index.html | (35): not clear even over bare ground | 35 | yes | rays_then_now.json |
@@ -31,6 +32,7 @@ found by its exact wording in `site/` and recomputed from the named output.
 | index.html | Great Britain 1935–1962</i> | cited | yes | History of the Retriangulation of Great Britain 1935-1962 (OS 1967) |
 | index.html | in the 2010–15 Copernicus surface model | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | from 2010–15 for trees | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
+| index.html | a 2010–15 model of trees and buildings | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | The surface model is 2010–15 radar | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | index.html | but not over the 2010–15 surface model | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
 | app.js | also clear on the 2010–15 surface model; farthest | cited | yes | Copernicus DEM Product Handbook issue 5.0, p. 30: TanDEM-X/WorldDEM acquired December 2010 - January 2015 (dataspace.copernicus.eu) |
