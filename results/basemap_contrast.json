@@ -1,0 +1,31 @@
+{
+  "light": {
+    "land": "rgb(242,243,240)",
+    "sea": "rgb(194, 200, 202)",
+    "land_vs_sea": 1.52,
+    "town_label": 18.85,
+    "road_label": 5.16
+  },
+  "dark_as_published": {
+    "land": "rgb(12,12,12)",
+    "sea": "rgb(27 ,27 ,29)",
+    "land_vs_sea": 1.14,
+    "place_label": 3.36,
+    "road_label": 2.37
+  },
+  "dark_as_used": {
+    "land": "rgb(12,12,12)",
+    "sea": "rgb(28,52,90)",
+    "water_label": "rgb(150,180,220)",
+    "road_label": 6.61,
+    "place_label": 9.02,
+    "land_vs_sea": 1.57,
+    "place_label_over_sea": 5.74,
+    "water_label_over_sea": 5.84
+  },
+  "targets": {
+    "text": 4.5,
+    "land_vs_sea": "at least the light map's"
+  },
+  "dark_passes": true
+}

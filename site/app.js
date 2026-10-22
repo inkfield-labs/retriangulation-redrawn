@@ -54,9 +54,18 @@ const GB = [[-7.6, 49.9], [1.8, 58.7]];
 const map = new maplibregl.Map({container: "map", bounds: GB, fitBoundsOptions: {padding: 20}, attributionControl: false});
 // basemap labels in Latin script only: the bilingual labels fetch font ranges for other scripts (about 1 MB on a phone)
 const latin = ["coalesce", ["get", "name:latin"], ["get", "name_en"], ["get", "name"]];
+// dark basemap: OpenFreeMap's dark style draws sea almost as land (1.14:1) and labels below WCAG AA (3.4:1). A navy sea
+// separates as much as the light map's (1.57:1 vs 1.52:1); labels reach 4.5:1 or more. Ratios: scripts/check_contrast.py
+const SEA = "rgb(28,52,90)";
+const DARK_PAINT = {water: {"fill-color": SEA}, waterway: {"line-color": SEA},
+  water_name: {"text-color": "rgb(150,180,220)", "text-halo-color": "rgb(12,12,12)"},
+  highway_name_other: {"text-color": "rgb(150,150,150)"}, highway_name_motorway: {"text-color": "rgb(150,150,150)"}};
+const darkPaint = (l) => DARK_PAINT[l.id] ?? (l.id.startsWith("place_")
+  ? {"text-color": "rgb(176,176,176)", "text-halo-color": "rgba(0,0,0,0.85)", "text-halo-width": 1.5} : null);
 map.setStyle("https://tiles.openfreemap.org/styles/" + (dark ? "dark" : "positron"), {transformStyle: (_, style) => ({
   ...style, layers: style.layers.map((l) => (JSON.stringify(l.layout?.["text-field"] ?? "").includes("name:nonlatin")
-    ? {...l, layout: {...l.layout, "text-field": latin}} : l))})});
+    ? {...l, layout: {...l.layout, "text-field": latin}} : l)).map((l) => (dark && darkPaint(l)
+    ? {...l, paint: {...l.paint, ...darkPaint(l)}} : l))})});
 map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-right");
 const narrow = innerWidth <= 640;
 // the tile credits are also given up front, so the credits are full when the opening view is framed below them
@@ -93,10 +102,15 @@ map.on("load", async () => {
 
   // surface-blocked lines (s = 0) get their own dashed layer: line-dasharray cannot be data-driven
   const width = ["interpolate", ["linear"], ["zoom"], 4, 0.3, 10, 0.8];
+  // the dense network goes under the basemap's place labels (its closing run of symbol layers) so towns stay readable
+  const styleLayers = map.getStyle().layers;
+  let labels = styleLayers.length;
+  while (labels > 0 && styleLayers[labels - 1].type === "symbol") labels--;
   map.addLayer({id: "lines", type: "line", source: "lines", "source-layer": "sightlines", filter: ["==", ["get", "s"], 1],
-    paint: {"line-color": LINE, "line-width": width}});
+    paint: {"line-color": LINE, "line-width": width}}, styleLayers[labels]?.id);
   map.addLayer({id: "lines-blocked", type: "line", source: "lines", "source-layer": "sightlines",
-    filter: ["==", ["get", "s"], 0], paint: {"line-color": LINE, "line-width": width, "line-dasharray": [2, 2]}});
+    filter: ["==", ["get", "s"], 0], paint: {"line-color": LINE, "line-width": width, "line-dasharray": [2, 2]}},
+    styleLayers[labels]?.id);
   const rayPaint = (dash) => ({"line-color": ["match", ["get", "st"], ...Object.entries(RAY).flat(), "#000"],
     "line-width": ["interpolate", ["linear"], ["zoom"], 4, ["match", ["get", "st"], "unknown", 0.8, 1.6],
                    9, ["match", ["get", "st"], "unknown", 1.5, 3]],
@@ -356,7 +370,12 @@ function fillSearch(features) {
     return null;
   };
   let enter = false;
-  input.addEventListener("keydown", (e) => { enter = e.key === "Enter"; });
+  input.addEventListener("keydown", (e) => {
+    enter = e.key === "Enter";
+    // WebKit (Safari, every iPhone browser) fires neither "change" nor "search" on Enter here, so Enter commits too;
+    // deferred so a picked suggestion lands first, and a no-op once another event has used and cleared the value
+    if (enter) setTimeout(() => commit(true));
+  });
   // the value is cleared once used, so a "change" and a "search" from the same Enter select only once
   const commit = (fallback) => {
     const text = input.value.trim().toLowerCase();

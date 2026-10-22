@@ -1,0 +1,71 @@
+{
+  "url": "http://localhost:8766/",
+  "note": "emulation, not real devices; pixel density 1; SwiftShader rendering in Chromium",
+  "chromium / Pixel 7 / light": {
+    "viewport": {
+      "width": 412,
+      "height": 839
+    },
+    "sideways_scroll": false,
+    "search_font_px": 16,
+    "story_tap_opens": "Hensbarrow",
+    "search_snowdon_selects": "Snowdon Summit",
+    "console_errors": []
+  },
+  "chromium / Pixel 7 / dark": {
+    "viewport": {
+      "width": 412,
+      "height": 839
+    },
+    "sideways_scroll": false,
+    "search_font_px": 16,
+    "story_tap_opens": "Hensbarrow",
+    "search_snowdon_selects": "Snowdon Summit",
+    "console_errors": []
+  },
+  "webkit / iPhone 15 / light": {
+    "viewport": {
+      "width": 393,
+      "height": 659
+    },
+    "sideways_scroll": false,
+    "search_font_px": 16,
+    "story_tap_opens": "Hensbarrow",
+    "search_snowdon_selects": "Snowdon Summit",
+    "console_errors": []
+  },
+  "webkit / iPhone 15 / dark": {
+    "viewport": {
+      "width": 393,
+      "height": 659
+    },
+    "sideways_scroll": false,
+    "search_font_px": 16,
+    "story_tap_opens": "Hensbarrow",
+    "search_snowdon_selects": "Snowdon Summit",
+    "console_errors": []
+  },
+  "webkit / iPhone SE / light": {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "sideways_scroll": false,
+    "search_font_px": 16,
+    "story_tap_opens": "Hensbarrow",
+    "search_snowdon_selects": "Snowdon Summit",
+    "console_errors": []
+  },
+  "webkit / iPhone SE / dark": {
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "sideways_scroll": false,
+    "search_font_px": 16,
+    "story_tap_opens": "Hensbarrow",
+    "search_snowdon_selects": "Snowdon Summit",
+    "console_errors": []
+  },
+  "all_pass": true
+}

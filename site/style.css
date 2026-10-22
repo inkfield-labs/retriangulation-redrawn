@@ -128,4 +128,5 @@ dialog a { color: var(--link); }
   .lede { display: none; }
   #panel.has-detail #legend, #panel.has-detail #explore { display: none; }
   .maplibregl-ctrl-top-left { max-width: calc(100% - 50px); }  /* the open credits stop short of the zoom buttons */
+  #search { font-size: 16px; }  /* below 16px, iOS Safari zooms the page in when the field takes focus */
 }
