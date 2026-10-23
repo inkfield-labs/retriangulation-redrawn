@@ -53,6 +53,7 @@ h1 { margin: 0 0 4px; font-size: 17px; }
 :is(button, summary, input, a):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
 #legend { padding: 8px 16px 10px; border-bottom: 1px solid var(--rule); font-size: 12.5px; }
+#key-box > summary { display: none; }  /* phones only: there the key starts folded */
 .key-head { display: flex; align-items: center; gap: 6px; margin: 4px 0 2px; font-weight: 600; }
 .key-head span { font-weight: 400; color: var(--muted); }
 .key { list-style: none; margin: 0 0 4px; padding: 0; }
@@ -148,6 +149,7 @@ dialog a { color: var(--link); }
   #panel { top: auto; bottom: 0; left: 0; right: 0; width: auto; max-height: 55%; border-radius: 12px 12px 0 0; }
   #panel header { padding: 12px 16px 10px; }
   .lede { display: none; }
+  #key-box > summary { display: list-item; cursor: pointer; padding: 2px 0; font-weight: 600; }
   #panel.has-detail #legend, #panel.has-detail #explore { display: none; }
   .maplibregl-ctrl-top-left { max-width: calc(100% - 50px); }  /* the open credits stop short of the zoom buttons */
   #search { font-size: 16px; }  /* below 16px, iOS Safari zooms the page in when the field takes focus */

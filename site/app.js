@@ -49,7 +49,13 @@ const base = new URL("data/", location.href).href;
 const PER_FILE = 6;
 
 const GB = [[-7.6, 49.9], [1.8, 58.7]];
-const map = new maplibregl.Map({container: "map", bounds: GB, fitBoundsOptions: {padding: 20}, attributionControl: false});
+const narrow = innerWidth <= 640;
+// on phones the key starts folded, so GB is framed larger above the bottom sheet: at zoom 3 the Europe-wide basemap
+// tiles weigh about 2 MB. Framing above the sheet from the start also loads no tiles for a view reframed at once
+if (narrow) document.getElementById("key-box").open = false;
+const sheet = document.getElementById("panel").getBoundingClientRect().height;
+const map = new maplibregl.Map({container: "map", bounds: GB, attributionControl: false, fitBoundsOptions:
+  {padding: narrow ? {top: 120, left: 30, right: 30, bottom: sheet + 20} : 20}});
 // basemap labels in Latin script only: the bilingual labels fetch font ranges for other scripts (about 1 MB on a phone)
 const latin = ["coalesce", ["get", "name:latin"], ["get", "name_en"], ["get", "name"]];
 // dark basemap: OpenFreeMap's dark style draws sea almost as land (1.14:1) and labels below WCAG AA (3.4:1). A navy sea
@@ -65,7 +71,6 @@ map.setStyle("https://tiles.openfreemap.org/styles/" + (dark ? "dark" : "positro
     ? {...l, layout: {...l.layout, "text-field": latin}} : l)).map((l) => (dark && darkPaint(l)
     ? {...l, paint: {...l.paint, ...darkPaint(l)}} : l))})});
 map.addControl(new maplibregl.NavigationControl({showCompass: false}), "top-right");
-const narrow = innerWidth <= 640;
 // the tile credits are also given up front, so the credits are full when the opening view is framed below them
 const attribution = new maplibregl.AttributionControl({compact: narrow, customAttribution: `${OS}. ${COP}`});
 // on phones the bottom sheet is below and the zoom buttons top-right, so the credits go top-left
