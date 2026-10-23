@@ -13,52 +13,52 @@
       390,
       844
     ],
-    "requests": 25,
-    "tile_requests": 1,
-    "bytes": 854831,
+    "requests": 34,
+    "tile_requests": 6,
+    "bytes": 2440560,
     "bytes_by_kind": {
-      "page": 13532,
-      "libraries": 233893,
-      "other": 0,
-      "basemap": 423141,
-      "data": 167359,
-      "tiles": 16906
+      "page": 15764,
+      "libraries": 221178,
+      "other": 10512,
+      "basemap": 1930759,
+      "data": 167428,
+      "tiles": 94919
     },
-    "bytes_if_site_text_gzipped": 854831,
-    "seconds_to_data_ready": 10.2,
-    "seconds_to_map_idle": 42.8,
+    "bytes_if_site_text_gzipped": 2440560,
+    "seconds_to_data_ready": 10.0,
+    "seconds_to_map_idle": 36.7,
     "largest": [
       {
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/4/8/5.pbf",
+        "bytes": 407856
+      },
+      {
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/4/8/6.pbf",
+        "bytes": 390165
+      },
+      {
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/4/7/6.pbf",
+        "bytes": 211468
+      },
+      {
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/4/8/4.pbf",
+        "bytes": 211457
+      },
+      {
         "url": "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js",
-        "bytes": 211773
+        "bytes": 211424
+      },
+      {
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/4/7/5.pbf",
+        "bytes": 174395
       },
       {
         "url": "https://retriangulation-redrawn.pages.dev/data/pillars.json",
-        "bytes": 147490
+        "bytes": 147488
       },
       {
-        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Bold/256-511.pbf",
-        "bytes": 58764
-      },
-      {
-        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Bold/512-767.pbf",
-        "bytes": 57197
-      },
-      {
-        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/256-511.pbf",
-        "bytes": 56243
-      },
-      {
-        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/512-767.pbf",
-        "bytes": 54196
-      },
-      {
-        "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
-        "bytes": 49815
-      },
-      {
-        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
-        "bytes": 48148
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/4/7/4.pbf",
+        "bytes": 112230
       }
     ]
   },
@@ -67,52 +67,52 @@
       1280,
       800
     ],
-    "requests": 27,
-    "tile_requests": 5,
-    "bytes": 913050,
+    "requests": 33,
+    "tile_requests": 6,
+    "bytes": 1605990,
     "bytes_by_kind": {
-      "page": 13519,
-      "libraries": 234090,
-      "other": 0,
-      "basemap": 374436,
-      "data": 167295,
-      "tiles": 123710
+      "page": 15760,
+      "libraries": 221127,
+      "other": 10512,
+      "basemap": 1097798,
+      "data": 167296,
+      "tiles": 93497
     },
-    "bytes_if_site_text_gzipped": 913050,
-    "seconds_to_data_ready": 8.8,
-    "seconds_to_map_idle": 23.6,
+    "bytes_if_site_text_gzipped": 1605990,
+    "seconds_to_data_ready": 8.7,
+    "seconds_to_map_idle": 22.3,
     "largest": [
       {
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/5/16/10.pbf",
+        "bytes": 276482
+      },
+      {
         "url": "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js",
-        "bytes": 211589
+        "bytes": 211793
+      },
+      {
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/5/15/10.pbf",
+        "bytes": 163549
       },
       {
         "url": "https://retriangulation-redrawn.pages.dev/data/pillars.json",
-        "bytes": 147353
+        "bytes": 147348
       },
       {
-        "url": "https://pub-cc8bd5fb6bbe4e13af19a087cbed078d.r2.dev/lines.pmtiles",
-        "bytes": 64232
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/5/16/9.pbf",
+        "bytes": 136160
+      },
+      {
+        "url": "https://tiles.openfreemap.org/planet/20261018_080001_pt/5/15/9.pbf",
+        "bytes": 79932
       },
       {
         "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/256-511.pbf",
-        "bytes": 62651
+        "bytes": 62652
       },
       {
-        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Bold/256-511.pbf",
-        "bytes": 58760
-      },
-      {
-        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/256-511.pbf",
-        "bytes": 56249
-      },
-      {
-        "url": "https://tiles.openfreemap.org/sprites/ofm_f384/ofm.png",
-        "bytes": 49814
-      },
-      {
-        "url": "https://tiles.openfreemap.org/fonts/Noto%20Sans%20Italic/0-255.pbf",
-        "bytes": 48151
+        "url": "https://retriangulation-redrawn.pages.dev/data/tiles/5/15/10.pbf",
+        "bytes": 60115
       }
     ]
   }

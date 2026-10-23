@@ -5,7 +5,8 @@ story" opens Hensbarrow and "Next story" walks stories 2-5, the last handing ove
 there is no sideways scroll, the search field is at least 16px on phones (below that iOS Safari zooms in on focus),
 tapping story marker 1 opens Hensbarrow, and searching "Snowdon" + Enter selects Snowdon Summit. After a reload the
 card stays closed (remembered); with storage cleared, a link naming a pillar (#PP92) skips it. Console errors are
-recorded. Emulation is not a real device: WebKit here is Playwright's Linux build, which shares Safari's
+recorded, except WebKit's "status of 404" message when every 404 was a line tile: sea and empty tiles have no file, by
+design (WebKit logs each 404 without its URL; Chromium does not log them from the map's worker). Emulation is not a real device: WebKit here is Playwright's Linux build, which shares Safari's
 engine but not iOS itself (no on-screen keyboard, toolbars or the focus zoom), so this narrows what a device test must
 cover rather than replacing it.
 
@@ -28,6 +29,7 @@ SHOTS = ROOT / "data" / "devicecheck"
 DEVICES = {"chromium": ["Pixel 7"], "webkit": ["iPhone 15", "iPhone SE"]}
 LAUNCH = {"chromium": {"args": ["--use-angle=swiftshader", "--enable-unsafe-swiftshader"]}, "webkit": {}}
 GPU_STALL = "GPU stall due to ReadPixels"
+NOT_FOUND = "the server responded with a status of 404"
 INTRO_OPEN = "document.getElementById('intro').open"
 IDLE = "new Promise((r) => { map.once('idle', r); map.triggerRepaint(); })"
 
@@ -38,6 +40,8 @@ def check(browser, profile, scheme, url, name):
     errors = []
     page.on("console", lambda m: m.type == "error" and GPU_STALL not in m.text and errors.append(m.text[:200]))
     page.on("pageerror", lambda e: errors.append(str(e)[:200]))
+    missing = []
+    page.on("response", lambda r: r.status == 404 and missing.append(r.url))
     page.goto(url)
     page.wait_for_function("window.mapReady === true", timeout=120_000)
     page.evaluate(IDLE)
@@ -79,7 +83,9 @@ def check(browser, profile, scheme, url, name):
     page.goto(url + "#PP92")
     page.wait_for_function("window.mapReady === true", timeout=120_000)
     out["intro_on_pillar_link"] = page.evaluate(INTRO_OPEN)
-    out["console_errors"] = errors
+    tiles_only = all("/data/tiles/" in u for u in missing)
+    out["console_errors"] = [e for e in errors if not (tiles_only and NOT_FOUND in e)]
+    out["tile_404s"] = sum("/data/tiles/" in u for u in missing)
     ctx.close()
     return out
 

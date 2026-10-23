@@ -22,7 +22,8 @@
     "search_snowdon_selects": "Snowdon Summit",
     "intro_after_reload": false,
     "intro_on_pillar_link": false,
-    "console_errors": []
+    "console_errors": [],
+    "tile_404s": 10
   },
   "chromium / Pixel 7 / dark": {
     "viewport": {
@@ -45,7 +46,8 @@
     "search_snowdon_selects": "Snowdon Summit",
     "intro_after_reload": false,
     "intro_on_pillar_link": false,
-    "console_errors": []
+    "console_errors": [],
+    "tile_404s": 10
   },
   "webkit / iPhone 15 / light": {
     "viewport": {
@@ -68,7 +70,8 @@
     "search_snowdon_selects": "Snowdon Summit",
     "intro_after_reload": false,
     "intro_on_pillar_link": false,
-    "console_errors": []
+    "console_errors": [],
+    "tile_404s": 7
   },
   "webkit / iPhone 15 / dark": {
     "viewport": {
@@ -91,7 +94,8 @@
     "search_snowdon_selects": "Snowdon Summit",
     "intro_after_reload": false,
     "intro_on_pillar_link": false,
-    "console_errors": []
+    "console_errors": [],
+    "tile_404s": 10
   },
   "webkit / iPhone SE / light": {
     "viewport": {
@@ -114,7 +118,8 @@
     "search_snowdon_selects": "Snowdon Summit",
     "intro_after_reload": false,
     "intro_on_pillar_link": false,
-    "console_errors": []
+    "console_errors": [],
+    "tile_404s": 5
   },
   "webkit / iPhone SE / dark": {
     "viewport": {
@@ -137,7 +142,8 @@
     "search_snowdon_selects": "Snowdon Summit",
     "intro_after_reload": false,
     "intro_on_pillar_link": false,
-    "console_errors": []
+    "console_errors": [],
+    "tile_404s": 5
   },
   "all_pass": true
 }
