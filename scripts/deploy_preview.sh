@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# Deploy site/ to the private Cloudflare Pages preview (free tier). Everything, the line tiles included, is a static
+# Deploy site/ to Cloudflare Pages (free tier). Everything, the line tiles included, is a static
 # file on Pages: no request metering, but at most 20,000 files and 25 MiB per file, which this script checks.
-# The deploy folder also gets robots.txt and an X-Robots-Tag header so the preview stays out of search engines.
+# Production (branch main) is public and indexable. Other branches also get robots.txt and an X-Robots-Tag header;
+# Pages itself adds noindex to preview and branch URLs.
 # (Until #18 the tiles were one pmtiles file on R2; the bucket retriangulation-redrawn-tiles is no longer read.)
 #
 # Pages project (once): npx wrangler pages project create retriangulation-redrawn --production-branch main
@@ -24,10 +25,12 @@ trap 'rm -rf "$OUT"' EXIT
 cp -r site/. "$OUT"
 rm -f "$OUT/data/lines.pmtiles"  # left over from builds before #18
 
-printf '/*\n  X-Robots-Tag: noindex\n' > "$OUT/_headers"
 # Pages labels .pbf as application/octet-stream, which Cloudflare does not compress; as protobuf it is compressed
-printf '/data/tiles/*\n  Content-Type: application/x-protobuf\n' >> "$OUT/_headers"
-printf 'User-agent: *\nDisallow: /\n' > "$OUT/robots.txt"
+printf '/data/tiles/*\n  Content-Type: application/x-protobuf\n' > "$OUT/_headers"
+if [ "${BRANCH:-main}" != main ]; then
+  printf '/*\n  X-Robots-Tag: noindex\n' >> "$OUT/_headers"
+  printf 'User-agent: *\nDisallow: /\n' > "$OUT/robots.txt"
+fi
 
 # Pages' free-plan limits; a deploy past them fails part-way, so stop here instead
 files=$(find "$OUT" -type f | wc -l)

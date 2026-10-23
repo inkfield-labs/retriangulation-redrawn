@@ -13,6 +13,6 @@
     "console_error_messages": [],
     "gpu_stall_warnings_filtered": 4,
     "gpu_stall_filter": "GPU stall due to ReadPixels",
-    "x_robots_tag": "noindex"
+    "x_robots_tag": null
   }
 }
